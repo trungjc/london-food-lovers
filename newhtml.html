@@ -1,0 +1,505 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>index</title>
+	
+	<link rel="stylesheet" href="css/bootstrap-min-lt.css" type="text/css"><!--remove it after apply to server-->
+	<link rel="stylesheet" href="css/Stylesheet-min-lt.css" type="text/css"> <!--remove it after apply to server-->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.scrolldeck.js"></script>
+</head>
+<body>
+	<div class="landing-page">
+		<div id="header-landing">
+			<div class="header-landing clearfix">
+				<div class="pull-left"><a href=""><img src="images/small-logo.png" alt="logo header top" ></a></div>
+				<div class="pull-right rightp">	
+					<div class="social-box pull-left">
+						<span class="">Try eXo Platform Now, Connect with:</span> 
+						<a href="javascript:void(0);" class="faceBookIcon "></a> 
+						<a href="javascript:void(0);" class="googleIcon "></a> 
+						<a href="javascript:void(0);" class="twitterIcon "></a>
+					</div>
+					
+					<div class="contactLang pull-right">
+					  <div class="combobox " id="lngMenuHomepage">
+							<div id="lngMenuBloc">
+								<span>Contact Us</span>
+								<span class="arrowIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOBAMAAADQ9FGEAAAAElBMVEUrKysrKytdb9i/X1DTAAD///+XiTJ8AAAAAXRSTlOWWYruFwAAAE1JREFUCJljYBSEAAEGIRMjVZcgZWdFBiFVVyArJAjIUgoJdQl1VQKxVF1dQoKALNHQUKBYaGggg4gLBDgisRCyCB1QU4JQTIbbBncBAAo7GfUTypcPAAAAAElFTkSuQmCC"></span>
+								<ul  id="lngMenu" class="uiDropDownMenu">
+										<li><a href="javascript:comboChangeLng('fr');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOBAMAAADQ9FGEAAAAD1BMVEUrKysrKystV6/TAAD///+93TPzAAAAAXRSTlOWWYruFwAAABxJREFUCJljYBSEAAEGISUlFxcXY2NDOrPgLgAA5/sVvYgI3l4AAAAASUVORK5CYII="></a></li>
+										<li><a href="javascript:comboChangeLng('de');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAMAAAAVBLyFAAAAP1BMVEUAAAAFBQUHBwcICAgNDQ0ODg4rKystLS0uLi7/AAD/BAT/BQX/Cgr/Cwv/EBD/3gD/3wT/3wX/3wn/4Az/4BLM859xAAAAPklEQVQY042NOQ4AIAzDklIJxP9fyz03XfBoKQ7bQcT8XHWOdaMphoSj5GEXNXILBuaWHmxHleH8bVEdNQU+mbQRMr4JFdkAAAAASUVORK5CYII="></a></li>
+										<li><a href="javascript:comboChangeLng('es');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAMAAAAVBLyFAAAAS1BMVEUrKysrKyu2u53AzqjTAADgjFHkp0ro7j3raVfryUvr3lPsU1Hs09Ts4ULtZ1Pt4I3w4EjxflfyvbDy81Xz9EH1w7H16uL58db99AB8DB4MAAAAAXRSTlOWWYruFwAAAD5JREFUGJVjYGBEAwwMjCxogJFYIQkQ4JKAA4iQsCAHvwiqkCgfjxAvQSFxVm4xAVQhZk42JnYkIXKdiultABBUCaZkjLjwAAAAAElFTkSuQmCC"></a></li>
+										<li><a href="javascript:comboChangeLng('pt_BR');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAMAAAAVBLyFAAAB7FBMVEUAlU8ClU4CnFoCoF4CoV4EoV0FnVkGmEwHn1wHolwJmUsJn1wJoF4Jo1sKmE0KoF4KoWILmVUMoWEMo1YMo1oNmlANn1MNoFoNomENo1QNo1YOm1AOo1cPl0cPmVQPnFEPnlMPoFoPo1cPo1gPo1oQo1cQo1gQpFgRolURpFgRpFkSpFgSpFkSpVgUolgUo1oVm0wVolcVolgVo1sVpF4WmlEWm1IXm1IXoVkXo1sYllEZpFwboVgdpl0fDn8jolIlqFonnEArHYErKysrpFAsGXYuIIEuI4UwIYYxHnoxMTEyMjI0JYI1I3g3K4k5Jnk6KHo6Knw7Los8K309okE9rlI/MH5FO5BGQ5hHpkJKozxLsEhLsk1MpD1PrUpTs0RVQG5XVI1ZsEdaRHddQGJjcp9mS25qcJtqeKhqrjtwtz1xqzB3e6N4eaF5uzh7uTt8fpGDbliHZVaNsiiOdVOOwziPvjWTcFeXsyabuzKdxTOivC+shjSvl1a2iEG5mVW7lTu/kzHAzyjEvx3LzCXNzSDOwhnUsDzUwhzWxiDYrSLZryjexxrkzBjlvyLpxRLwwR3zyQ7zyxrzzRv0wxP51A/6xwr6xw/63BX9xBL91xL/yQ7/zAf/zQj/zQr/zQ3/0AX/0Az/1Aj/3hCs9w/WAAAA3UlEQVQY02PwdkYD3gzOVuZgICdoBqZNnRmcxWSUdXR4WeLzdFm1tNSVhIFCCvqW1kIOVZMntcQImFgbqwKF5A3F+ZM669KSy/vKbDj0NIBCokwu1bPqI8J97FJmtsUysgOFDDJ7Fk4oSM3JTXevWTS9whEoFDVx3vwuf0/fsMSM2rmz5xQDhfgiOxZOSfAICHYNal/Qny0LFJJms6+c2hjo5OZXNK05hIELbKMiT1xrd0lhQ2++BbeRBtRdEralMxY3hcLcJamkpqMtwhydpcKpo62pKuXM4IXubS8AZ8VJZXQpCZMAAAAASUVORK5CYII="></a></li>
+										<li><a href="javascript:comboChangeLng('ja');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOBAMAAADQ9FGEAAAAG1BMVEUrKystLS0uLi7/AAD/Hx//MzP/Zmb/v7////+kk0msAAAAOUlEQVQI12NQYIAAJgaODghoQGWVuaRDWO3BxqYVYFabsbFxBpjVAmR5oLEQsggdCFMw7RCAuoARAN+6K6IB7k8tAAAAAElFTkSuQmCC"></a></li>
+										<li><a href="javascript:comboChangeLng('ru');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAMAAAAVBLyFAAAAhFBMVEUPIf8QIf8pKfQpKfcqKvcrKyvaCQncBgbdJyfeBgbeJyfeMDDgCwvgFRXiCwvkBgbkLCzlBgblLi7mBQXnMzPoCwvoNDToNzfpCwvpDAzpNzfpOTnpOjrzEAHzGgv0EQH2EAH39/f4EAD6EAD7EAD8EAD8/Pz9/f3+/v7///v///z///0n6cmKAAAAbklEQVQY022PMRICMQwDV47T8ANK/v8tCjrKG8gRUYC5G0CVV5YKqfOt5BR122GP84snAAqkTvCn2AK0K6NuF8qA6i0AV3HuCHB7W5uE+lFKlTE9LsnVcdgy60JyUyz5Sc1B0h9qTSkwvlvod/YT27YjKv5qhD4AAAAASUVORK5CYII="></a></li>
+										<li><a href="javascript:comboChangeLng('zh_CN');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAMAAAAVBLyFAAAAxlBMVEUrKyvBOT3FNzfNMivQLSTRLyTRMCTTLyDVLh3aMBnbLBfbLxfcHRHcIRDcIRHdIhDdIhHdIxDdJA7dJBDdJBHdJQ7dJRDdJRHdJhDeJhDeJxDeKBDeKRDeKg3eKhDeKxDeLBDfLBDfLRDfLxDfMQ/gMQ/gMg/gMw/gNQ/hNw/hOQ7hOg7hPyjhQCjhQSjiPg7iQA7iQg7iRjDjQw7jRA7lTg3lTw3mUw3mVwzoYAvrcArrdAnugQjvhwjznAb5yAL6xgP/7wC4RztQAAAAlUlEQVQY02NgwAKYuEW5WNn0ZEV12Ni4RbnZgELs0uKqcnza1tKCcjIgABRiVVK3sZBX1DA3EYEJsSjZOjqY8fOaGQvDhHR5LOztpMQk9DWlYEKikgZqBirSwpamAnAhGQlBQWEtKwUxuPE6IFpK2VBeWgYmxAZmSAtCRRBCCAAU4sAUYuQU4mRmNhISMmJmBjGxeRoATdEU/1Dz+YAAAAAASUVORK5CYII="></a></li>
+										<li><a href="javascript:comboChangeLng('vi');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAMAAADeWG8gAAABX1BMVEUrKyssLCzJBSTJBiPMBiHNBSDNBiDOBR7OBR/OBSDOBh/PBh7PBh/PBx/PCB3QBh/QCB/QCR7QCR/QCh3QCh7QCh/QDB3QDB7QDR7RDB7RDR7RDh3RDh7RDx3REB3REhzRExzSDh7SEBzSEB3SERzSER3SEhzSEh3SExvSExzSEx3SFBzSFB3SFRzSFhvSFh3TExzTEx3TFxzTFx3UFxzUGBrUGBvUHhnUHhrUKhnVHhvWJxjWKBjWKhbYMhXZOhTaPxPbRRDcRhDcSA3dSA3eUQvfUgzfUwnfXwHgZADhZgDhaADjdADkdgDkegDkfgDlgwDnjwDokgDplQDqmADqngDroADrpwDssADtqgDtrwDtsADutwDvtADvugDwtwDwyADy1wDzzgD02wD24QD36wD37QD3+wD49gD4+AD4+QD4+gD4/QD4/gD4/wD59gD5+wD5/wD6/QD6/wD9/wBWJuBIAAAA2klEQVQY013Q20oCURhA4fXvw5iOxczkRERXEQm+/xsUdNu1GFFQ4ynNDHO2+2d30Z2L7wkWwlEiDLFoikW2PORRSGODtZG0Z1DN8ugsYIjqUvZ5WZwVG0fcg8PJbqqa+ubmfk5VB4TR4q7ympXd5dam1aQ3cZD9nA7KnQlFvZ223QyH5uv2EIvgddasfh0YrMs/HtfSP4lfD+8kcGgK+XnuF1KVV6ETwGDprGr/+vL8lt3uVRRLz6MXbfM0d1G+fWo3wkgtvjlcx3kchqBpbMCqIoIISeDf0Yk/yUFh8QWzEbYAAAAASUVORK5CYII="></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<a rel=".TryOnlinePopup" class="btnDownloadShort btnDownloadShortEn btnTryeXo" href="javascript:void(0);"></a>
+		
+		</div>
+		<!--end Header-->
+		
+		
+		
+		<div class="slide noBg" id="home">
+			<div class="leftbar">
+				<h1>eXo Platform</h1>
+				<h4>Open Source Intranet Software</h4>
+				<p>Social collaboration solution</p>
+				<p>Open Source and Enterprise Ready</p>
+				<p>Highly extensible intranet software</p>
+				<div class="social-box">
+					<span>Try now </span> 
+					<a href="javascript:void(0);" class="faceBookIcon facebookBtn"></a> 
+					<a href="javascript:void(0);" class="inIcon linkedinBtn"></a> 
+					<a href="javascript:void(0);" class="googleIcon googleBtn"></a>
+				</div>
+			</div>
+			<a class="sizeBtnDown" href="javascript:void(0);"></a>
+			<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 666px; width: 1349px; z-index: -999998; position: absolute;">
+			<img style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 100%; max-width: none; z-index: -999999; left: 0px; top: 0px;" src="images/banner1.jpg"></div>
+		</div>
+		<!--end leftbar-->
+		
+		
+		<div class="slide noBg" style="min-height:50px">
+			<div class="headerTopPlatform">
+				<img src="images/logo.png" alt="logo header top">
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="slide" id="platform" >
+			<div class="container" style="height: 640px;">
+				<div class="platform-box  clearfix">
+					<a href="" class="pull-left"><img src="images/img1.png" alt="logo header top" ></a>
+					<div class="contentPlafform article-body">
+						<h2>
+							What is eXo Platform?</h2>
+						<p>
+							<strong> eXo Platform</strong> is an open source social intranet software designed for the Enterprise. It is full featured, standard based, extensible and has an amazing design.</p>
+					</div>
+				</div>
+				<div class="enterprisePlatform">
+					<h2>Why an Enterprise Social Platform?</h2>
+					<div class="clearfix">
+						<div class="boxPlf pull-left">
+							<h5>
+								<span class="iconEveryWhere iconPlf"></span>Social is everywhere</h5>
+							<p class="textReady">
+								These days every application and website integrates a social layer. The social graph and activity streams are central to enterprise collaboration. IT organizations must have a solution for it.</p>
+						</div>
+						<div class="boxPlf pull-left">
+							<h5>
+								<span class="iconEnterpriseReady iconPlf"></span>Social is enterprise-ready</h5>
+							<p class="textReady">
+								Consumer usages have already transforming enterprise users practices and processes. A social platform must provide security and robustness. It must be standard, leverage IT investments and be professionally supported. </p>
+						</div>
+						<div class="boxPlf pull-left">
+							<h5>
+								<span class="iconAvailable iconPlf"></span>Social is available</h5>
+							<p class="textReady">
+								Nobody is wondering if they should deal with social, but how. It’s essential to build upon a social platform with no liability, no vendor lock in. The ideal Platform in a commodity world should be open source and affordable. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End platform-->
+		
+		
+		<div id="solutions" class="slide slide-gray slide-white " style="">		
+			<h2 class="heading ">Build an Open Source Social Intranet</h2>
+			<div style="height: 750px;" class="solutions container">
+				<div class="contentSolutions">
+					<p><strong>eXo Platform </strong>comes as an out of the box social intranet solution.</p>
+					<p>Rich collaboration features such as wikis, forums, calendars and documents smartly integrated around activity streams, social networking and workspaces. It’s carefully designed to instantly engage its users. It runs within the trusted security of an enterprise platform that is highly customizable to adapt when your needs evolve.</p>
+					<br/>
+					<br/>
+					<a title="Build Social Intranets - Share activities and collaborate on documents." href="#" data-fancybox-group="gallery" class="fancybox">
+						<img src="images/build-an-opensource-social-intranet.jpg" alt="Build Social Intranets - Share activities and collaborate on documents."> <span> </span> 
+					</a>	
+				</div>
+			</div>
+		</div>
+		<!--end solutions-->
+		
+		
+		
+		<div id="features" class="slide slide-gray" >
+			<div class="features container" style="height: 2520px;">
+				<h2 class="heading">Social Intranet Features</h2>
+				<div class="effectFeature" >
+					<div class="socialplatform">
+						<a href="javascript:void(0);" class="socialplatform">
+						<img style="  left: 422px;  position: relative; top: 102px;" class="animate-in" alt="Social Platform"  data-animation="socialplatform"  src="images/social-platform.png">
+						</a>
+					</div>
+					<div class="cloud">
+						<a rel="#box-cloud" href="#box-cloud" class="imgproducts">
+						<img style="  left: 558px;  position: relative; top: 158px;" class="animate-in" alt="Social Platform" src="images/cloud.png"  data-animation="cloud"  alt="Cloud" >
+						</a>
+					</div>
+					<div class="webcontent">
+						<a rel="#box-webcontent" href="#box-webcontent" class="imgproducts">
+							<img style="  left: 367px;  position: relative; top: 19px;" src="images/document-management.png" data-animation="webcontent" class="animate-in" alt="WebContent"> 
+						</a>					
+						</div>
+					<div class="wiki">
+						<a rel="#box-collaboration" href="#box-collaboration" class="imgproducts">
+							<img style="  left: 367px;  position: relative; top: 219px;" src="images/wiki.png" data-animation="wiki" class="animate-in" alt="Wiki" > 
+						</a>
+					</div>
+					<div class="social">
+						<a rel="#box-social" href="#box-social" class="imgproducts">
+							<img style="  left: 325px;  position: relative; top: 158px;" src="images/social-network.png" data-animation="social" class="animate-in" alt="Social" > 
+						</a>
+					</div>
+					<div class="forum">
+						<a rel="#box-collaboration" href="#box-collaboration" class="imgproducts">
+							<img style="  left:324px;  position: relative; top: 82px;" src="images/forum.png" data-animation="forum" class="animate-in" alt="Forum" > 
+						</a>
+					</div>
+					<div class="calendar">
+						<a rel="#box-productivity" href="#box-productivity" class="imgproducts">
+						<img  style="  left: 515px;  position: relative; top: 19px;" src="images/calendar.png" data-animation="calendar" class="animate-in" alt="Calendar" > 
+						</a>
+					</div>
+					<div class="mobile">
+						<a rel="#mobile" href="#mobile" class="imgproducts">
+						<img  style="  left: 558px;  position: relative; top: 83px;" src="images/mobile.png" data-animation="mobile" class="animate-in" alt="Mobile" > 
+						</a>
+					</div>
+					<div class="answer">
+						<a rel="#box-collaboration" href="#box-collaboration" class="imgproducts">
+						<img  style="  left: 515px;  position: relative; top: 219px;" src="images/answer.png" data-animation="answer" class="animate-in" alt="Answer" >
+						</a>
+					</div>
+					<div class="dashboard">
+						<a rel="#box-productivity" href="#box-productivity" class="imgproducts">
+							<img  style="  left: 441px;  position: relative; top: 227px;"src="images/dashboard.png" data-animation="dashboard" class="animate-in" alt="Dashboard" > 
+						</a>
+					</div>
+					<div class="portal">
+						<a rel="#box-portal" href="#box-portal" class="imgproducts">
+							<img style="  left: 440px;  position: relative; top: -19px;" src="images/portal.png" data-animation="portal" class="animate-in" alt="Portal" >
+						</a>
+					</div>
+				</div>				
+				<!-- End effectFeature-->
+				
+				<div class="contentFeatures clearfix">
+					<div class="imgHeader">
+						<img  src="images/all-in-single-platform.png"  alt="BgAllInPlf">
+					</div>
+					<div class="leftFeature boxFeature pull-left">
+						<div class="colsLarger  socialFeatureBox">
+							<div class="clearfix">						
+								<div class="iconSocial pull-right iconFeature"> </div>
+								<div class="popover left">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Social Network</h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+									<p style="margin: 43px 43px 40px 10px;">
+										<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+										<img src="images/mac-book.png" /> <span class="icon-plus"> </span> 
+										</a>
+									</p>
+							</div>				
+						</div>
+						<!--end socialFeatureBox-->
+						<div class="colsLarger  contentManagementBox">
+							<div class="clearfix">						
+								<div class="iconForder pull-right iconFeature"> </div>
+								<div class="popover left">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Content</h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+									<p style="margin:32px 31px 34px 10px">
+										<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+										<img src="images/content.png" /> <span class="icon-plus"> </span> 
+										</a>
+									</p>
+							</div>				
+						</div>
+						<!--end contentManagementBox-->
+						<div class="colsLarger  extensibilityBox">
+							<div class="clearfix">						
+								<div class="iconExtensibility pull-right iconFeature"> </div>
+								<div class="popover left">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Extensibility </h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+									<p style="margin:31px 43px 29px 10px">
+										<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+										<img src="images/extensibility.png" /> <span class="icon-plus"> </span> 
+										</a>
+									</p>
+							</div>				
+						</div>
+						<!--end extensibilityBox-->
+						<div class="colsLarger  IntegrationBox">
+							<div class="clearfix">						
+								<div class="iconIntegration pull-right iconFeature"> </div>
+								<div class="popover left">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Enterprise Integration </h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+									<p style="margin:32px 43px 10px 10px">
+										<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+										<img src="images/Enterprise-Integration.png" /> <span class="icon-plus"> </span> 
+										</a>
+									</p>
+							</div>				
+						</div>
+						<!--end IntegrationBox-->
+					</div>
+					<!--End leftFeature-->
+					
+					<div class="rightFeature boxFeature pull-right">
+						<div class="colsSmall  collaborativeBox">
+							<div class="clearfix">
+								<div class="iconFeature pull-left iconForum"> </div>
+								<div class="popover right pull-right">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Collaborative Features</h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+								<p style="margin:31px 10px 27px 53px">
+									<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+									<img  src="images/collaborative.png" alt=""> 
+									<span class="icon-plus"> </span> 
+								</a>
+								</p>
+							</div>
+						</div><!--end collaborativeBox-->
+						<div class="colsSmall  productivityBox">
+							<div class="clearfix">
+								<div class="iconFeature pull-left iconDashboard"> </div>
+								<div class="popover right pull-right">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Productivity</h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+								<p style="margin:26px 10px 28px 37px">
+									<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+									<img  src="images/productivity.png" alt=""> <span class="icon-plus"> </span> 
+									</a>
+								</p>
+							</div>
+						</div>
+						<!--end productivityBox-->
+						<div class="colsSmall enterpriseBox">
+							<div class="clearfix">
+								<div class="iconFeature pull-left iconEnterprise"> </div>
+								<div class="popover right pull-right">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Enterprise Portal</h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+								<p style="margin:34px 0px 27px 36px">
+									<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+									<img  src="images/Enterprise-portal.png" alt=""> <span class="icon-plus"> </span> 
+									</a>
+								</p>
+							</div>
+						</div>
+						<!--end enterpriseBox-->
+						<div class="colsSmall  cloudBox">
+							<div class="clearfix">
+								<!--div class="iconFeature pull-left iconCloud"> </div-->
+								<div class="popover right pull-right">
+									<div class="arrow">&nbsp;</div>
+									<div class="popover-content">
+										<h2>Cloud-Ready</h2>
+									</div>
+								</div>
+							</div>
+							<div class="textFeature">
+								<p style="margin:46px 10px 6px 40px">
+									<a title="" href="" data-fancybox-group="gallery" class="fancybox">
+									<img  src="images/cloud-image.png" alt=""> <span class="icon-plus"> </span> 
+									</a>
+								</p>
+							</div>
+						</div>
+						<!--end cloudBox-->
+					</div>
+					<!--end rightFeature-->
+				</div>				
+				<!--end contentFeatures-->	
+				
+				<div class="endNode">
+					<span class="iconFeature iconLoading"></span>
+				</div>
+				<div class="seeMoreFeature ">
+					<div class="btn-loadmore">
+						<div class="btn-inner ">
+							<span>Connect to your new social intranet now with:</span>
+							<span class="social-box">
+								<a href="javascript:void(0);" class="faceBookIcon "></a> 
+								<a href="javascript:void(0);" class="googleIcon "></a> 
+								<a href="javascript:void(0);" class="twitterIcon "></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end features-->
+
+	
+	<div id="customers" class="slide slide-gray  " style="">		
+			<h2 class="heading  no-bg">They use eXo Platform 4</h2>
+			<div style="height: 590;" class="customers container">
+				<ul class="slideLogo clearfix">
+					<li>
+						<a class="caixa-logo" href="/company/en/company/our-customers"></a>
+						<a class="orange-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="ministere-finance-logo" href="/company/en/company/our-customers"></a>
+						<a class="macif-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="generali-logo" href="/company/en/company/our-customers"></a>
+						<a class="nato-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="spff-logo" href="/company/en/company/our-customers"></a>
+					</li>	
+					
+					<li>
+						<a class="dod-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="aeronautica-logo" href="/company/en/company/our-customers"></a>
+						<a class="allianz-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="apria-logo" href="/company/en/company/our-customers"></a>
+						<a class="bpi-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="cca-logo" href="/company/en/company/our-customers"></a>
+						<a class="citet-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="dga-logo" href="/company/en/company/our-customers"></a>
+						<a class="sonaca-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="eads-logo" href="/company/en/company/our-customers"></a>
+						<a class="epo-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="globecast-logo" href="/company/en/company/our-customers"></a>
+						<a class="guyane-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="hsbc-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="isere-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="m6-logo" href="/company/en/company/our-customers"></a>
+						<a class="manche-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="netvibes-logo" href="/company/en/company/our-customers"></a>
+						<a class="pagesjaunes-logo" href="/company/en/company/our-customers"></a>
+					</li>
+					<li>
+						<a class="parlement-tn-logo" href="/company/en/company/our-customers"></a>
+						<a class="reale-logo" href="/company/en/company/our-customers"></a>
+					</li>
+				</ul>
+			
+			</div>
+	</div>
+	<!--end Customer-->
+	<div class="footer slide" id="footer-landing">
+		<div class="container " style="height:auto;">
+			<div class="pull-left copyright">
+				Powered by eXo Platform<br>
+				Copyright &copy; 2000-2014. All rights Reserved, eXo Platform SAS 
+				<a href="/company/en/privacy">Privacy</a> <a href="/company/en/sitemaps">Site Map</a>
+			</div>
+			<div class="pull-right footerMenu">
+				<a target="_blank" href="/company/en/home" class="fistTab">Website</a> 
+				<a target="_blank" href="http://community.exoplatform.org/">Community</a> 
+				<a target="_blank" href="/company/en/resource-center">Resource Center</a> 
+				<a target="_blank" href="/company/en/company/contact-us">Contact Us</a>
+			</div>
+		</div>
+	</div>
+	<!--end footer-->	
+	
+	
+	
+</div>							
+	<!--end landing-page-->
+	
+		
+	
+	<script>
+	  $(document).ready(function() {
+		  
+			var deck = new $.scrolldeck({
+				buttons: '.nav-button',
+				easing: 'easeInOutExpo'
+			});
+			
+			// add other animations using the scrolldeck.controller (see Scrollorama plugin)
+			//console.log(deck.controller);
+			//deck.controller.animate('#instructions',{ duration: 100, property:'opacity', end: 0 });
+		  
+	  });
+	</script>
+
+</body></html>
