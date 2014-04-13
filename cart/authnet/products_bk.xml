@@ -1,0 +1,202 @@
+<products>
+	<!--LABCORP-->
+    <!--No basic panel <package>
+		<name>Basic Panel</name>
+		<has_types>0</has_types>
+		<price>249</price>
+		<code>083824</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>-->
+
+	<package>
+		<name>Gonnorhea / Chlyamdia Combo</name>
+		<has_types>0</has_types>
+		<price>169</price>
+		<code>183194</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+    <package>
+		<name>Comprehensive 8 Panel</name>
+		<has_types>0</has_types>
+		<price>399</price>
+		<code>342323</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+	 <package>
+		<name>HIV Test</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>083824</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+	 <package>
+		<name>Oral Herpes</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>164897</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+	<package>
+		<name>Genital Herpes</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>163147</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+    <package>
+		<name>Chlyamdia</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>188078</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+    <package>
+		<name>Gonorrhea</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>188086</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+	  <package>
+		<name>Syphilis </name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>006072</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+  <package>
+		<name>Hepatitis B</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>006510</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+	  <package>
+		<name>Hepatitis C</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>144065</code>
+		<lab>LabCorp</lab>
+		<lab_code></lab_code>
+	</package>
+
+<!--QUEST LABS--> 
+    <package>
+		<name>Basic Panel</name>
+		<has_types>0</has_types>
+		<price>249</price>
+		<code>19728</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+    <package>
+		<name>Chlamydia / Gonorrhea Combo</name>
+		<has_types>0</has_types>
+		<price>169</price>
+		<code>17304</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+<!--NO package for 8 test panel
+   <package>
+		<name>Comprehensive 8 Panel Test</name>
+		<has_types>0</has_types>
+		<price>169</price>
+		<code>19728</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>-->
+
+   <package>
+		<name>HIV</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>19728</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+	   <package>
+		<name>Herpes Oral</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>3636</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+	 <package>
+		<name>Herpes Genital</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>3640</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+	<package>
+		<name>Chlyamdia</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>17305</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+    <package>
+		<name>Gonorrhea</name>
+		<has_types>0</has_types>
+		<price>99</price>
+		<code>17304</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+    <package>
+		<name>Syphillis</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>36126</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+	<package>
+		<name>Hepatitis B</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>498</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+	<package>
+		<name>Hepatitis C</name>
+		<has_types>0</has_types>
+		<price>79</price>
+		<code>8472</code>
+		<lab>Quest Lab</lab>
+		<lab_code></lab_code>
+	</package>
+
+</products>

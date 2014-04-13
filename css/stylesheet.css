@@ -1,0 +1,239 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;line-height: 22px;
+}
+input,selct,textarea {font-size: 14px;line-height: 22px;}
+.navbar-inverse {
+    background-color: #111;
+    border-color: #080808;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+.panel h4 {margin-bottom: 20px;}
+
+/* top-menu*/
+.top-menu   {
+	margin: 10px 0 20px;
+}
+.header-bottom {
+	margin: 10px 0;
+}
+.top-menu  a {
+	display: inline-block;
+	line-height: 12px;   color: #999999;
+	padding: 0 5px;font-size: 12px;
+}
+.top-menu  a + a {
+	border-left: 1px solid #999999;
+	
+}
+
+.navbar-nav > li > a {
+   padding: 10px  15px;
+   font-size: 13px;
+   text-transform: uppercase;
+   
+}
+
+.navbar-nav > li.active > a {
+   border-radius:4px;
+}
+.banner-section.bg-line {margin-bottom:0}
+.banner-section ,.main-body{
+	margin-top: 184px;
+}.form-horizontal .control-label {
+    text-align: left;
+}
+.banner-section .glyphicon {
+	color:#222;
+}
+.intro {
+	margin: 0px 0 40px;padding: 20px 0;
+}
+.mgr15 {margin-right:15px;}
+.circle {
+	border: 6px solid #FFFFFF!important;
+    border-radius: 50%;width: 200px;height:200px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.27);
+	overflow: hidden;
+	opacity:1;
+	margin: 10px auto;
+}
+.circle:hover {opacity:0.8;}
+.circle img {
+    border-radius: 50%;width: 190px;height:190px;
+}
+.top-menu .SocIcon {
+	width: 32px;
+		background: url(../images/IconConnect.png) no-repeat;
+	text-indent:-99999px;
+	 border: 2px solid #FFFFFF!important;
+    border-radius: 50px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.27);
+	display: inline-block;
+	vertical-align: middle;
+	height: 32px;
+}
+.top-menu .SocIcon.twitter-b {
+	background-position: -5px -5px;
+}
+
+
+.top-menu .SocIcon.facebook {
+	background-position: -5px -45px;
+}
+
+.top-menu .SocIcon.twitter {
+	background-position: -3px -82px;
+}
+
+.top-menu .SocIcon.facebook:hover {
+	background-position: -5px -45px;
+}
+
+.top-menu .SocIcon.twitter-b:hover{
+	background-position: -5px -5px;
+}
+.top-menu .SocIcon.twitter:hover{
+	background-position: -3px -82px;
+}
+.top-menu .SocIcon:hover{opacity:0,9;}
+
+.SocIcon {
+	border: none!important;
+	background: url(../images/IconConnect.png) no-repeat;
+	width: 42px;
+	height: 42px;
+	border: 3px solid #FFFFFF!important;
+    border-radius: 50px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.27);
+	display: inline-block;
+	vertical-align: middle;
+}
+.SocIcon.twitter-b {
+	background-position: 0px 0px;
+}
+.SocIcon:hover{
+	opacity:0.9;
+}
+
+.SocIcon.facebook {
+	background-position: 0px -42px;
+}
+
+.SocIcon.twitter {
+	background-position: 0px -80px;
+}
+
+.navbar-ex1-collapse button {
+	margin-top: 3px;
+}
+
+.banner-section input.form-control{   
+    display: inline-block;
+    width: 94%;
+}
+.date {color:#999;display:block;margin: 10px 0 4px;}
+
+.center {text-align: center;}
+
+.why-choice-us .well {
+	margin:0;border-radius: 0;box-shadow: 0 0 0 transparent;min-height: 240px;
+}
+.why-choice-us  .nav-tabs {
+	border: none;
+}
+.panel-heading h3 {
+	margin: 0;
+}
+.contact-box ,.why-choice-us {
+	margin: 20px auto;
+}
+.Subscribe {min-height: 319px;}
+.Subscribe  .btn{width: 100%;}
+.why-choice-us .nav-tabs > li {
+width: 50%;
+}
+.why-choice-us .nav-tabs > li  > a,.why-choice-us .nav-tabs > li  > a:hover{
+	border: 1px solid #DDDDDD; 
+	background:white; border-radius: 0;
+    margin: 0;
+	border-top: none;
+	
+}
+.question,.answer {
+	margin: 15px 0;
+}
+.why-choice-us .nav-tabs > li  + li > a,
+.why-choice-us .nav-tabs > li  + li > a:hover{ border-left: none;}
+.why-choice-us .nav-tabs > li.active a,
+.why-choice-us .nav-tabs > li > a:hover{ background:#F5F5F5;font-weight: bold}
+
+.bg-line {
+background: url(../images/BgTitle.png) no-repeat center bottom;
+padding-bottom: 15px;margin-bottom: 20px;
+}
+.jumbotron p {
+	font-size: 14px;
+}
+.btn-black {
+    background-color: #111111;
+    border-color: #000000;
+    color: #FFFFFF;
+}
+.btn-black:hover {
+    background:#222;
+    color: #f9f9f9;
+}
+.panel-default > .panel-heading {
+	background:white;
+}
+.jumbotron  .panel-body {
+	font-size: 15px;
+}
+.list-post + .list-post,.question-box + .question-box{
+	border-top: 1px solid #DDDDDD;
+	padding-top:10px;
+}.carousel-indicators li {    border: 1px solid #111111;}
+.carousel-control {background: none!important;left: -80px;width:10%;}
+.carousel-control.right{right:-80px}
+.date-time select ,.select{
+ background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+	min-width: 20%;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+}
+.date-time  select + select{
+	margin-left: 10px;
+}
+/*footer*/
+
+.footer {
+	background-color: #222222;
+	color:white;
+	padding:40px 0 15px 0 ;font-size: 13px;
+}
+.footer hr  {
+border-color: #999;
+}
+.copyright{
+	color:#999;
+}
+.footer  ul {
+	padding:0;
+	list-style: none;
+}
+.footer  a {
+	color:white;
+}
+@media (max-width:768px ) { 
+	.pull-right{float:none!important}
+	.navbar-ex1-collapse button {margin-bottom: 10px;}
+}
