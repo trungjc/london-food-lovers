@@ -14,8 +14,8 @@ function roots_widgets_init() {
   ));
   //common
    register_sidebar(array(
-    'name'          => __('Secondary', 'roots'),
-    'id'            => 'common-widget',
+    'name'          => __('Blog sidbear', 'roots'),
+    'id'            => 'sidebar-blog',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
@@ -29,7 +29,7 @@ function roots_widgets_init() {
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
+    'after_title'   => '</h3>', 
   ));
 
   register_sidebar(array(
@@ -39,6 +39,10 @@ function roots_widgets_init() {
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
+
+
+
+    
   ));
 
   // Widgets

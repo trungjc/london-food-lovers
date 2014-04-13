@@ -1201,7 +1201,7 @@ function register_shortcodes_button( $buttons ) {
 
 function add_shortcodes_tinymce_plugin( $plugin_array ) {
 
-	$plugin_array['ss_framework_shortcodes'] = SS_BASE_URL . 'functions/tinymce/tinymce.js';
+	//$plugin_array['ss_framework_shortcodes'] = SS_BASE_URL . 'functions/tinymce/tinymce.js';
 
 	return $plugin_array;
 
@@ -1223,7 +1223,7 @@ add_filter('tiny_mce_version', 'my_refresh_mce');
 
 function aw_quicktags() {
 
-	wp_enqueue_script( 'aw_quicktags', SS_BASE_URL . 'functions/tinymce/quicktags.js', array('quicktags') );
+	//wp_enqueue_script( 'aw_quicktags', SS_BASE_URL . 'functions/tinymce/quicktags.js', array('quicktags') );
 
 }
 add_action('admin_print_scripts', 'aw_quicktags');
