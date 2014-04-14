@@ -17,8 +17,8 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     define("AUTHORIZENET_SANDBOX", true);*/
     
     define("AUTHORIZENET_API_LOGIN_ID", "4za9QX58");
-    define("AUTHORIZENET_TRANSACTION_KEY", "2uaH2g7eN3d2D4VR");
-    define("AUTHORIZENET_SANDBOX", true);
+    define("AUTHORIZENET_TRANSACTION_KEY", "27342GzTN5rjx7Un");
+    define("AUTHORIZENET_SANDBOX", false);
 
     $auth = new AuthorizeNetAIM;
 
@@ -50,17 +50,25 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     $auth->card_num   = $_POST['card_number'];
     $auth->exp_date   = $_POST['expire_date'];
     $auth->card_code  = $_POST['cvv'];
+    
+    list($fname,$lname) = explode(" ",$_POST['holder_name']);
 
     $auth->email  = $_POST['customer_email'];
-    $auth->first_name  = $_POST['customer_name'];
-    $auth->last_name   = '';
+    $auth->first_name  = $fname;
+    $auth->last_name   = $lname;
+    $auth->address   = $_POST['customer_address'];
+    $auth->city     = $_POST['customer_city'];
+    $auth->state    = $_POST['customer_region'];
+    $auth->zip      = $_POST['customer_postal_zip'];
+    $auth->country  = 'GB';
+    
     $auth->ship_to_first_name  = $_POST['customer_name'];
     $auth->ship_to_last_name   = '';
-
     $auth->ship_to_city   = $_POST['customer_city'];
     $auth->ship_to_state  = $_POST['customer_region'];
     $auth->ship_to_zip    = $_POST['customer_postal_zip'];
-    $auth->ship_to_address   = $_POST['customer_address'];
+    $auth->ship_to_address  = $_POST['customer_address'];
+    $auth->ship_to_country  = 'GB';
 
     // Set Invoice Number:
     $auth->invoice_num = time();

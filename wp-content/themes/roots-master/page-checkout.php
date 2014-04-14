@@ -208,6 +208,11 @@ $item_data = $items[$_SESSION['cart']['item_id']];
         	   <input type="checkbox" name="terms" id="terms" value="1"> I have read and agree to the terms and conditions</label>
           </div>
           
+          <div class="form-group">
+        	   <label for="inputPassword3" class="col-sm-12 control-label">
+        	   <input type="checkbox" name="newsletter" id="newsletter" value="1"> Would you like to join our newsletter?</label>
+          </div>
+          
           <hr/>
           <div class="form-group">
         	<div class="col-sm-10">
