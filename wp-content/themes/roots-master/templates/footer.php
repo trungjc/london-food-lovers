@@ -25,7 +25,7 @@
 </footer>
 
 	
-	
+
 <script>
 	jQuery(document).ready(function(){
 	jQuery('.modal').modal('hide');
@@ -33,7 +33,7 @@
 		jQuery('.footer .menu-private-policy a').attr({'data-toggle':"modal", 'data-target':"#privacy-policy"});
 		jQuery('.footer .menu-terms-conditions a').attr({'data-toggle':"modal", 'data-target':"#terms-condtions"});
 	})
-</script>
+</script> 
 
 <?php wp_footer(); ?>
 

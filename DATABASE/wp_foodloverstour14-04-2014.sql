@@ -17,10 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `london-food`
+-- Database: `wp_foodloverstour`
 --
-CREATE DATABASE IF NOT EXISTS `london-food` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `london-food`;
+
 
 -- --------------------------------------------------------
 

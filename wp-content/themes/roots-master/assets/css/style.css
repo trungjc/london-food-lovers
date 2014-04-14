@@ -37,10 +37,16 @@ font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 */
 
 body {
-	font-family: 'Gotham A', sans-serif;
+	font-family: 'Gotham SSm A', 'Gotham SSm B'; font-weight: 400; font-style: normal;
 	font-size: 14px;line-height: 22px;
         background:#eff4f6;
 }
+
+body h1, h2, h3, h4, h5, h6 {
+font-family: 'Gotham A', 'Gotham B'; font-weight: 500; font-style: normal;
+
+}
+
 input,selct,textarea {font-size: 14px;line-height: 22px;}
 .logo {
     position: absolute;
@@ -418,7 +424,18 @@ header.navbar {margin-bottom: 0}
     position: relative;
     z-index: 999;
 }
-.home-section .form-search{position:absolute;top: 65px;z-index: 99;left:10%;min-width: 280px;margin-top: 0;}
+.home-section .form-search {
+position: absolute;
+top: 65px;
+z-index: 99;
+left: 10%;
+max-width: 225px;
+margin-top: 0;
+font-size:10px;
+}
+
+#form-search{ font-size:10px;}
+
 .form-search select + span {margin-left: 2px}
 .why-choice-us h3 {text-align: center;}
 .home .intro {margin-bottom: 0;background:white}
@@ -428,6 +445,11 @@ header.navbar {margin-bottom: 0}
 .home-section .glyphicon {
     color: #222222;
 }
+
+
+
+
+
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     color:#FE682B
 }
@@ -510,7 +532,7 @@ header.navbar {margin-bottom: 0}
 }
 .home .page-header,.carousel-control {display: none;}
 .navbar-inverse .navbar-nav > li > a {
-    color: #161717;font-size: 15px;    font-family: arial;
+    color: #161717;font-size: 15px;    font-family: arial; font-weight:bold;
     
 }
 .navbar-nav > li > a {
@@ -595,7 +617,7 @@ header.navbar {margin-bottom: 0}
     width: 200px;margin: 0 10px;
 }
 .newletter-inner {padding: 10px 0;}
-.three-col h3 {font-size: 24px;font-weight: bold;
+.three-col h3 {font-size: 20px;
               /*font-family: Kartika;*/
               margin-bottom: 15px}
 .recent-post-item + .recent-post-item {border-top: 1px solid #e5e4e4;padding-top: 10px;margin-top: 10px;}
@@ -651,7 +673,7 @@ img {max-width: 100%;}
 .sidebar  {padding-top: 20px}
 .form-group {overflow: hidden}
 .page-header {border: none;}
-.tp-caption  .clearfix.button{width:420px}
+.tp-caption  .clearfix.button{width:520px}
 .button  .pull-left + .pull-left{margin-left: -8px;}
 .tp-caption  {background: none!important;}
 .tp-caption h2 {margin:0;color:white;font-size: 30px;padding: 10px 20px;background: rgba(0,0,0,0.8);font-family: 'Conv_AGaramondPro-Bold';}

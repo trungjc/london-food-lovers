@@ -7,10 +7,12 @@
       <div class="col-md-9 col-xs-12 ">
             <div class="clearfix top-menu">
                     <div class="pull-right">
+                       <a href="/Private Tours">Private Tours</a>&nbsp;&nbsp;&nbsp;
+                            <a href="/Corporate Tours">Corporate Tours</a>&nbsp;&nbsp;&nbsp;
                             <a href="/FAQ">FAQ</a>
                             <a href="/blog">Blog</a>&nbsp;&nbsp;&nbsp;
-                            <a class="SocIcon twitter-b" href="">twitter</a>
-                            <a class="SocIcon facebook" href="">facebook</a>
+                          <!--  <a class="SocIcon twitter-b" href="">twitter</a>
+                            <a class="SocIcon facebook" href="">facebook</a> -->
                          
                     </div>					
             </div>
