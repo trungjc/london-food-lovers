@@ -118,12 +118,5 @@ if(isset($_POST['item_id'])) {
   	
 </body>
 
-<script>
-    jQuery(document).ready(function(){
-    	jQuery('.carousel').carousel();
-    	jQuery('#privacy-policy').modal({
-      			show: true
-    	})
-    });
-</script>
+
 </html>
