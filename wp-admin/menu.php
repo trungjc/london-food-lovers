@@ -245,4 +245,6 @@ $compat = array(
 	'themes' => 'appearance',
 	);
 
+$menu[100] = array( __('Reviews'), 'edit_posts', 'reviews.php', '', 'open-if-no-js menu-top menu-icon-post', 'menu-posts', 'none' );
+
 require_once(ABSPATH . 'wp-admin/includes/menu.php');

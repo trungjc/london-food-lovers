@@ -39,7 +39,7 @@
         <div class="newletter-inner">
         	<form method="post" name="newletter" action="<?php echo home_url()?>/cart/newsletter.php">
            		 Find the best restaurant reviews and most unique places in London
-           		 <input type="text" name="email" class="form-control" />
+           		 <input type="text" placeholder="enter your email" name="email" class="form-control" />
            		 <input type="submit" name="newslettersubmit" class="btn btn-orange btn-md" />
             </form>
         </div>

@@ -50,7 +50,7 @@
 					  <a href="javascript:void(0);" onclick="jQuery('#calender').toggle();"><img src="<?php echo home_url()?>/images/img.gif" /></a>
 				   </div>
 				   
-				   <div id="calender" style="display:none;margin-left:50px;"></div>
+				   <div id="calender" style="display:none;"></div>
             	   <input type="hidden" name="month" id="month" value="<?php echo date('m');?>" />
                 </div>
                 

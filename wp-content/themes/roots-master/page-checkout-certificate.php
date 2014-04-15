@@ -146,7 +146,7 @@
           
           <div class="form-group">
         	   <label for="inputPassword3" class="col-sm-12 control-label">
-        	   <input type="checkbox" name="newsletter" id="newsletter" value="1"> Would you like to join our newsletter?</label>
+        	   <input type="checkbox" name="newsletter" id="newsletter" value="1"> Would you like subscribe to newsletter?</label>
           </div>
           
           <hr/>
