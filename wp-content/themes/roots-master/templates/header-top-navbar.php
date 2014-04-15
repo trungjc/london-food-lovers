@@ -7,6 +7,7 @@
       <div class="col-md-9 col-xs-12 ">
             <div class="clearfix top-menu">
                     <div class="pull-right">
+                        <a class="phone-number" ><span class="glyphicon glyphicon-earphone"></span> 0983987498</a>
                        <a href="/Private Tours">Private Tours</a>&nbsp;&nbsp;&nbsp;
                             <a href="/Corporate Tours">Corporate Tours</a>&nbsp;&nbsp;&nbsp;
                             <a href="/FAQ">FAQ</a>
