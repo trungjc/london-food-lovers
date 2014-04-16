@@ -9,6 +9,12 @@ if(!$_SESSION['cart']) {
 	exit;
 }
 
+if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
+    $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    header("Location: $redirect");
+    exit;
+}
+
 $query  = "select name from categories where category_id = '".(int)$_SESSION['cart']['category_id']."'";
 $result = mysql_query($query) or die(mysql_error());
 $category = mysql_fetch_assoc($result);
