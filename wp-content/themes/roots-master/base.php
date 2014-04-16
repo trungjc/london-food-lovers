@@ -54,7 +54,7 @@ if(isset($_POST['item_id'])) {
       <?php if (is_page('home') ) :      ?>
       
       <?php putRevSlider("homepage") ?>
-           <?php  require_once locate_template('form-book-tour.php');       ?>
+         <div class="container" style="position:relative">  <?php  require_once locate_template('form-book-tour.php');       ?></div>
            
       <?php elseif(is_page('corporate-tours')) :      ?>
            <?php putRevSlider("corporate-tours-inner") ?>
