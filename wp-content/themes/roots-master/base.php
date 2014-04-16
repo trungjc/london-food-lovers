@@ -87,17 +87,17 @@ if(isset($_POST['item_id'])) {
         <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
              <?php if (is_page('private-tours') ) :      ?>
                  <?php  require_once locate_template('private-tour-information.php');       ?>
-             <?php endif; ?>
+    
                  
-             <?php if (!is_page('private-tours') ) :      ?>           
-             <?php elseif (!is_page('corporate-tours') ) :      ?>
+  
+       
              <?php else :      ?>
                 <?php  require_once locate_template('form-book-tour.php');       ?>
              <?php endif;     ?>  
              
             <?php if (is_page('reviews') ) :      ?>
               <?php  require_once locate_template('form-book-tour.php');       ?>
-              <?php  require_once locate_template('form-review.php');       ?>
+         
             <?php endif; ?>
         	<!-- end form-search-->
         	
