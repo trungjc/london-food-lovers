@@ -51,6 +51,7 @@ input,selct,textarea {font-size: 14px;line-height: 22px;}
 .logo {
     position: absolute;
     top: -13px;
+    left:-10px;
     z-index: 999;
 }
 .navbar-inverse {
@@ -134,7 +135,7 @@ margin: 10px 0;
 .form-request {
      margin-top: -90px;
     position: relative;
-    z-index: 10000;
+    z-index: 999;
 }
 .form-request .panel-heading  h3 {
     font-size: 16px;
@@ -345,10 +346,10 @@ text-align: center;
 .carousel-control {background: none!important;left: -80px;width:10%;}
 .carousel-control {outline: none!important;}
 .carousel-control.right{right:-80px}
-
+/*
 .sidebar .form-search .date-time select {
   width: 68px;
-}
+}*/
 .select-small {
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
@@ -363,7 +364,7 @@ text-align: center;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     vertical-align: middle;
 }
-.label-option {font-size:10px;}
+.label-option {font-size:9px;}
 .date-time  select + select{
 	margin-left: 3px;
 }
@@ -443,16 +444,14 @@ header.navbar {margin-bottom: 0}
     margin: 0;
 }
 .form-search .btn {
-    display: block;
-    width: 100%;
-    text-transform: uppercase;
-    border-radius: 0;
+       text-transform: uppercase;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
 select#adults ,select#children{
-    width: 36px;
+    width: 30px;
 }
  .form-search .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .form-search h3 {
     font-family: 'Gotham A', 'Gotham B'; font-weight: 400; font-style: normal;
@@ -465,6 +464,10 @@ select#adults ,select#children{
 .form-search select.form-control {
     height: 22px;
     padding: 2px;
+    
+}
+.PROMOTION {font-size: 11px;}
+.form-search select {
     font-size:10px;
 }
 .date-time select ,.select{
@@ -474,10 +477,10 @@ select#adults ,select#children{
 
 .home-section .form-search {
 position: absolute;
-top: 65px;
+bottom:-20px;
 z-index: 99;
-left: 10%;
-max-width: 225px;
+left: 16px;
+width: 260px;
 margin-top: 0;
 font-size:10px;
 }
@@ -485,7 +488,18 @@ font-size:10px;
 #form-search{ font-size:10px;}
 
 .form-search select + span {margin-left: 2px}
-.why-choice-us h3 {text-align: center;}
+
+
+ .why-choice-us   h3 {
+    margin: 15px 0px 35px;
+    text-align: center;
+}
+.why-choice-us   .media img.pull-left {        
+     margin-right: 10px;        
+}
+.why-choice-us   .btn-orange {
+        margin: 20px 0;
+ }
 .home .intro {margin-bottom: 0;background:white}
 .why-choice-us {background: url(../images/map.png) no-repeat center top;margin-top: 0;padding:20px 0}
 .item *{text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);color: #FFFFFF;}
@@ -505,11 +519,11 @@ font-size:10px;
     
 }
 .menu-book-now a {
-      background: none repeat scroll 0 0 #FE682B;
+      background: none repeat scroll 0 0 #FE682B!important;
     border: medium none;
     color: #FFFFFF!important;
      border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 4px;
+    border-radius: 4px!important;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -605,6 +619,19 @@ font-size:10px;
 .control-tab a {color:#333;line-height: 20px;display: inline-block}
 .control-tab a.current {border-bottom: 2px solid #222;}
 .london-tour hr {border-color: #222;width:60%}
+.london-tour .btn-lg{
+    margin-left: 60px; padding: 6px 16px;
+    border-radius: 3px;
+}
+.tp-bullets.simplebullets.round .bullet {
+    background: none;
+    border:1px solid #fff;
+    width: 12px;height: 12px;
+    border-radius: 50%;
+}
+.tp-bullets.simplebullets.round .bullet.selected {
+    background: #111; box-shadow: 1px 1px 1px rgba(0,0,0,0.5) inset;
+}
 .control-tab a{margin: 10px ;}
 .responsive-slider.flexslider  {margin-bottom: 0;
 }
@@ -755,7 +782,7 @@ border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 }
 
-.form-search hr {margin: 3px 0}
+.form-search hr {margin: 6px 0}
 .panel-Primary .panel-heading {
     background: rgba(238,121,77,0.7);
     text-align: center;
@@ -772,11 +799,10 @@ border-bottom-right-radius: 5px;
 .checkout-page h3 {color:#ee794d;font-size:24px;}
 .checkout-page hr {margin: 15px -15px;}
 .title-img{
-     background: url("../images/title.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    background: url("../images/title.png") no-repeat scroll left center rgba(0, 0, 0, 0);
     font-size: 24px;
-    padding-right: 90px;
-    padding: 15px 90px 15px 0;
     margin-top: 0;
+    padding: 15px 10px 15px 65px;
 }
 .rated ,.ui-accordion .ui-accordion-header{
     color:#f2591f;
@@ -834,9 +860,13 @@ border-right:0;
     color: #535353;font-weight: bold;font-size: 12px;
     min-width: 80px;display: inline-block;
 }
-
+.tp-caption.big_white {
+    left: 616px!important;
+}
 @media (min-width: 980px) and (max-width: 1024px) {
-    
+    .tp-caption.big_white {
+    left: -120px!important;
+}
       .home .intro.jumbotron {
     padding: 80px 0 20px 0;
 }
@@ -846,8 +876,9 @@ border-right:0;
    .home .intro.jumbotron {
     padding: 100px 0 20px 0;
 }
-
-   .tp-caption {left:50%!important;    transform: translate(75%)!important;}
+ .tp-caption.big_white {
+    left: -120px!important;
+}
     .navbar-inverse .navbar-nav > li > a {
     font-size: 13px;
 }

@@ -6,7 +6,12 @@
 <div class="panel panel-default ">
 	<div class="panel-body">
          <h3 class="title-img">Gift Certificate</h3>
-         <p>                  
+         <div class="media">
+             <div class="pull-left">
+                 <img src="../wp-content/uploads/2014/04/about1.png" />
+             </div>
+             <div class="media-body">
+                   <p>                  
            If you want to give someone a gift that they will be able to taste in their memories again and again for years to come, why not give them a London Food Lovers Gift Voucher?
  		</p>
 		<p>    
@@ -19,6 +24,9 @@
  		<p>    
 			Once your order has been confirmed, you will receive email confirmation of your voucher as well as the printable tour voucher that can be validated when you decide which day you will redeem the tour.
         </p>
+             </div>
+         </div>
+       
 	</div>
 </div>
 

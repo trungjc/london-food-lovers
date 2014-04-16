@@ -67,24 +67,24 @@
 								<option value="<?php echo $i;?>"><?php echo $i;?></option>
 						<?php endfor;?>
 					  </select>
-					  &nbsp;&nbsp;&nbsp;<span class="label-option">ADULTS</span>&nbsp;&nbsp;&nbsp;
+					  &nbsp;<span class="label-option">ADULTS (13+)</span>
 					  <select class="" name="children" id="children">
 						<?php for($i=0;$i<=10;$i++):?>
 								<option value="<?php echo $i;?>"><?php echo $i;?></option>
 						<?php endfor;?>
 					  </select>
-					  &nbsp;&nbsp;&nbsp;<span class="label-option">KIDS</span>&nbsp;&nbsp;&nbsp;
+					  &nbsp;<span class="label-option">KIDS (5-13)</span>
 				   </div>				  
 				</div>
 
-                <hr>
-
-                <div class="form-group center">
-					 <a href="javascript://" onclick="jQuery('#discount_code').toggle();" id="">ENTER PROMOTION CODE</a>
-					 <br />
+                
+                <div class=" center ">
+                    <a class="PROMOTION" href="javascript://" onclick="jQuery('#discount_code').toggle();" id="">ENTER PROMOTION CODE</a>
+					
 					 <input type="text" name="discount_code" value="" id="discount_code" style="display:none;" />
 				</div>
-				
+				<hr>
+
 				<div class="center">
 			  	    <input type="submit" class="btn btn-orange btn-md" id="booknow" name="booknow" value="Book Now" />
 			    </div>

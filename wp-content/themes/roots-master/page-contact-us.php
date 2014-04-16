@@ -9,10 +9,10 @@
             <form>
                 <div class="form-group">
                     <div class="row">
-                            <div class="col-md-4 col-xs-12">
+                            <div class="col-md-6 col-xs-12">
                                     <input type="text" placeholder="Your Name" class="form-control ">
                             </div>
-                            <div class="col-md-4 col-xs-12">
+                            <div class="col-md-6 col-xs-12">
                                     <input type="text" placeholder="Your Email" class="form-control ">
                             </div>
                     </div>  
@@ -20,14 +20,14 @@
                 </div>
                 <div class="form-group">
                     <div class="row">
-                            <div class="col-md-11 col-xs-12">
+                            <div class="col-md-12 col-xs-12">
                                     <textarea style="height:300px" class="form-control "></textarea>
                             </div>
                     </div>  
 
                 </div>	
             <div class="form-group">
-                    <div class="col-md-11 col-xs-12">
+                    <div class="col-md-12 col-xs-12">
                             <div class="pull-right">
                                     <button class="btn btn-orange" style="margin-right: -14px">Send</button>
                             </div>
@@ -50,14 +50,14 @@
                 London N1 9JY                   
                     
             </div>   
-            <div class="col-md-4 col-xs-12">
+            <!--div class="col-md-4 col-xs-12">
                 <h3 style="font-size: 15px;color: #ee794d">SOCIAL MEDIA</h3>
                 <div class="connect">
                        <a href=""><span class="SocIcon twitter-b"></span>   </a>
                        <a href=""><span class="SocIcon facebook"></span>   </a>
                  </div>                  
                     
-            </div>   
+            </div-->   
         </div>
          <hr/>     
           <div class="row">
