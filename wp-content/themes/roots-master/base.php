@@ -54,7 +54,7 @@ if(isset($_POST['item_id'])) {
       <?php if (is_page('home') ) :      ?>
       
       <?php putRevSlider("homepage") ?>
-          
+           <?php  require_once locate_template('form-book-tour.php');       ?>
            
       <?php elseif(is_page('corporate-tours')) :      ?>
            <?php putRevSlider("corporate-tours-inner") ?>
@@ -79,17 +79,27 @@ if(isset($_POST['item_id'])) {
       <?php else :      ?>
           <?php putRevSlider("common") ?>
       <?php endif;     ?>
-      <div class=" container" style="position: relative"><?php  require_once locate_template('form-book-tour.php');       ?></div>   
-          
  </div>
 
   <div class="wrap container" role="document">
     <div class="content row">      
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+             <?php if (is_page('private-tours') ) :      ?>
+                 <?php  require_once locate_template('private-tour-information.php');       ?>
+    
+                 
+  
+       
+             <?php else :      ?>
+                <?php  require_once locate_template('form-book-tour.php');       ?>
+             <?php endif;     ?>  
              
-             
-           
+            <?php if (is_page('reviews') ) :      ?>
+              <?php  require_once locate_template('form-book-tour.php');       ?>
+         
+            <?php endif; ?>
+        	<!-- end form-search-->
         	
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
