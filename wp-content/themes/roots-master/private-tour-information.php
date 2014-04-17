@@ -1,4 +1,4 @@
-<div class="panel panel-default orange private-tour-information">
+<!--<div class="panel panel-default orange private-tour-information">
     <div class="panel-heading center">
         <h3 style="font-size:14px;">PRIVATE TOUR INFORMATION</h3>
     </div>
@@ -11,4 +11,4 @@
         <div>
             <span> Max: </span> Participants: 25</div>
     </div>
-    </div>
+    </div>-->

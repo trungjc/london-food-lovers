@@ -1,5 +1,11 @@
 ﻿<?php
 
+if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
+    $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    echo "<script>window.location.href='$redirect';</script>";
+    exit;
+}
+
 ?>
 <div class="panel checkout-page">
     <div class="panel-body">
@@ -129,6 +135,20 @@
         		 		<option value="<?php echo $i;?>"><?php echo $i;?></option>
         		 <?php endfor;?>
         	  </select>
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">Billing Address:</label>
+        	<div class="col-sm-6">
+        	  <input type="text" autocomplete="off" class="form-control" id="inputPassword3" id="bill_address" name="bill_address" placeholder="Billing Address">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">Billing Country:</label>
+        	<div class="col-sm-6">
+        	  <input type="text" autocomplete="off" class="form-control" id="inputPassword3" id="bill_country" name="bill_country" placeholder="Billing Country">
         	</div>
           </div>
           
