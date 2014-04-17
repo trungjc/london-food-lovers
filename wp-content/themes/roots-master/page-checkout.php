@@ -5,13 +5,13 @@ $categories = $Booking->query_categories();
 
 if(!$_SESSION['cart']) {
     $url = home_url();
-    header("Location:$url");
-	exit;
+	echo "<script>window.location.href='$url';</script>";
+    exit;
 }
 
 if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
     $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-    header("Location: $redirect");
+    echo "<script>window.location.href='$redirect';</script>";
     exit;
 }
 
@@ -28,8 +28,8 @@ $items = $Booking->query_inventory(
 		'category_id' => $_SESSION['cart']['category_id'],
 	    'start_date'  => $tour_date,
 		'item_id' => (int)$_SESSION['cart']['item_id'],
-		'available' => 1,
 		'discount_code' => $_SESSION['cart']['discount_code'],
+		'available' => 1,
 	    'param'  => array(
 			'adults' => $_SESSION['cart']['adults'],
 			'children' => $_SESSION['cart']['children']

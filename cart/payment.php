@@ -31,8 +31,8 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 				'category_id' => $_SESSION['cart']['category_id'],
 			    'start_date'  => $tour_date,
 				'item_id' => (int)$_SESSION['cart']['item_id'],
-				'available' => 1,
 				'discount_code' => $_SESSION['cart']['discount_code'],
+				'available' => 1,
 			    'param'  => array(
 					'adults' => $_SESSION['cart']['adults'],
 					'children' => $_SESSION['cart']['children']
@@ -107,7 +107,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             //this function will send email, save order in database
             //function written in func.php file
             saveOrder($data , $order_id);
-            $message = "<h6>Your Order has been placed successfully.</h6> Your transaction ID : $transaction_id";
+            $message = "<h6>Your Order has been placed successfully.</h6> Your transaction ID : $transaction_id AND Booking ID: ".$order['booking']['id'];
             unset($_SESSION['cart']);
             unset($_SESSION['data']);
         }

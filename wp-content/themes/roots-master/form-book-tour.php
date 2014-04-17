@@ -93,4 +93,10 @@
     </div>
  </div>
 </form>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+        jQuery("#category_id").val(1);
+        getTours(1);
+	});
+</script>
 <!-- end form-search-->

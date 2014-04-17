@@ -13,7 +13,7 @@
 				<div class="col-md-12 center">
 					<h3>  London Food Tours</h3>
 					<p>
-						Reserved for SEO
+				London Food Lovers Food Tours are rated among the top London Attractions, London Tours, London Private Tours, London Group Tours and London Food Tours. 
 					</p>
 				</div>
 			</div>
@@ -30,8 +30,8 @@
 	jQuery(document).ready(function(){
 	jQuery('.modal').modal('hide');
 
-		jQuery('.footer .menu-private-policy a').attr({'data-toggle':"modal", 'data-target':"#privacy-policy"});
-		jQuery('.footer .menu-terms-conditions a').attr({'data-toggle':"modal", 'data-target':"#terms-condtions"});
+		jQuery('.footer .menu-privacy-policy a').attr({'data-toggle':"modal", 'data-target':"#privacy-policy"});
+		jQuery('.footer .menu-terms-and-conditions a').attr({'data-toggle':"modal", 'data-target':"#terms-condtions"});
 	})
 </script> 
 
