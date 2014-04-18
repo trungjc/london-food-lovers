@@ -942,6 +942,15 @@ border-right:0;
 }
 }
  @media screen and (max-width: 768px) {
+     .form-search {
+    margin-top: 0px;
+     }
+     .box-inner {
+    
+    width: 259px;
+    margin: 10px auto;
+}
+
      .navbar-inverse .navbar-nav > li + li > a {
     border-left: 0px dotted #9CA6AA;
 }
