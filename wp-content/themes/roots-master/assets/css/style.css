@@ -931,6 +931,10 @@ border-right:0;
 #rev_slider_1_1, #rev_slider_1_1_wrapper,.rev_slider_wrapper {
     max-width: 100%;
 }
+.rev_slider_wrapper > div {
+    max-width: 100% !important;
+}
+
 @media (min-width: 980px) and (max-width: 1280px) { 
 .tp-caption.big_white {
     
