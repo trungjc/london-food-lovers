@@ -75,7 +75,7 @@ if(isset($_POST['item_id'])) {
     <div class="content row">      
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-             <?php if (is_page('private-tours' || 'corporate-tours') ) :      ?>
+             <?php if (is_page('private-tours') || is_page('corporate-tours') ) :      ?>
                  <?php  require_once locate_template('private-tour-information.php');       ?>
     
         
