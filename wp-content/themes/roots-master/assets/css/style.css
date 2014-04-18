@@ -705,8 +705,7 @@ font-size: 15px;
 }
 .pre-footer {
     padding: 0px 0 0;
-  //  background: url(../images/pre-footer.jpg) no-repeat center top;
-    color:white;margin: 20px 0 0; //   background-size: 100% 100%; ầ sfasf
+    color:white;margin: 20px 0 0; 
       background: url(../images/pre-footer.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1026,5 +1025,15 @@ border-right:0;
     position: static;
 }
    .tp-caption.big_white { display:none!important;}
+          .box-inner {
+    margin: 10px auto;
+     width: 250px;
+}.recent-post {
+    margin: 0 auto;
+    width: 250px;
+}
+   }
    
+    @media screen and (max-width: 320px)  {
+
    }
