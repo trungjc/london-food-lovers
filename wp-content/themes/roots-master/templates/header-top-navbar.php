@@ -19,14 +19,15 @@
             </div>
           <div class="clearfix header-bottom">
               <div class="navbar-header">
+                      <a class="logo visible-xs" href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>"  /></a>
+           
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                  <a class="logo visible-xs" href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>"  /></a>
-              </div>
+                 </div>
               <nav class="collapse navbar-collapse" role="navigation">
                 <?php
                   if (has_nav_menu('primary_navigation')) :
