@@ -7,8 +7,8 @@
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tripadvisor.jpg" />
             	
             </div></div> -->
-            <div class="col-md-3 col-xs-12">
-                <div class="pull-left recent-post">
+            <div class=" col-xs-12">
+                <div class=" recent-post">
                     <div class="panel panel-default orange">
                         <div class="panel-heading center">
                             <h3>Recent Blog Posts</h3>
