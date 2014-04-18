@@ -94,27 +94,6 @@ elseif ( is_page('corporate-tours')  ) : ?>
                 <div class="form-group">
                      <textarea class="form-control" name="comments" id="comments"></textarea>
                 </div>
-                <div class="form-group">
-                    <div class=" row">
-                        <div class="col-md-7 col-xs-12">
-                            <select class="select-small" name="adults" id="adults">
-        						<?php for($i=1;$i<=10;$i++):?>
-        								<option value="<?php echo $i;?>"><?php echo $i;?></option>
-        						<?php endfor;?>
-        					</select>
-                            <span class="label-option"  style="font-size:10px">ADULTS(19+)</span>
-                        </div>
-
-                        <div class="col-md-5 col-xs-12">
-                            <select class="select-small" name="children" id="children">
-        						<?php for($i=0;$i<=10;$i++):?>
-        								<option value="<?php echo $i;?>"><?php echo $i;?></option>
-        						<?php endfor;?>
-        					</select>
-                            <span class="label-option"  style="font-size:11px">KIDS</span>
-                        </div>
-                    </div>
-               </div>
                <div class="center">
                		<input type="submit" class="btn btn-black btn-md" id="booknow" name="booknow" value="Book Now" />
                </div>
