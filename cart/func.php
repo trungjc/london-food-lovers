@@ -10,7 +10,32 @@ function sendOrderEmail($data){
     $email_body .= "";
     $email_body .= "Best wishes, <br /> FoodLoversTours";
 
-    $from = "no-reply@foodloverstours.com";
+    $from = "no-reply@londonfoodlovers.com";
+    $fromName = "FoodLoversTours";
+
+    $phpmailer = new PHPMailer();
+    $phpmailer->From = $from;
+    $phpmailer->FromName = $fromName;
+    $phpmailer->Subject  = "Order Confirmation - FoodLoversTours";
+    $phpmailer->MsgHTML($email_body);
+    $phpmailer->AddAddress($data['customer_email'],$data['customer_name']);
+
+    if($phpmailer->Send()){
+        return 1;
+    }
+    else{
+        return $phpmailer->ErrorInfo;
+    }
+}
+
+function sendGiftCertificateEmail($data){
+    $email_body = "Dear ".$data['customer_name']." <br /><br />";
+    $email_body .= "Your gift certtificate order has been placed successfully.<br /><br />";
+
+    $email_body .= "";
+    $email_body .= "Best wishes, <br /> FoodLoversTours";
+
+    $from = "no-reply@londonfoodlovers.com";
     $fromName = "FoodLoversTours";
 
     $phpmailer = new PHPMailer();
@@ -39,7 +64,7 @@ function sendFeedbackEmail($order_id , $data){
 
     $email_body .= "Best wishes, <br /> FoodLoversTours";
 
-    $from = "no-reply@foodloverstours.com";
+    $from = "no-reply@londonfoodlovers.com";
     $fromName = "FoodLoversTours";
 
     $phpmailer = new PHPMailer();
@@ -63,6 +88,9 @@ function saveOrder($data , $order_id){
         return -1;
     }
     else{
+        $date = $_SESSION['cart']['tour_year']."-".$_SESSION['cart']['tour_month']."-".$_SESSION['cart']['tour_date'];
+        $tour_date = date('Y-m-d' , strtotime($date));
+
         $order_query = "Insert into orders SET order_id = '$order_id' ,
 						tour_id = '".$_SESSION['cart']['item_id']."' , 
 						total = '".$_SESSION['cart']['total']."',
@@ -78,6 +106,7 @@ function saveOrder($data , $order_id){
 						phone = '".mysql_real_escape_string($data['customer_phone'])."',
 						cart  = '".mysql_real_escape_string(json_encode($_SESSION))."',
 						order_date  = '".mysql_real_escape_string(date('Y-m-d H:i:s'))."',
+						tour_date  = '".mysql_real_escape_string($tour_date)."',
 						dateofmodification = '".date('Y-m-d H:i:s')."'";
 
         mysql_query($order_query) or die(mysql_error());
@@ -124,7 +153,7 @@ function saveCertificate($data , $transaction_id){
         mysql_query($order_query) or die(mysql_error());
 
         //send email to cusotmer
-        sendOrderEmail($data);
+        sendGiftCertificateEmail($data);
 
         if($data['newsletter']){
             // add customer email to mailchimp list

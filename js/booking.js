@@ -9,7 +9,7 @@ function getTours(cid){
            bindCalenderEvent();
 	   },
 	   error:function(error){
-		   alert(error);
+		   //alert(error);
 	   }
 	});
 }

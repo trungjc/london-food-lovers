@@ -9,6 +9,8 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     $email    = $_POST['email'];
     $phone    = $_POST['phone'];
     $comments = $_POST['comments'];
+    $title    = $_POST['title'];
+    $company  = $_POST['company'];
 
     $to = "growthlabsdev@gmail.com";
     $from = 'no-reply@londonfoodlovers.com';
@@ -16,7 +18,7 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     $pagename = urldecode($_POST['frompage']);
 
     $email_body = 'Hi Admin, <br /><br />';
-    $email_body .= "New Private tour request information is <br />";
+    $email_body .= "New Corporate tour request information is <br />";
     $email_body .= "<table border='1' cellpadding='5' cellspacing='0'>
     					<tr>
     					     <td>First Name</td>
@@ -25,6 +27,14 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     					<tr>
     					     <td>Last Name</td>
     					     <td>$lastname</td>
+    					</tr>
+    					<tr>
+    					     <td>Title</td>
+    					     <td>$title</td>
+    					</tr>
+    					<tr>
+    					     <td>Company</td>
+    					     <td>$company</td>
     					</tr>
     					<tr>
     					     <td>Email</td>
@@ -47,7 +57,7 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     $phpmailer = new PHPMailer();
     $phpmailer->From = $from;
     $phpmailer->FromName = $fromName;
-    $phpmailer->Subject  = "Private - FoodLoversTours Request";
+    $phpmailer->Subject  = "Corporate - FoodLoversTours Request";
     $phpmailer->MsgHTML($email_body);
     $phpmailer->AddAddress($to);
     $phpmailer->AddAddress("vipin.garg12@gmail.com");
