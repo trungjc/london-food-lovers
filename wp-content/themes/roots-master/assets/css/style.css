@@ -928,7 +928,9 @@ border-right:0;
      margin-left: 10px;      
  } 
 
-
+#rev_slider_1_1, #rev_slider_1_1_wrapper,.rev_slider_wrapper {
+    max-width: 100%;
+}
 @media (min-width: 980px) and (max-width: 1280px) { 
 .tp-caption.big_white {
     left: 516px!important;
@@ -939,7 +941,10 @@ border-right:0;
 @media (min-width: 980px) and (max-width: 1024px) {
     .tp-caption.big_white {
     left: 190px!important;
+    width: 430px;
 }
+.tp-caption p,.tp-caption h2 {font-size: 20px;}
+.tp-caption h2 {font-size: 26px;}
 .navbar-inverse .navbar-nav > li > a {font-size: 13px;}
       .home .intro.jumbotron {
     padding: 80px 0 20px 0;
@@ -947,23 +952,32 @@ border-right:0;
    .tp-caption {left:50%!important;    transform: translate(75%)!important;}
 }
 @media (min-width: 768px) and (max-width: 980px) {
-    
+    .home-section .form-search {
+    bottom: -145px;
+}
+.form-search {margin-top: 0;}
 .navbar-inverse .navbar-nav > li > a {font-size: 13px;}
    .home .intro.jumbotron {
     padding: 100px 0 20px 0;
 }
  .tp-caption.big_white {
-    left: 190px!important;
+    left: 190px!important;    width: auto;
 }
+.tp-caption p,.tp-caption h2 {font-size: 16px;}
+.tp-caption h2 {font-size: 20px;}
     .navbar-inverse .navbar-nav > li > a {
     font-size: 13px;
 }
-     .logo {
-    position: static;
+    .top-menu {
+    padding-top: 110px;
+    text-align: left;
 }
 }
  @media screen and (max-width: 768px) {
-
+.top-menu {
+    padding: 0; padding-top: 110px;
+    text-align: left;
+}
      .form-search {
     margin-top: 0px;
     
@@ -1019,11 +1033,24 @@ border-right:0;
    .tp-caption {left:50%!important;    transform: translate(25%)!important;}
   }
    @media screen and (max-width: 480px) {
+       .top-menu {
+    padding-left: 0;
+    padding-top: 148px;
+    text-align: left;
+}
+       .home > .container {
+           margin: auto;
+       }
+       .home .main {padding: 15px;}
        .navbar-collapse.in {
     margin-top: 0px;
 }
-        .logo {
-    position: static;
+       .logo {
+    left: 50%;
+    margin-left: -122px;
+    position: absolute;
+    top: -13px;
+    z-index: 1000;
 }
    .tp-caption.big_white { display:none!important;}
           .box-inner {
