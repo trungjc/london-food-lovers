@@ -936,9 +936,10 @@ border-right:0;
     left: 516px!important;
 	max-width: 723px;
 	width: 723px;
+}.row.three-col {width: 100%;}
 }
-}
-@media (min-width: 980px) and (max-width: 1024px) {
+@media (min-width: 980px) and (max-width: 1024px) { 
+    .row.three-col {width: 100%;}
     .tp-caption.big_white {
     left: 190px!important;
     width: 430px;
@@ -951,7 +952,7 @@ border-right:0;
 }
    .tp-caption {left:50%!important;    transform: translate(75%)!important;}
 }
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: 768px) and (max-width: 980px) { .row.three-col {width: 100%;}
     .home-section .form-search {
     bottom: -145px;
 }
@@ -961,7 +962,9 @@ border-right:0;
     padding: 100px 0 20px 0;
 }
  .tp-caption.big_white {
-    left: 190px!important;    width: auto;
+     left: auto !important;
+    right: 0 !important;
+    width: 299px;
 }
 .tp-caption p,.tp-caption h2 {font-size: 16px;}
 .tp-caption h2 {font-size: 20px;}
@@ -974,12 +977,17 @@ border-right:0;
 }
 }
  @media screen and (max-width: 768px) {
+     .row.three-col {width: 100%;}
      .home > .container {
            margin: auto;
        }
+       .home > .container > .row {
+           margin: 0;
+       }
        .home .main {padding: 15px;}
+       .logo {  top: -28px;z-index: 1000;}
 .top-menu {
-    padding: 0; padding-top: 140px;
+    padding: 0; padding-top: 130px;
     text-align: left;
 }
      .form-search {
@@ -1033,13 +1041,15 @@ border-right:0;
 }
 
    .home-section .form-search {position: static;    margin: 10px auto;}
+    .tp-caption.big_white {
+    display: none!important;
+}
    
-   .tp-caption {left:50%!important;    transform: translate(25%)!important;}
   }
    @media screen and (max-width: 480px) {
        .top-menu {
     padding-left: 0;
-    padding-top: 148px;
+    padding-top: 130px;
     text-align: left;
 }
        .home > .container {
@@ -1053,13 +1063,11 @@ border-right:0;
     left: 50%;
     margin-left: -122px;
     position: absolute;
-    top: -13px;
-    z-index: 1000;
+   top: -28px;z-index: 1000;
 }
    .tp-caption.big_white { display:none!important;}
           .box-inner {
     margin: 10px auto;
-     width: auto;
 }.recent-post {
     margin: 0 auto;
     width: 250px;
