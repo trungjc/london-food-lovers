@@ -148,35 +148,35 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
         	<div class="col-sm-6">
-        	  <input type="checkbox" class="form-control" id="Vegetarian" value="1" name="Vegetarian">
+        	  <input type="checkbox" class="" id="Vegetarian" value="1" name="Vegetarian">
         	</div>
           </div>
           
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">No Chocolate?</label>
         	<div class="col-sm-6">
-        	  <input type="checkbox" class="form-control" id="no_chocolate" value="1" name="no_chocolate" placeholder="No Chocolate">
+        	  <input type="checkbox" class="" id="no_chocolate" value="1" name="no_chocolate" placeholder="No Chocolate">
         	</div>
           </div>
           
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
         	<div class="col-sm-6">
-        	  <input type="checkbox" class="form-control" id="no_alcohol" value="1" name="no_alcohol" placeholder="No Alcohol">
+        	  <input type="checkbox" class="" id="no_alcohol" value="1" name="no_alcohol" placeholder="No Alcohol">
         	</div>
           </div>
           
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
         	<div class="col-sm-6">
-        	  <input type="checkbox" class="form-control" id="no_pork" value="1" name="no_pork" placeholder="No Pork">
+        	  <input type="checkbox" class="" id="no_pork" value="1" name="no_pork" placeholder="No Pork">
         	</div>
           </div>
           
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Can't eat anything cooked in peanut oil?</label>
         	<div class="col-sm-6">
-        	  <input type="checkbox" class="form-control" id="peanut_oil" value="1" name="peanut_oil" placeholder="Can't eat anything cooked in peanut oil?">
+        	  <input type="checkbox" class="" id="peanut_oil" value="1" name="peanut_oil" placeholder="Can't eat anything cooked in peanut oil?">
         	</div>
           </div>
           
@@ -186,7 +186,7 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>
         	<div class="col-sm-6">
-        	  <select id="authorizenet_cc_type" name="cc_type" class="validate[required]">
+        	  <select id="authorizenet_cc_type" name="cc_type" class="validate[required] form-control">
                     <option value="">--Please Select--</option>
                     <option value="AE" <?php if($_SESSION['data']['cc_type'] == 'AE'):?> selected="selected" <?php endif;?>>American Express</option>
                     <option value="VI" <?php if($_SESSION['data']['cc_type'] == 'VI'):?> selected="selected" <?php endif;?>>Visa</option>
@@ -215,12 +215,12 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Expire Date:</label>
         	<div class="col-sm-6">
-        	  <select class="select" name="month">
+        	  <select class="select-x form-control pull-left" name="month">
         		 <?php for($i=1;$i<=12;$i++): $k = $i; if($i < 10){ $k = '0'.$i; }?>
         		 		<option value="<?php echo $k;?>"><?php echo $k;?></option>
         		 <?php endfor;?>
         	  </select>
-        	  <select class="select" name="year">
+        	  <select class="select-x form-control pull-left" name="year">
         		 <?php for($i=date('Y');$i<=date('Y')+10;$i++):?>
         		 		<option value="<?php echo $i;?>"><?php echo $i;?></option>
         		 <?php endfor;?>
@@ -277,8 +277,8 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           
           <hr/>
           <div class="form-group">
-        	<div class="col-sm-10">
-        	  <button type="submit" class="btn btn-orange" name="placeOrder" value="placeOrder">Check Out</button>
+        	<div class="col-sm-12 center" >
+        	  <button type="submit" class="btn btn-orange btn-lg" name="placeOrder" value="placeOrder">Check Out</button>
         	</div>
           </div>
     </form>

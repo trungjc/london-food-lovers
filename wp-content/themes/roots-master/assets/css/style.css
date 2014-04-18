@@ -897,6 +897,12 @@ border-right:0;
 	max-width: 723px;
 	width: 723px;
 }
+.select-x {
+    width: 90px;
+}
+.select-x + .select-x {
+    margin-left: 10px;
+}
 @media (min-width: 980px) and (max-width: 1280px) { 
 .tp-caption.big_white {
     left: 516px!important;
