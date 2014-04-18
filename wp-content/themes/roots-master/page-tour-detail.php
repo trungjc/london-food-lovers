@@ -19,7 +19,7 @@
 <div class="tab-content">
 <div class="tab-pane active" id="tour-detail">
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-6 col-md-8 col-xs-12">
 <h4 style="color: #ee794d; font-size: 18px;">Soho’s International Food Tour</h4>
 <p>Our Soho International Food Tour is an exploration of one of London’s most diverse and historically rich neighborhoods, Soho. </p>
 <h4 style="color: #ee794d; font-size: 18px;">Discover Soho</h4>
@@ -52,7 +52,7 @@ Most foreigners that came to London, found cheap housing in Soho, and brought wi
 
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-6 col-md-4 col-xs-12">
 <div class="panel panel-default orange">
 <div class="panel-heading center">
 <h3 style="font-size: 14px;">Tour Information</h3>
@@ -71,7 +71,7 @@ Details provided upon booking.</div>
 </div>
 </div>
 
-  <div class="col-sm-4">
+  <div class="col-sm-6 col-md-4 col-xs-12">
                             <div class="panel panel-default orange">
                                 <div class="panel-heading center">
                                     <h3 style="font-size:14px;">Tour Benefits</h3>
@@ -95,7 +95,7 @@ Details provided upon booking.</div>
 
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-6 col-md-8 col-xs-12">
 <h4 style="color: #ee794d; font-size: 18px;">Itinerary</h4>
 <p>Soho is one of London’s oldest international neighborhoods, so our exploration will begin with breakfast, followed by a colorful walk through some of Soho’s oldest and most charming streets, while you eat your way from one interesting international destination to another.</p>
 
@@ -107,7 +107,7 @@ Our exploration will also include a trip through Chinatown on our way to the fin
 
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-6 col-md-4 col-xs-12">
 <div class="panel panel-default orange">
 <div class="panel-heading center">
 <h3 style="font-size: 14px;">Tour Information</h3>
@@ -147,7 +147,7 @@ Details provided upon booking.</div>
 
 
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-6 col-md-8 col-xs-12">
 <h4 style="color: #ee794d; font-size: 18px;">Itinerary</h4>
 <ul>
  <li>10 Delicious Tastings – in and around Soho </li>
@@ -162,7 +162,7 @@ Details provided upon booking.</div>
 
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-6 col-md-4 col-xs-12">
 <div class="panel panel-default orange">
 <div class="panel-heading center">
 <h3 style="font-size: 14px;">Inclusions</h3>

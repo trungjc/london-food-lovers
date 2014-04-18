@@ -562,7 +562,8 @@ font-size:10px;
     color:#FE682B
 }
 .box-inner {
-    
+        width: 300px;
+    margin: 0 auto;
 }
 .menu-book-now a {
       background: none repeat scroll 0 0 #FE682B!important;
@@ -1027,7 +1028,7 @@ border-right:0;
    .tp-caption.big_white { display:none!important;}
           .box-inner {
     margin: 10px auto;
-     width: 250px;
+     width: auto;
 }.recent-post {
     margin: 0 auto;
     width: 250px;
@@ -1035,5 +1036,8 @@ border-right:0;
    }
    
     @media screen and (max-width: 320px)  {
-
+.box-inner {
+    margin: 10px auto;
+    width: auto;
+}
    }
