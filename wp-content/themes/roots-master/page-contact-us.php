@@ -65,13 +65,13 @@
                 <h3 style="font-size: 15px;color: #ee794d;text-align: center">PRIVATE TOURS AND GIFTS</h3>
                 <hr class="hr-center"/>
                 
-In addition to our Soho International Food Tour for groups, we also offer Private and Corporate Tours. No matter what your particular needs may be, let us know and we can design a Food Tour to fit your special requirements
+In addition to our Soho International Food Tour for groups, we also offer <a href="/private-tours">Private</a> and <a href="/corporate-tours">Corporate Tours</a>. No matter what your particular needs may be, let us know and we can design a Food Tour to fit your special requirements
                 
             </div>
             <div class="col-md-6 col-xs-12 " style="border-left: 1px solid #cbc9c9">
                 <h3 style="font-size: 15px;color: #ee794d;text-align: center">STILL HAVE QUESTIONS?</h3>
                <hr class="hr-center"/>
-                If something is still not clear about our tour, services, company or anything else, have look at our FAQ page! If you don’t find your answer there, feel free to let us know.
+                If something is still not clear about our tour, services, company or anything else, have look at our <a href="/faq">FAQ page!</a> If you don’t find your answer there, feel free to let us know.
 
             </div>
 				

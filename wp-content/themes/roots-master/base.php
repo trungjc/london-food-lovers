@@ -57,24 +57,14 @@ if(isset($_POST['item_id'])) {
          <div class="container" style="position:relative">  <?php  require_once locate_template('form-book-tour.php');       ?></div>
            
       <?php elseif(is_page('corporate-tours')) :      ?>
-           <?php putRevSlider("corporate-tours-inner") ?>
+           <?php putRevSlider("home-page") ?>
            
       <?php elseif(is_page('private-tours')) :      ?>
-           <?php putRevSlider("private") ?>
+           <?php putRevSlider("homepage") ?>
             <?php elseif(is_page('london-soho-tour')) :      ?>
-           <?php putRevSlider("soho") ?>
+           <?php putRevSlider("homepage") ?>
 
-               <?php elseif(is_page('reviews')) :      ?>
-           <?php putRevSlider("reviews") ?>
-            <?php elseif(is_page('why-us')) :      ?>
-           <?php putRevSlider("about") ?>
-             <?php elseif(is_page('contact-us')) :      ?>
-           <?php putRevSlider("contact") ?>
-              <?php elseif(is_page('gift-certificates')) :      ?>
-           <?php putRevSlider("gift") ?>
-       
-      <?php elseif(is_page('faq')) :      ?>
-      	   <?php putRevSlider("FAQ") ?>
+             
       
       <?php else :      ?>
           <?php putRevSlider("common") ?>
@@ -85,10 +75,10 @@ if(isset($_POST['item_id'])) {
     <div class="content row">      
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-             <?php if (is_page('private-tours') ) :      ?>
+             <?php if (is_page('private-tours' || 'corporate-tours') ) :      ?>
                  <?php  require_once locate_template('private-tour-information.php');       ?>
     
-                 
+        
   
        
              <?php else :      ?>

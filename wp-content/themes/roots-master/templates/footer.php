@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<p class="copyright center">
-					2014 Food Lovers Tours LTD. All Rights Reserved
+					©2014 Food Lovers Tours LTD. All Rights Reserved
 			</p>
 		</div>
 	</div>

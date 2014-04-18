@@ -21,7 +21,7 @@
 
   <div class="home-section">
       
-       <?php putRevSlider("common") ?>
+       <?php putRevSlider("blog") ?>
     </div>
   
   

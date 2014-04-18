@@ -35,9 +35,9 @@
           <h3 >Give a gift from the heart, a Food Lovers Gift Certificate!</h3>
     
           <ol class="guidle">
-              <li> <span class="badge badge-x orange">1</span><strong>Simply add to cart. Pay through Credit Card or Paypal </strong></li>
+              <li> <span class="badge badge-x orange">1</span><strong>Simply add to cart. Pay through Credit Card. </strong></li>
               <li> <span class="badge  badge-x orange">2</span><strong>   Get our confirmation and online gift certificate   </strong>  </li>
-              <li> <span class="badge  badge-x orange">3</span> <strong>  Get our confirmation and online gift certificate   </strong>  </li>
+              <li> <span class="badge  badge-x orange">3</span> <strong> Use your voucher code to make a reservation of the tour of your choice. </strong>  </li>
           </ol>
               
           <div class="center-block " style="width: 60%"> 
@@ -47,7 +47,7 @@
                       <div class="form-group center ">
                       	 <a class="btn btn-black btn-md" href="javascript://" onclick="document.forms['certificate'].submit();" style="border-radius: 13px;  padding: 3px 20px;">Add to Cart</a>
                       	 <a class="paypal-button" href="#">
-                          	<img width="" src="../wp-content/uploads/2014/04/paypal.jpg">
+                          	<!--<img width="" src="../wp-content/uploads/2014/04/paypal.jpg"> -->
                       	 </a>
                       </div>
                   </form>

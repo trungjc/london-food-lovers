@@ -157,10 +157,16 @@ The food on this tour was delicious, and carefully selected to ensure a gastrono
         </div>
        </div>  
 
-<div class="review-item">
+
+
+
+
+
+
+          <div class="review-item hasArrow">
     <div class="panel panel-default ">
-            <div class="panel-body "><div class= "date"> March 8, 2014 </div> 
-              <p> <span class="quote1">“</span>Part of visiting countries is not only to soak in the history and
+            <div class="panel-body "> <div class= "date"> March 14, 2014 </div> 
+               <p> <span class="quote1">“</span>Part of visiting countries is not only to soak in the history and
 
 culture, but also to TASTE the area you are visiting. Sarah takes 
 
@@ -172,20 +178,29 @@ unique delicious foods! I am salivating for the next time I can
 
 take another tour with Sarah and the team! Thank you all for a 
 
-great day out and amazing types of scrumptious foods! <span class="quote1">”</span></p>
+great day out and amazing types of scrumptious foods!<span class="quote1">”</span>
+</p>
+
             </div>
         </div>
     <div class="media ">
-       
+        <a class="pull-left" href="#">
+        <img  src="../wp-content/uploads/2014/04/angie.png" alt="..." class="img-rounded img-thumbnail" width="70">
+
+        </a>
         <div class="media-body">
-            <span class="rate">
+        <div class="author">Angie Folz, USA</div>
+            <div class="rate">
             <span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span>
-            </span>
-            
-        <span class="author">Angie Folz, USA</span>
+            </div>
         </div>
         </div>
-       </div>
+       </div>  
+
+
+
+
+
 
 
 <!--<div class="review-item">

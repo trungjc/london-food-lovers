@@ -7,11 +7,11 @@
       <div class="col-md-9 col-xs-12 ">
             <div class="clearfix top-menu">
                     <div class="pull-right">
-                        <a class="phone-number" ><span class="glyphicon glyphicon-earphone"></span> 0983987498</a>
-                       <a href="/Private Tours">Private Tours</a>&nbsp;&nbsp;&nbsp;
-                            <a href="/Corporate Tours">Corporate Tours</a>&nbsp;&nbsp;&nbsp;
+                        <a class="phone-number" ><span class="glyphicon glyphicon-earphone"></span>+44 (777) 409 9306</a>
+                       <a href="/Private Tours">Private Tours</a>
+                            <a href="/Corporate Tours">Corporate Tours</a>
                             <a href="/FAQ">FAQ</a>
-                            <a href="/blog">Blog</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://londonfoodlovers.com/category/blog">Blog</a>
                           <!--  <a class="SocIcon twitter-b" href="">twitter</a>
                             <a class="SocIcon facebook" href="">facebook</a> -->
                          

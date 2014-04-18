@@ -159,16 +159,21 @@ margin-left: 155%;
     margin-top: 0;
 }
 .tab-content {
-    background: white;padding-top: 50px!important;    
-    border-radius: 0 5px 5px 5px;
-    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.3),0 4px 2px rgba(0, 0, 0, 0.1);
+
+  background: white;padding-top: 50px!important;   
+   border-radius: 0 5px 5px 5px;       
+   box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.3),0 4px 2px rgba(0, 0, 0, 0.1);         
+ }       
+ .tab-content .panel{        
+     box-shadow: none;       
+ }       
+ .tab-content .review-item {         
+     width: 100%; 
 }
-.tab-content .panel{
-    box-shadow: none;
-}
-.tab-content .review-item {
-    width: 100%;
-}
+
+
+
+
 .nav-tabs > li > a {
     box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.3);
     margin-right: 0;
@@ -468,11 +473,16 @@ border-color: #999;
 header.navbar {margin-bottom: 0}
 .footer .container {max-width: 960px;}
 .newletter .container {max-width: 100%;}
-.home-section {position:relative;}
+.home-section {position:relative;
+ margin:0 auto;
+    align: center;
+    background-image:url("http://londonfoodlovers.com/wp-content/themes/roots-master/assets/images/pattern.jpg");
+}
 .form-search {
     margin-top: -220px;
     position: relative;
     z-index: 999;
+   
 }
 .form-search .panel,.form-search .panel-heading {
     border-radius: 0;
@@ -905,12 +915,16 @@ border-right:0;
 	max-width: 723px;
 	width: 723px;
 }
-.select-x {
-    width: 90px;
-}
-.select-x + .select-x {
-    margin-left: 10px;
-}
+
+
+.select-x {         
+    width: 90px;        
+}       
+ .select-x + .select-x {         
+     margin-left: 10px;      
+ } 
+
+
 @media (min-width: 980px) and (max-width: 1280px) { 
 .tp-caption.big_white {
     left: 516px!important;
@@ -942,15 +956,15 @@ border-right:0;
 }
 }
  @media screen and (max-width: 768px) {
-     .form-search {
-    margin-top: 0px;
-     }
-     .box-inner {
-    
-    width: 259px;
-    margin: 10px auto;
-}
 
+    .form-search {      
+    margin-top: 0px;        
+     }      
+     .box-inner {       
+             
+    width: 259px;       
+    margin: 10px auto;      
+ } 
      .navbar-inverse .navbar-nav > li + li > a {
     border-left: 0px dotted #9CA6AA;
 }
