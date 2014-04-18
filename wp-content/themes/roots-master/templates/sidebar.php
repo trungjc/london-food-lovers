@@ -32,7 +32,7 @@ if ( !$pagename && $id > 0 ) {
                      <textarea class="form-control" name="comments" id="comments"></textarea>
                 </div>
                <div class="center">
-               		<input type="submit" class="btn btn-black btn-md" id="booknow" name="booknow" value="Book Now" />
+               		<input type="submit" class="btn btn-black btn-md" id="booknow" name="booknow" value="Submit" />
                </div>
           </div>
        </div>
@@ -74,7 +74,7 @@ elseif ( is_page('corporate-tours')  ) : ?>
                      <textarea class="form-control" name="comments" id="comments"></textarea>
                 </div>
                <div class="center">
-               		<input type="submit" class="btn btn-black btn-md" id="booknow" name="booknow" value="Book Now" />
+               		<input type="submit" class="btn btn-black btn-md" id="booknow" name="booknow" value="Submit" />
                </div>
           </div>
        </div>

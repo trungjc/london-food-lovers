@@ -42,7 +42,9 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 	
 	$item_data = $items[$_SESSION['cart']['item_id']];
 	
-    $auth->addLineItem($item_id , $item_data['name'], $item_data['rate']['summary']['details'], '1', $item_data['rate']['sub_total'], 'N');
+	$item_name = substr($item_data['name'],0,10);
+	
+    $auth->addLineItem("1" , $item_name, $item_data['rate']['summary']['details'], '1', $item_data['rate']['sub_total'], 'N');
     $auth->amount = $item_data['rate']['sub_total'];
     $_SESSION['cart']['total'] = $item_data['rate']['sub_total'];
 
@@ -60,7 +62,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     $auth->city     = $_POST['customer_city'];
     $auth->state    = $_POST['customer_region'];
     $auth->zip      = $_POST['customer_postal_zip'];
-    $auth->country  = 'GB';
+    $auth->country  = $_POST['customer_country'];
     
     $auth->ship_to_first_name  = $_POST['customer_name'];
     $auth->ship_to_last_name   = '';
@@ -68,12 +70,12 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     $auth->ship_to_state  = $_POST['customer_region'];
     $auth->ship_to_zip    = $_POST['customer_postal_zip'];
     $auth->ship_to_address  = $_POST['customer_address'];
-    $auth->ship_to_country  = 'GB';
+    $auth->ship_to_country  = $_POST['bill_country'];
 
     // Set Invoice Number:
     $auth->invoice_num = time();
     $response = $auth->authorizeOnly();
-
+    
     unset($_POST['card_number']);
     unset($_POST['expire_date']);
     unset($_POST['cvv']);
