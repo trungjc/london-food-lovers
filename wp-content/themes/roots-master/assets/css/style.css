@@ -813,7 +813,7 @@ img {max-width: 100%;}
 .tp-caption h2 {
 margin: 0;
 color: white;
-font-size: 32px;
+font-size: 25px;
 padding: 15px 15px 0px 15px;
 background: rgba(0,0,0,0.8);
 letter-spacing: 1px;
@@ -821,11 +821,18 @@ border-top-left-radius: 5px;
 border-top-right-radius: 5px;    white-space: normal;
 }
 
+.main article.panel-body { /* blog post   */
+padding: 50px;}
+
+.main article.post { /* blog post   */
+padding: 50px;
+
+}
 
 .tp-caption p {
 margin: 0;
 color: white;
-font-size: 20px;
+font-size: 13px;
 padding: 0px 15px 15px 15px;
 background: rgba(0,0,0,0.8);    white-space: normal;
 letter-spacing: 1px;
@@ -833,6 +840,9 @@ text-align: left;
 -moz-border-radius: 15px;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
+font-family: 'Gotham SSm A', 'Gotham SSm B';
+font-weight: 400;
+font-style: normal;
 }
 
 .form-search hr {margin: 6px 0}
@@ -840,7 +850,7 @@ border-bottom-right-radius: 5px;
     background: rgba(238,121,77,0.7);
     text-align: center;
     color:white;border: none;
-     padding: 19px 15px;    position: relative;
+     padding: 20px 15px;    position: relative;
 }
 .panel-Primary  .textwidget {
     padding:0 0 15px;

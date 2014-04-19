@@ -67,13 +67,13 @@
 								<option value="<?php echo $i;?>"><?php echo $i;?></option>
 						<?php endfor;?>
 					  </select>
-					  &nbsp;<span class="label-option">ADULTS (13+)</span>
+					  &nbsp;<span class="label-option">ADULTS (12+)</span>
 					  <select class="" name="children" id="children">
 						<?php for($i=0;$i<=10;$i++):?>
 								<option value="<?php echo $i;?>"><?php echo $i;?></option>
 						<?php endfor;?>
 					  </select>
-					  &nbsp;<span class="label-option">KIDS (5-13)</span>
+					  &nbsp;<span class="label-option">KIDS (4-12)</span>
 				   </div>				  
 				</div>
 

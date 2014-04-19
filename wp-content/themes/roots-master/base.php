@@ -57,14 +57,31 @@ if(isset($_POST['item_id'])) {
          <div class="container" style="position:relative">  <?php  require_once locate_template('form-book-tour.php');       ?></div>
            
       <?php elseif(is_page('corporate-tours')) :      ?>
-           <?php putRevSlider("home-page") ?>
+           <?php putRevSlider("corporate-tours-inner") ?>
            
       <?php elseif(is_page('private-tours')) :      ?>
-           <?php putRevSlider("homepage") ?>
+           <?php putRevSlider("private") ?>
             <?php elseif(is_page('london-soho-tour')) :      ?>
-           <?php putRevSlider("homepage") ?>
+           <?php putRevSlider("soho") ?>
 
-             
+   <?php elseif(is_page('gift-certificates')) :      ?>
+           <?php putRevSlider("gift") ?>
+
+   <?php elseif(is_page('faq')) :      ?>
+           <?php putRevSlider("faq") ?>
+
+       <?php elseif(is_page('contact-us')) :      ?>
+           <?php putRevSlider("contact") ?>
+
+   <?php elseif(is_page('reviews')) :      ?>
+           <?php putRevSlider("reviews") ?>
+
+      
+
+
+   <?php elseif(is_page('why-us')) :      ?>
+           <?php putRevSlider("why-us") ?>
+         
       
       <?php else :      ?>
           <?php putRevSlider("common") ?>
