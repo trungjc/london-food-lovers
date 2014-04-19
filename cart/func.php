@@ -4,19 +4,22 @@ include_once 'phpmailer/class-phpmailer.php';
 include_once 'Mailchimp.php';
 
 function sendOrderEmail($data){
-    $email_body = "Dear ".$data['customer_name']." <br /><br />";
-    $email_body .= "Your order has been placed successfully. Here are the details:<br /><br />";
-
-    $email_body .= "";
-    $email_body .= "Best wishes, <br /> FoodLoversTours";
+    $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
+    
+    $email_body .= "<br /><div>";
+    $email_body .= "Dear ".$data['customer_name']." <br /><br />";
+    $email_body .= "Your order has been placed successfully for selected tour. We will contact you soon.<br /><br />";
+    $email_body .= "</div><br />";
+    
+    $email_body .= "Best wishes, <br /> London Food Lovers";
 
     $from = "no-reply@londonfoodlovers.com";
-    $fromName = "FoodLoversTours";
+    $fromName = "London Food Lovers";
 
     $phpmailer = new PHPMailer();
     $phpmailer->From = $from;
     $phpmailer->FromName = $fromName;
-    $phpmailer->Subject  = "Order Confirmation - FoodLoversTours";
+    $phpmailer->Subject  = "Order Confirmation - London Food Lovers";
     $phpmailer->MsgHTML($email_body);
     $phpmailer->AddAddress($data['customer_email'],$data['customer_name']);
 
@@ -29,14 +32,17 @@ function sendOrderEmail($data){
 }
 
 function sendGiftCertificateEmail($data){
-    $email_body = "Dear ".$data['customer_name']." <br /><br />";
+    $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
+    
+    $email_body .= "<br /><div>";
+    $email_body .= "Dear ".$data['customer_name']." <br /><br />";
     $email_body .= "Your gift certtificate order has been placed successfully.<br /><br />";
+    $email_body .= "</div><br />";
 
-    $email_body .= "";
-    $email_body .= "Best wishes, <br /> FoodLoversTours";
+    $email_body .= "Best wishes, <br /> London Food Lovers";
 
     $from = "no-reply@londonfoodlovers.com";
-    $fromName = "FoodLoversTours";
+    $fromName = "London Food Lovers";
 
     $phpmailer = new PHPMailer();
     $phpmailer->From = $from;
@@ -56,21 +62,24 @@ function sendGiftCertificateEmail($data){
 function sendFeedbackEmail($order_id , $data){
     global $host_path;
 
-    $email_body = "Dear ".$data['customer_name']." <br /><br />";
+    $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
 
-    $email_body .= "We want your some time to give feedback us on currently ordered tour. <br /><br/>";
-    $email_body .= "Follow the below link to complete the feedback <br/>";
-    $email_body .= "<a href='".$host_path."/feedback?id=".base64_encode($order_id)."'>click here</a><br/><br/>";
+    $email_body .= "<br /><div>";
+    $email_body .= "Dear ".$data['customer_name']." <br /><br />";
+    $email_body .= "Thanks for spending the day with London Food Lovers!<br/><br/>";
+    $email_body .= "We hope you enjoyed your Soho Food Tour as much as we do. We enjoy receiving feedback about our clients experiences and we'd love to know what YOU thought...";
+    $email_body .= "That said, please take 54 seconds to rate us !Click <a href='".$host_path."/feedback?id=".base64_encode($order_id)."'>this link</a><br/><br/> to start";
+    $email_body .= "</div><br />";
 
-    $email_body .= "Best wishes, <br /> FoodLoversTours";
+    $email_body .= "Best wishes, <br /> London Food Lovers";
 
     $from = "no-reply@londonfoodlovers.com";
-    $fromName = "FoodLoversTours";
+    $fromName = "London Food Lovers";
 
     $phpmailer = new PHPMailer();
     $phpmailer->From = $from;
     $phpmailer->FromName = $fromName;
-    $phpmailer->Subject  = "Feedback requested - FoodLoversTours";
+    $phpmailer->Subject  = "Feedback requested - London Food Lovers";
     $phpmailer->MsgHTML($email_body);
     $phpmailer->AddAddress($data['email'],$data['customer_name']);
 
