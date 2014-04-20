@@ -52,7 +52,7 @@ $cart = json_decode($result['cart'],true);
                                 
                      <div class="form-group">
                         <label for="name" class="col-sm-4 control-label">Your full name:</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                         <input type="text" name="name" id="name" value="" class="form-control" />
                         </div>
                     </div>   
@@ -65,7 +65,7 @@ $cart = json_decode($result['cart'],true);
                       
                        <div class="form-group">
                         <label for="datepicker" class="col-sm-4 control-label">Tour Date:</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                        <input type="text"  class="form-control"  name="tour_date" id="datepicker" />
                         </div>
                     </div>   
@@ -184,7 +184,7 @@ $cart = json_decode($result['cart'],true);
                     </div>
 	             
 	            <div class="form-group">
-                        <div class="col-sm-6 col-md-offset-4">
+                        <div class="col-sm-7 col-md-offset-4">
                           <input type="checkbox" id="" name="walk_more" value="1" /> I-would-walk-a-thousand-miles-AND-I-would-walk-a-thousand-more..!!!
                         </div>
                     </div>
@@ -218,7 +218,7 @@ $cart = json_decode($result['cart'],true);
                      <h3>Where did you hear about us?</h3><hr/>
                      
                       <div class="form-group">
-                        <div class="col-sm-6 col-md-offset-4">
+                        <div class="col-sm-4 col-md-offset-4">
                                <p> <input type="checkbox" id="" name="hear_us_referral" value="1" /> Referral </p>
 	             		 <p><input type="checkbox" id="" name="hear_us_google" value="1" /> Google  </p>
 	             		 <p><input type="checkbox" id="" name="hear_us_blog" value="1" /> Blog  </p>
@@ -231,14 +231,14 @@ $cart = json_decode($result['cart'],true);
                     <h3>Friends that might be interested in Food Lovers tours...</h3><hr/>
 	             <div class="form-group">
                         <label for="email1" class="col-sm-4 control-label">Email 1:</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                          <input type="text" name="email1" class="form-control" id="email1" value="" />
                         </div>
                     </div>
                     
                   <div class="form-group">
                         <label for="email1" class="col-sm-4 control-label">Email 2</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                          <input type="text" name="email2" class="form-control" id="email2" value="" />
                         </div>
                     </div>
