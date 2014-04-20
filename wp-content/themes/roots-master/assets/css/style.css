@@ -228,7 +228,6 @@ display:none;
 }
 .hasArrow .media { padding-left: 12px;
     padding-top: 10px;}
-.review-item {width:80%;}
 .review-item + .review-item{padding-top: 15px;margin-top: 15px;
 border-top: 1px dashed #d5d9db;
 }
@@ -562,7 +561,7 @@ font-size:10px;
     color:#FE682B
 }
 .box-inner {
-        width: 300px;
+        width: 295px;
     margin: 0 auto;
 }
 .menu-book-now a {
@@ -662,7 +661,8 @@ font-size: 15px;
 }
 .row.three-col {
     text-align: center;
-    width: 80%;margin: 0 auto;
+    width: 86%;
+    margin: 0 auto;
 }
 .container .container{
     max-width: 960px;
@@ -750,6 +750,9 @@ font-size: 15px;
     height: 28px;
     vertical-align: middle;
     width: 200px;margin: 0 10px;
+}
+h4 {
+    margin: 0 0 20px 0;
 }
 .newletter-inner {padding: 10px 0;}
 .three-col h3 {font-size: 20px;
@@ -892,7 +895,6 @@ font-style: normal;
 .page-food-tour h3 a{color:#333}
 .date {
   margin-bottom: 10px;  
-  text-align:right;
 }
 .date .glyphicon,.price-tag .glyphicon{
     color:#b5babc;margin-right: 5px;
