@@ -18,8 +18,23 @@
 	</div>
 
   </header>
+
+      <?php 
+if ( has_post_thumbnail() ) { 
+  the_post_thumbnail(medium);
+} 
+?>
   <div class="entry-summary">
-    <?php the_content(); ?>
+
+
+
+<?php
+
+$content = strip_tags(nl2br(get_the_content('')),"<img><b><strong><i><em><a>");
+$trimmed_content = wp_trim_words( $content, 80, '<a href="'. get_permalink() .'"> ...Read More</a>' );
+echo $trimmed_content;
+
+?>
   </div>
 </article>
 </div>

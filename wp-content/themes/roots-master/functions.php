@@ -19,3 +19,26 @@ require_once locate_template('/lib/scripts.php');         // Scripts and stylesh
 require_once locate_template('/lib/custom.php');          // Custom functions
 require_once locate_template('/lib/shortcodes.php');          // Custom functions
 
+function new_excerpt_length($length) {
+    return 200;
+}
+add_filter('excerpt_length', 'new_excerpt_length',999);
+
+
+function tow_excerpt($charlength) {
+$excerpt = get_the_excerpt();
+$charlength++;
+if(strlen($excerpt)>$charlength) {
+$subex = substr($excerpt,0,$charlength-5);
+$exwords = explode(" ",$subex);
+$excut = -(strlen($exwords[count($exwords)-1]));
+if($excut<0) {
+echo substr($subex,0,$excut);
+} else {
+echo $subex;
+}
+echo "[...]";
+} else {
+echo $excerpt;
+}
+}
