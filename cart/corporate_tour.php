@@ -12,7 +12,7 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     $title    = $_POST['title'];
     $company  = $_POST['company'];
 
-    $to = "growthlabsdev@gmail.com";
+    $to = "info@londonfoodlovers.com";
     $from = 'no-reply@londonfoodlovers.com';
     $fromName = "FoodLoversTours";
     $pagename = urldecode($_POST['frompage']);
@@ -60,7 +60,7 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     $phpmailer->Subject  = "Corporate - FoodLoversTours Request";
     $phpmailer->MsgHTML($email_body);
     $phpmailer->AddAddress($to);
-    $phpmailer->AddAddress("vipin.garg12@gmail.com");
+    //$phpmailer->AddAddress("vipin.garg12@gmail.com");
     $phpmailer->Send();
 
     $url = home_url();

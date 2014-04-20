@@ -84,13 +84,13 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">Special Requests:</label>
+        	<label for="inputPassword3" class="col-sm-4 control-label">Special Requests (For example - Celebrating a Birthday or Anniversary? Let us know!):</label>
         	<div class="col-sm-6">
         	  <textarea class="form-control" name="note"><?php echo @$_SESSION['data']['note']?></textarea>
         	</div>
           </div>
           
-          <h3 class="sub-title">2. Contact Information</h3>
+          <h3 class="title-img">2. Contact Information</h3>
           <hr/>
           
           <div class="form-group">
@@ -101,16 +101,9 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">Customer Phone:</label>
+        	<label for="inputPassword3" class="col-sm-4 control-label">Contact Number:</label>
         	<div class="col-sm-6">
         	  <input type="text" class="form-control" id="customer_phone" value="<?php echo @$_SESSION['data']['customer_phone']?>" name="customer_phone" onchange="phoneFix();" placeholder="phone">
-        	</div>
-          </div>
-          
-          <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">Address:</label>
-        	<div class="col-sm-6">
-        	  <input type="text" class="form-control" id="customer_address" value="<?php echo @$_SESSION['data']['customer_address']?>" name="customer_address" placeholder="Address">
         	</div>
           </div>
           
@@ -118,6 +111,13 @@ $item_data = $items[$_SESSION['cart']['item_id']];
         	<label for="inputPassword3" class="col-sm-4 control-label">Country:</label>
         	<div class="col-sm-6">
         	  <input type="text" class="form-control" id="customer_country" value="<?php echo @$_SESSION['data']['customer_country']?>" name="customer_country" placeholder="country">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">Address:</label>
+        	<div class="col-sm-6">
+        	  <input type="text" class="form-control" id="customer_address" value="<?php echo @$_SESSION['data']['customer_address']?>" name="customer_address" placeholder="Address">
         	</div>
           </div>
           
@@ -142,27 +142,13 @@ $item_data = $items[$_SESSION['cart']['item_id']];
         	</div>
           </div>
           
-          <h3 class="sub-title">3. Dietary Restrictions</h3>
+          <h3 class="title-img">3. Let us know about your Food Needs! </h3>
           <hr/>
           
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
         	<div class="col-sm-6">
         	  <input type="checkbox" class="" id="Vegetarian" value="1" name="Vegetarian">
-        	</div>
-          </div>
-          
-          <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Chocolate?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_chocolate" value="1" name="no_chocolate" placeholder="No Chocolate">
-        	</div>
-          </div>
-          
-          <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_alcohol" value="1" name="no_alcohol" placeholder="No Alcohol">
         	</div>
           </div>
           
@@ -174,14 +160,70 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">Can't eat anything cooked in peanut oil?</label>
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
         	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="peanut_oil" value="1" name="peanut_oil" placeholder="Can't eat anything cooked in peanut oil?">
+        	  <input type="checkbox" class="" id="no_fish" value="1" name="no_fish" placeholder="No Pork">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="no_alcohol" value="1" name="no_alcohol" placeholder="No Alcohol">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="vegan" value="1" name="vegan" placeholder="No Alcohol">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="no_eggs" value="1" name="no_eggs" placeholder="No Alcohol">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="no_gluten" value="1" name="no_gluten" placeholder="No Alcohol">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="no_nuts" value="1" name="no_nuts" placeholder="No Chocolate">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="no_lactose" value="1" name="no_lactose" placeholder="No Chocolate">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
+        	<div class="col-sm-6">
+        	  <input type="checkbox" class="" id="no_shellfish" value="1" name="no_shellfish" placeholder="No Chocolate">
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputPassword3" class="col-sm-4 control-label">Other restriction(s): (here should be a box for person to write their special need)</label>
+        	<div class="col-sm-6">
+        	  <textarea class="form-control" name="other_note"><?php echo @$_SESSION['data']['other_note']?></textarea>
         	</div>
           </div>
           
           
-          <h3 class="sub-title">4. Enter your Payment details</h3>
+          <h3 class="title-img">4. Enter your Payment details</h3>
           <hr/>
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>

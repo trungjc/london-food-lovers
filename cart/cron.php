@@ -15,7 +15,7 @@ foreach($categories as $category){
 
 
 //check all orders which feedback request is not sent
-$query = "Select *, DATEDIFF(now(),tour_date) as diff from orders where feedback_request = 'Pending' having diff >= 2";
+$query = "Select *, DATEDIFF(now(),tour_date) as diff from orders where feedback_request = 'Pending' having diff >= 1";
 $order_query  = mysql_query($query) or die(mysql_error());
 while($order_result = mysql_fetch_assoc($order_query)){
 	$res = sendFeedbackEmail($order_result['order_id'] , $order_result);

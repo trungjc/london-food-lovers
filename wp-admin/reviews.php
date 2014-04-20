@@ -110,8 +110,18 @@ if($_REQUEST['action']){
     exit;
 }
 
+include_once '../cart/split_page_results.php';
 global $wpdb;
-$reviews = $wpdb->get_results("Select f.* , c.name as category_name from feedbacks f left join categories c on (c.category_id = f.category_id)");
+
+$page = (int)$_GET['page'];
+if(!$page){
+    $page = 1;
+}
+
+$query = "Select f.* , c.name as category_name from feedbacks f left join categories c on (c.category_id = f.category_id)";
+
+$split_page = new splitPageResults($query , 20 , 5 , $page);
+$reviews = $wpdb->get_results($split_page->sql_query);
 
 ?>
 <div class="wrap">
@@ -165,6 +175,12 @@ $reviews = $wpdb->get_results("Select f.* , c.name as category_name from feedbac
         		</td>
         	</tr>
     	<?php endforeach;?>
+    	
+    	<tr>
+    		<td colspan="3"><?php echo $split_page->display_count('Displaying %s to %s (of %s Records)');?></td>
+    		
+    		<td colspan="6"><?php echo $split_page->display_links(5);?></td>
+    	</tr>
     </table>
 
 </div><!-- wrap -->
