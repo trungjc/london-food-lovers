@@ -19,7 +19,7 @@
 
   </header>
   <div class="entry-summary">
-    <?php the_excerpt(); ?>
+    <?php the_content(); ?>
   </div>
 </article>
 </div>
