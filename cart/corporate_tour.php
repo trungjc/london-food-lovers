@@ -11,6 +11,8 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     $comments = $_POST['comments'];
     $title    = $_POST['title'];
     $company  = $_POST['company'];
+    $tour_date = $_POST['tour_date'];
+    $tour_size = $_POST['tour_size'];
 
     $to = "info@londonfoodlovers.com";
     $from = 'no-reply@londonfoodlovers.com';
@@ -45,7 +47,15 @@ if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){
     					     <td>$phone</td>
     					</tr>
     					<tr>
-    					     <td>Comments</td>
+    					     <td>Tour Date Desired</td>
+    					     <td>$tour_date</td>
+    					</tr>
+    					<tr>
+    					     <td>Approximate Size of Group</td>
+    					     <td>$tour_size</td>
+    					</tr>
+    					<tr>
+    					     <td>Description</td>
     					     <td>$comments</td>
     					</tr>
     				</table>

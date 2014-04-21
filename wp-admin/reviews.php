@@ -129,11 +129,10 @@ $reviews = $wpdb->get_results($split_page->sql_query);
 	
     <table border="1" width="100%" cellpadding="5" cellspacing="0">
     	<tr>
+    		<td>Order ID</td>
     		<td>Customer Name</td>
     		<td>Category</td>
     		<td>Rating</td>
-    		<td>Email</td>
-    		<td>Comments</td>
     		<td>Date</td>
     		<td>City/State</td>
     		<td>Status</td>
@@ -141,15 +140,13 @@ $reviews = $wpdb->get_results($split_page->sql_query);
     	</tr>
     	<?php foreach($reviews as $review):?>
     		<tr>
+    			<td><?php echo $review->order_id;?></td>
+    			
         		<td><?php echo $review->name;?></td>
         		
         		<td><?php echo $review->category_name;?></td>
         		
-        		<td><?php echo $review->rating;?></td>
-        		
-        		<td><?php echo $review->email;?></td>
-        		
-        		<td style="word-wrap:break-word;width:300px;float:left;"><?php echo $review->comments;?></td>
+        		<td><?php echo $review->overall_rating;?></td>
         		
         		<td><?php echo $review->dateofmodification;?></td>
         		
@@ -164,6 +161,8 @@ $reviews = $wpdb->get_results($split_page->sql_query);
         		</td>
         		
         		<td>
+        			<a href="reviews_edit.php?id=<?php echo $review->id?>">Edit</a> |
+        			
         		    <a href="reviews.php?id=<?php echo $review->id?>&action=delete" onclick="">Delete</a> |
         		    
         		    <?php if($review->status == 0):?>
