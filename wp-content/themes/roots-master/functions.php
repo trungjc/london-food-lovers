@@ -42,3 +42,67 @@ echo "[...]";
 echo $excerpt;
 }
 }
+
+
+
+function header_text($atts){
+ 	extract( shortcode_atts( array(
+		'h2' => 'no foo',
+		'p' => 'default bar',
+		'no' => 'no'
+	), $atts ) );
+
+if ($no == "no") 
+
+{
+
+		$message =  '<div class="tp-caption big_white header_manual" ><h2>'.$h2.'</h2>' ;
+	$message .= '<p>' .$p. '</p></div>'; 
+	
+
+return $message;
+}	
+
+else
+
+{
+
+		$message =  '<div class="tp-caption big_white header_manual" ><h2>'.$h2.'</h2>' ;
+	$message .= '<p>' .$p. '</p></div>'; 
+	$message .= '<div class="tp-caption  sfr start buttons_manual"><div class="clearfix button"><a href="/gift-certificates" class="pull-left"><img alt="gift certificates" src="../wp-content/uploads/2014/04/Gift-certificates.png" style="width: 208px; height: 62px;"></a>
+<a href="/private-tours" class="pull-left"><img alt="gift certificates" src="../wp-content/uploads/2014/04/private-tours.png" style="width: 208px; height: 62px;"></a></div></div>';
+
+return $message;
+}	
+
+
+
+
+
+}// End some_random_code()
+ 
+add_shortcode( 'header_text', 'header_text' );
+
+
+
+
+
+
+
+
+
+
+/*
+
+<div class="tp-caption big_white fade start" data-x="704" data-y="8" data-speed="300" data-start="0" data-easing="easeOutExpo" style="-webkit-transform: scale(1, 1) rotate(0deg); font-size: 35px; padding: 2px 4px 0px; margin: 0px; border: 0px; line-height: 36px; white-space: nowrap; left: 704px; top: 8px; opacity: 0; visibility: hidden;"><h2>Explore the International Tastes of London</h2>
+<p>Discover Soho - Eat, Drink, and enjoy a Cultural Walking Tour </p></div>
+
+*/
+
+
+
+
+
+
+?>
+
