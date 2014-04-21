@@ -97,6 +97,7 @@
 	jQuery(document).ready(function(){
         jQuery("#category_id").val(1);
         getTours(1);
+        filldate("<?php echo date('Ymd')?>");
 	});
 </script>
 <!-- end form-search-->

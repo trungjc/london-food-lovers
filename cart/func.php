@@ -1,9 +1,13 @@
 <?php
 
+$host_path = "https://www.londonfoodlovers.com/";
+
 include_once 'phpmailer/class-phpmailer.php';
 include_once 'Mailchimp.php';
 
 function sendOrderEmail($data , $order_id){
+    global $host_path;
+    
     $tour_query = mysql_query("select name from categories where category_id = '".$_SESSION['cart']['category_id']."'");
     $tour_data  = mysql_fetch_array($tour_query);
     $tour_name  = $tour_data['name'];
@@ -89,6 +93,8 @@ function sendOrderEmail($data , $order_id){
 }
 
 function sendGiftCertificateEmail($data){
+    global $host_path;
+    
     $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
 
     $email_body .= "<br /><div>";
@@ -126,7 +132,7 @@ function sendFeedbackEmail($order_id , $data){
     $email_body .= "Dear ".$data['customer_name']." <br /><br />";
     $email_body .= "Thanks for spending the day with London Food Lovers!<br/><br/>";
     $email_body .= "We hope you enjoyed your Soho Food Tour as much as we do. We enjoy receiving feedback about our clients experiences and we'd love to know what YOU thought...";
-    $email_body .= "That said, please take 54 seconds to rate us !Click <a href='".$host_path."/feedback?id=".base64_encode($order_id)."'>this link</a><br/><br/> to start";
+    $email_body .= "That said, please take 54 seconds to rate us !Click <a href='".$host_path."/feedback?id=".base64_encode($order_id)."'>this link</a> to start.";
     $email_body .= "</div><br />";
 
     $email_body .= "Best wishes, <br /> London Food Lovers";
