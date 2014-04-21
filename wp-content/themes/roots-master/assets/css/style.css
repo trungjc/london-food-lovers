@@ -461,6 +461,9 @@ border-color: #999;
 .panel,.panel.orange .panel-heading {
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+.orange  .glyphicon {
+color:#FE682B;
+}
 .panel.orange .panel-heading {
 	background: #FE682B;
 	color: #FFFFFF;
@@ -824,7 +827,38 @@ border-top-left-radius: 5px;
 border-top-right-radius: 5px;    white-space: normal;
 
 }
+.main {position:relative;}
+.caption-slide {
+	position: absolute;
+	z-index: 99;
+	top: -300px;
+	right: 100px;
+}
 
+.caption-slide .header_manual {
+	    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 15px 20px 10px;
+    border-left: 5px solid #3CADB1;
+}
+
+.caption-slide h2,
+.caption-slide p {text-align: center;
+	color:white;
+	margin: 0 0 10px 0;    text-shadow: 1px 1px 1px #000000;
+}
+
+.buttons_manual .gift-certificates,.buttons_manual .private-tours {
+	width: 208px;
+	height: 62px;
+	margin-left: -2px;
+	margin-top:10px;
+	display: block;
+	background: url("../images/Gift-certificates.png") no-repeat left top;
+}
+.buttons_manual .private-tours {
+background: url("../images/private-tours.png") no-repeat left top;
+}
 .tp-caption p {
 margin: 0;
 color: white;
@@ -850,21 +884,7 @@ padding: 50px;
 
 }
 
-.header_manual {
-    position:absolute;
-    left:150px;
-top:-330px;
-z-index:998;
-}
 
-.buttons_manual {
- 
-       position:absolute;
-    left:1100px ;
-top:-250px;
-z-index:998;
-
-}
 
 
 
@@ -1077,12 +1097,15 @@ border-right:0;
 }
 
    .home-section .form-search {position: static;    margin: 10px auto;}
-    .tp-caption.big_white {
-    display: none!important;
-}
+    .caption-slide {
+   display: none!important;
+   }
    
   }
    @media screen and (max-width: 480px) {
+   .caption-slide {
+   display: none!important;
+   }
        .top-menu {
     padding-left: 0;
     padding-top: 130px;

@@ -56,8 +56,8 @@ if ($no == "no")
 
 {
 
-		$message =  '<div class="tp-caption big_white header_manual" ><h2>'.$h2.'</h2>' ;
-	$message .= '<p>' .$p. '</p></div>'; 
+		$message =  '<div class="caption-slide"><div class=" header_manual" ><h2>'.$h2.'</h2>' ;
+	$message .= '<p>' .$p. '</p></div></div>'; 
 	
 
 return $message;
@@ -67,10 +67,9 @@ else
 
 {
 
-		$message =  '<div class="tp-caption big_white header_manual" ><h2>'.$h2.'</h2>' ;
+		$message =  '<div class="caption-slide"><div class="header_manual" ><h2>'.$h2.'</h2>' ;
 	$message .= '<p>' .$p. '</p></div>'; 
-	$message .= '<div class="tp-caption  sfr start buttons_manual"><div class="clearfix button"><a href="/gift-certificates" class="pull-left"><img alt="gift certificates" src="../wp-content/uploads/2014/04/Gift-certificates.png" style="width: 208px; height: 62px;"></a>
-<a href="/private-tours" class="pull-left"><img alt="gift certificates" src="../wp-content/uploads/2014/04/private-tours.png" style="width: 208px; height: 62px;"></a></div></div>';
+	$message .= '<div class="buttons_manual"><div class="clearfix button"><a href="/gift-certificates" class="pull-left gift-certificates"></a><a href="/private-tours" class="pull-left private-tours"></a></div></div></div>';
 
 return $message;
 }	
