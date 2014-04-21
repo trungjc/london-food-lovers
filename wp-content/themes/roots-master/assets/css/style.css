@@ -834,10 +834,12 @@ border-top-right-radius: 5px;    white-space: normal;
 .caption-slide {
 	position: absolute;
 	z-index: 99;
-	top: -300px;
+	top: -250px;
 	right: 100px;
 }
-
+.caption-slide.has-button {
+	top: -300px;
+}
 .caption-slide .header_manual {
 	    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
     border-radius: 5px;
