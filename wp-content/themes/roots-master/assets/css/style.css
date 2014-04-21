@@ -827,6 +827,9 @@ border-top-left-radius: 5px;
 border-top-right-radius: 5px;    white-space: normal;
 
 }
+.dropdown-menu > li > a {
+	padding: 10px 20px;
+}
 .main {position:relative;}
 .caption-slide {
 	position: absolute;
@@ -1010,6 +1013,9 @@ border-right:0;
    .tp-caption {left:50%!important;    transform: translate(75%)!important;}
 }
 @media (min-width: 768px) and (max-width: 980px) { .row.three-col {width: 100%;}
+.caption-slide {
+	display: none
+}
     .home-section .form-search {
     bottom: -145px;
 }
