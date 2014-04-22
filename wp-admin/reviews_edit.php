@@ -104,6 +104,12 @@ if($_POST['submitfeedback']){
     $data = $_POST;
     unset($data['submitfeedback']);
     
+    $image_name = $order_id."_".time().".jpg";
+	$save_path  = $_SERVER['DOCUMENT_ROOT'] . "/cart/images/".$image_name;
+	move_uploaded_file($_FILES['image']['tmp_name'],$save_path);
+	
+	$data['image'] = $image_name;
+    
     $extra_str = '';
 	foreach($data as $k => $v) {
 	    $extra_str .= ($extra_str ? ", " : "") . $k . "='" . $v . "'";
@@ -219,6 +225,17 @@ $review = $wpdb->get_row($query);
     			</td>
     		</tr>
     		
+    		<tr>
+             	 <td>
+             	 	Your Picture
+             	 </td>
+             	 <td>
+             	 	<input type="file" name="image" value="" />
+             	 	
+             	 	<img src="<?php echo home_url(). "/cart/images/". $review->image;?>" width="100" height="100" />
+             	 </td>
+             </tr>
+	             
     		 <tr>
              	 <td colspan="2"><h3>Your opinion of the level of physical activity on the tour:</h3></td>
              </tr>

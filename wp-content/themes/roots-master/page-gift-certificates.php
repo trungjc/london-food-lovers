@@ -1,7 +1,16 @@
 <?php
-/*
 
-*/
+if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
+    $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    echo "<script>window.location.href='$redirect';</script>";
+    exit;
+}
+
+$code_query  = mysql_query("select code , rand(1000) from vouchers where is_used = 0 and status = 1 order by rand() ASC limit 1");
+$code_result = mysql_fetch_assoc($code_query);
+if($code_result){
+    $code = $code_result['code'];
+}
 ?>
 <div class="panel panel-default ">
 	<div class="panel-body">
@@ -45,10 +54,26 @@
               	  <form method="post" action="<?php echo home_url()?>/checkout-certificate" id="certificate"> 
                       <img style="margin-bottom: 5px" width="" src="../wp-content/uploads/2014/04/Gift-certificates.png">
                       <div class="form-group center ">
-                      	 <a class="btn btn-black btn-md" href="javascript://" onclick="document.forms['certificate'].submit();" style="border-radius: 13px;  padding: 3px 20px;">Add to Cart</a>
-                      	 <a class="paypal-button" href="#">
-                          	<!--<img width="" src="../wp-content/uploads/2014/04/paypal.jpg"> -->
-                      	 </a>
+                      	 <?php if($code):?>
+                      	 	 QTY: 
+                      	 	 <select name="qty">
+                      	 	 	 <option value="1">1</option>
+                      	 	 	 <option value="2">2</option>
+                      	 	 	 <option value="3">3</option>
+                      	 	 	 <option value="4">4</option>
+                      	 	 	 <option value="5">5</option>
+                      	 	 	 <option value="6">6</option>
+                      	 	 	 <option value="7">7</option>
+                      	 	 	 <option value="8">8</option>
+                      	 	 	 <option value="9">9</option>
+                      	 	 	 <option value="10">10</option>
+                      	 	 </select>
+                      	 	 
+                          	 <a class="btn btn-black btn-md" href="javascript://" onclick="document.forms['certificate'].submit();" style="border-radius: 13px;  padding: 3px 20px;">Add to Cart</a>
+                          	 <a class="paypal-button" href="#">
+                              	<!--<img width="" src="../wp-content/uploads/2014/04/paypal.jpg"> -->
+                          	 </a>
+                         <?php endif;?>  	 
                       </div>
                   </form>
               </div>

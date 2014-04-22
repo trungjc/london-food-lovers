@@ -9,11 +9,11 @@
                 <div class="form-group">
                     <select class="form-control" name="category_id" id="category_id" onchange="getTours(this.value);">
 					  	<option value="">Select Category</option>
-					    <?php foreach($categories as $category):?>
+					    <?php foreach($categories as $category): if($category['name'] != 'Private Tour' && $category['name'] != 'Corporate Tour'):?>
         						<option value="<?php echo $category['category_id']?>">
         						   <?php echo $category['name']?>
         						</option>
-        				<?php endforeach;?>			
+        				<?php endif; endforeach;?>			
 					  </select>
                 </div>
                 
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="form-group" id="itemsDiv">				  
-				  <select class="form-control" name="item_id">
+				  <select class="form-control" name="item_id" id="item_id">
 					<option value="">Select Tour</option>
 				  </select>	
 			    </div>

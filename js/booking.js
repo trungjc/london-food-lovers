@@ -7,6 +7,7 @@ function getTours(cid){
            jQuery("#calender").html(parts[0]);
            jQuery("#itemsDiv").html(parts[1]);
            bindCalenderEvent();
+           jQuery("#item_id").prop("selectedIndex",1);
 	   },
 	   error:function(error){
 		   //alert(error);

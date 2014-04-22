@@ -7,7 +7,7 @@ include_once 'Mailchimp.php';
 
 function sendOrderEmail($data , $order_id){
     global $host_path;
-    
+
     $tour_query = mysql_query("select name from categories where category_id = '".$_SESSION['cart']['category_id']."'");
     $tour_data  = mysql_fetch_array($tour_query);
     $tour_name  = $tour_data['name'];
@@ -71,7 +71,7 @@ function sendOrderEmail($data , $order_id){
 
     $email_body .= "<h3>Terms and conditions</h3>";
     $email_body .= "<p>Tickets are non-refundable and non-exchangeable. Please check carefully for tour dates and times before placing your order. For the Full Terms and Conditions, please click here </p>";
-    
+
     $email_body .= "Best wishes, <br /> London Food Lovers";
 
     $from = "no-reply@londonfoodlovers.com";
@@ -94,13 +94,13 @@ function sendOrderEmail($data , $order_id){
 
 function sendGiftCertificateEmail($data){
     global $host_path;
-    
+
     $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
 
     $email_body .= "<br /><div>";
     $email_body .= "Dear ".$data['customer_name']." <br /><br />";
     $email_body .= "Your gift certtificate order has been placed successfully.<br /><br />";
-    $email_body .= "Your gift certtificate code is: FoodLovers2014 <br /><br />";
+    $email_body .= "Your gift certtificate code is: ".$_SESSION['voucher_code']." <br /><br />";
     $email_body .= "</div><br />";
 
     $email_body .= "Best wishes, <br /> London Food Lovers";
@@ -221,10 +221,15 @@ function saveCertificate($data , $transaction_id){
 						phone = '".mysql_real_escape_string($data['customer_phone'])."',
 						cart  = '".mysql_real_escape_string(json_encode($_SESSION))."',
 						order_date  = '".mysql_real_escape_string(date('Y-m-d H:i:s'))."',
+						vouchers 	= '".$_SESSION['cart']['codes']."',
 						dateofmodification = '".date('Y-m-d H:i:s')."'";
 
         mysql_query($order_query) or die(mysql_error());
 
+        mysql_query("Update vouchers SET is_used = 1 where code in (".$_SESSION['cart']['codes'].")");
+        
+        mysql_query("delete from tmp_vouchers where id = '".session_id()."'");
+        
         //send email to cusotmer
         sendGiftCertificateEmail($data);
 

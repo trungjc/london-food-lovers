@@ -1,17 +1,50 @@
 ﻿<?php
 
-if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
-    $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-    echo "<script>window.location.href='$redirect';</script>";
-    exit;
+mysql_query("delete from tmp_vouchers where id = '".session_id()."'");
+    
+$qty = (int)$_POST['qty'];
+
+$tmp_vouchers = $wpdb->get_results("select codes from tmp_vouchers");
+$tmp_vouchers_str = '';
+foreach($tmp_vouchers as $code){
+    $tmp_vouchers_str .= $code->codes . ",";
+}
+$tmp_vouchers_str = substr($tmp_vouchers_str,0,-1);
+
+if($tmp_vouchers_str){
+    $_query = "select code from vouchers where is_used = 0 and status = 1 and code not in ($tmp_vouchers_str) order by rand() ASC limit $qty";
+}
+else{
+    $_query = "select code from vouchers where is_used = 0 and status = 1 order by rand() ASC limit $qty";
 }
 
+$code_query  = mysql_query($_query) or die(mysql_error() . "Query: $_query");
+$codes = array();
+$codestr = '';
+while($code_result = mysql_fetch_assoc($code_query)){
+    $codes[]  = $code_result['code'];
+    $codestr .= '"'. $code_result['code'] .'",';
+}
+$codestr = substr($codestr,0,-1);
+
+if(sizeof($codes) != $qty){
+    $error_message = sizeof($codes) . " only gift vouchers are availables";
+}
+
+mysql_query("Insert into tmp_vouchers SET codes = '$codestr' , id = '".session_id()."'");
+
+$_SESSION['cart']['codes'] = $codestr;
+$_SESSION['cart']['qty'] = $qty;
+    
 ?>
 <div class="panel checkout-page">
     <div class="panel-body">
 		<h3 class="title-img">Online Gift certificate</h3>
 		
 		<hr/>
+		<?php if($error_message):?>
+			<div style="color:red;"><?php echo $error_message;?></div>		
+		<?php endif;?>
 		
     	<form class="form-horizontal" method="post" role="form" id="checkout" action="<?php echo home_url();?>/cart/certificate.php" onsubmit="return validateForm();">
           <div class="form-group">
@@ -22,9 +55,23 @@ if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
           </div>
           
           <div class="form-group">
-        	<label for="inputEmail3" class="col-sm-4 control-label">Price:</label>
+        	<label for="inputEmail3" class="col-sm-4 control-label">Unit Price:</label>
         	<div class="col-sm-6">
-        	   <?php echo "£". 80;?>
+        	   <?php echo "£80";?>
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputEmail3" class="col-sm-4 control-label">Qty:</label>
+        	<div class="col-sm-6">
+        	   <?php echo $qty;?>
+        	</div>
+          </div>
+          
+          <div class="form-group">
+        	<label for="inputEmail3" class="col-sm-4 control-label">Total:</label>
+        	<div class="col-sm-6">
+        	   <?php echo "£". 80*$qty;?>
         	</div>
           </div>
           
