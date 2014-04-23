@@ -89,6 +89,191 @@ $item_data = $items[$_SESSION['cart']['item_id']];
         	  <textarea class="form-control" name="note"><?php echo @$_SESSION['data']['note']?></textarea>
         	</div>
           </div>
+            <!--calendar here-->
+            
+            <div class="panel panel-default orange " style="margin: 20px 0px;">
+        <div class="panel-heading ">
+            <h3 style="font-weight: normal; font-size: 18px; color: white;"><span style="color: white;" class="glyphicon glyphicon-calendar"></span> What to change the tour date?</h3>
+        </div>
+        <div class="panel-body">
+		<div class="row calendarbox">
+            <div style="" class="col-sm-6 col-md-6 col-xs-12">
+				<div style="margin: 10px auto; width: 72%;" class="form-groups">
+                <div class="form-group">
+                    <select onchange="getTours(this.value);" id="category_id" name="category_id" class="form-control">
+					  	<option value="">Select Category</option>
+					            						<option value="1">
+        						   London Soho Tour        						</option>
+        							
+					  </select>
+                </div>
+                
+                <div class="form-group">
+                    <div class="date-times">
+				      					  <select style="width: 32%;" class="form-control pull-left" name="tour_year" id="tour_year">
+						<option value="">Year</option>
+					            						<option value="2014">
+        						   2014        						</option>
+        				        						<option value="2015">
+        						   2015        						</option>
+        									  </select>
+					  
+					  <select style="margin-left: 10px; width: 32%;" class="form-control pull-left" name="tour_month" id="tour_month">
+						<option value="">Month</option>
+					            						<option value="04">
+        						  Apr        						</option>
+        				        						<option value="05">
+        						  May        						</option>
+        				        						<option value="06">
+        						  Jun        						</option>
+        				        						<option value="07">
+        						  Jul        						</option>
+        				        						<option value="08">
+        						  Aug        						</option>
+        				        						<option value="09">
+        						  Sep        						</option>
+        				        						<option value="10">
+        						  Oct        						</option>
+        				        						<option value="11">
+        						  Nov        						</option>
+        				        						<option value="12">
+        						  Dec        						</option>
+        									  </select>
+					  
+					  <select style="margin-left: 10px; width: 28%;" class="form-control pull-left" name="tour_date" id="tour_date">
+						<option value="">Day</option>
+					            						<option value="01">
+        						   1        						</option>
+        				        						<option value="02">
+        						   2        						</option>
+        				        						<option value="03">
+        						   3        						</option>
+        				        						<option value="04">
+        						   4        						</option>
+        				        						<option value="05">
+        						   5        						</option>
+        				        						<option value="06">
+        						   6        						</option>
+        				        						<option value="07">
+        						   7        						</option>
+        				        						<option value="08">
+        						   8        						</option>
+        				        						<option value="09">
+        						   9        						</option>
+        				        						<option value="10">
+        						   10        						</option>
+        				        						<option value="11">
+        						   11        						</option>
+        				        						<option value="12">
+        						   12        						</option>
+        				        						<option value="13">
+        						   13        						</option>
+        				        						<option value="14">
+        						   14        						</option>
+        				        						<option value="15">
+        						   15        						</option>
+        				        						<option value="16">
+        						   16        						</option>
+        				        						<option value="17">
+        						   17        						</option>
+        				        						<option value="18">
+        						   18        						</option>
+        				        						<option value="19">
+        						   19        						</option>
+        				        						<option value="20">
+        						   20        						</option>
+        				        						<option value="21">
+        						   21        						</option>
+        				        						<option value="22">
+        						   22        						</option>
+        				        						<option value="23">
+        						   23        						</option>
+        				        						<option value="24">
+        						   24        						</option>
+        				        						<option value="25">
+        						   25        						</option>
+        				        						<option value="26">
+        						   26        						</option>
+        				        						<option value="27">
+        						   27        						</option>
+        				        						<option value="28">
+        						   28        						</option>
+        				        						<option value="29">
+        						   29        						</option>
+        				        						<option value="30">
+        						   30        						</option>
+        				        						<option value="31">
+        						   31        						</option>
+        									  </select>
+					  
+					  <a onclick="jQuery('#calender').toggle();" href="javascript:void(0);" style="margin-left: 4px; font-size: 48px; display: none;"><img src="https://londonfoodlovers.com/images/img.gif"></a>
+				   </div>
+				   
+				   <div style="display:none;position:absolute" id="calender"><table class="cf-cal-sm"><thead><tr class="head"><td><a class="cf-prev" href="#D20140301">◄</a></td><td colspan="5"><select class="none" id="cf-month" name="cf-month"><option selected="selected" value="20140423">APRIL 2014</option><option value="20140501">MAY 2014</option><option value="20140601">JUNE 2014</option><option value="20140701">JULY 2014</option><option value="20140801">AUGUST 2014</option><option value="20140901">SEPTEMBER 2014</option><option value="20141001">OCTOBER 2014</option><option value="20141101">NOVEMBER 2014</option><option value="20141201">DECEMBER 2014</option><option value="20150101">JANUARY 2015</option><option value="20150201">FEBRUARY 2015</option><option value="20150301">MARCH 2015</option><option value="20150401">APRIL 2015</option><option value="20150501">MAY 2015</option><option value="20150601">JUNE 2015</option><option value="20150701">JULY 2015</option><option value="20150801">AUGUST 2015</option><option value="20150901">SEPTEMBER 2015</option></select></td><td><a class="cf-next" href="#D20140501">►</a></td></tr><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead><tfoot><tr><td colspan="7">Wednesday April 23</td></tr></tfoot><tbody><tr><td class="X"><a href="#D20140331">31</a></td><td class="X"><a href="#D20140401"> 1</a></td><td class="X"><a href="#D20140402"> 2</a></td><td class="X"><a href="#D20140403"> 3</a></td><td class="X"><a href="#D20140404"> 4</a></td><td class="X"><a href="#D20140405"> 5</a></td><td class="X"><a href="#D20140406"> 6</a></td></tr>
+<tr><td class="X"><a href="#D20140407"> 7</a></td><td class="X"><a href="#D20140408"> 8</a></td><td class="X"><a href="#D20140409"> 9</a></td><td class="X"><a href="#D20140410">10</a></td><td class="X"><a href="#D20140411">11</a></td><td class="X"><a href="#D20140412">12</a></td><td class="X"><a href="#D20140413">13</a></td></tr>
+<tr><td class="X"><a href="#D20140414">14</a></td><td class="X"><a href="#D20140415">15</a></td><td class="X"><a href="#D20140416">16</a></td><td class="X"><a href="#D20140417">17</a></td><td class="X"><a href="#D20140418">18</a></td><td class="X"><a href="#D20140419">19</a></td><td class="X"><a href="#D20140420">20</a></td></tr>
+<tr><td class="X"><a href="#D20140421">21</a></td><td class="X"><a href="#D20140422">22</a></td><td class="Q T"><a href="#D20140423">23</a></td><td class=""><a href="#D20140424">24</a></td><td class=""><a href="#D20140425">25</a></td><td class=""><a href="#D20140426">26</a></td><td class=""><a href="#D20140427">27</a></td></tr>
+<tr><td class=""><a href="#D20140428">28</a></td><td class=""><a href="#D20140429">29</a></td><td class=""><a href="#D20140430">30</a></td><td class=""><a href="#D20140501"> 1</a></td><td class=""><a href="#D20140502"> 2</a></td><td class=""><a href="#D20140503"> 3</a></td><td class=""><a href="#D20140504"> 4</a></td></tr>
+</tbody></table><input type="hidden" value="20140423:20140423" id="CF_range"></div>
+            	   <input type="hidden" value="04" id="month" name="month">
+                </div>
+                
+                <div id="itemsDiv" class="form-group"><select id="item_id" name="item_id" class="form-control"><option value="">Select Tour</option><option value="6">Morning Tour - English - 09:45AM</option></select></div>
+			    
+                <div id="detailsDiv" class="form-group">
+				  <div class="date-times">
+					<select style="width: 20%;" class="form-control pull-left" name="adults" id="adults">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+											  </select>
+					  &nbsp;<span class="label-option pull-left" style="margin-left: 5px; font-size: 11px; margin-top: 5px; margin-right: 5px;">ADULTS (12+)</span>
+					  <select style="width: 20%;" class="form-control pull-left" name="children" id="children">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+											  </select>
+					  &nbsp;<span class="label-option pull-left" style="font-size: 11px; margin-top: 5px; margin-left: 5px;">KIDS (4-12)</span>
+				   </div>				  
+				</div>
+
+                
+                <div class=" center ">
+                    <a id="" onclick="jQuery('#discount_code').toggle();" href="javascript://" class="PROMOTION">ENTER PROMOTION CODE</a>
+					
+					 <input type="text" style="display:none;" id="discount_code" value="" name="discount_code">
+				</div>
+            </div>
+			</div>
+            <div class="col-sm-6 col-md-6 col-xs-12" style="border-left: 1px solid rgb(227, 227, 227);">
+				<div style="margin: 10px auto; width: 210px;" id="calender"><table class="cf-cal-sm"><thead><tr class="head" style="height: 48px;"><td><a class="cf-prev" href="#D20140301">◄</a></td><td colspan="5"><select class="none form-control" id="cf-month" name="cf-month"><option selected="selected" value="20140423">APRIL 2014</option><option value="20140501">MAY 2014</option><option value="20140601">JUNE 2014</option><option value="20140701">JULY 2014</option><option value="20140801">AUGUST 2014</option><option value="20140901">SEPTEMBER 2014</option><option value="20141001">OCTOBER 2014</option><option value="20141101">NOVEMBER 2014</option><option value="20141201">DECEMBER 2014</option><option value="20150101">JANUARY 2015</option><option value="20150201">FEBRUARY 2015</option><option value="20150301">MARCH 2015</option><option value="20150401">APRIL 2015</option><option value="20150501">MAY 2015</option><option value="20150601">JUNE 2015</option><option value="20150701">JULY 2015</option><option value="20150801">AUGUST 2015</option><option value="20150901">SEPTEMBER 2015</option></select></td><td><a class="cf-next" href="#D20140501">►</a></td></tr><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead><tfoot><tr><td colspan="7">Wednesday April 23</td></tr></tfoot><tbody><tr><td class="X"><a href="#D20140331">31</a></td><td class="X"><a href="#D20140401"> 1</a></td><td class="X"><a href="#D20140402"> 2</a></td><td class="X"><a href="#D20140403"> 3</a></td><td class="X"><a href="#D20140404"> 4</a></td><td class="X"><a href="#D20140405"> 5</a></td><td class="X"><a href="#D20140406"> 6</a></td></tr>
+<tr><td class="X"><a href="#D20140407"> 7</a></td><td class="X"><a href="#D20140408"> 8</a></td><td class="X"><a href="#D20140409"> 9</a></td><td class="X"><a href="#D20140410">10</a></td><td class="X"><a href="#D20140411">11</a></td><td class="X"><a href="#D20140412">12</a></td><td class="X"><a href="#D20140413">13</a></td></tr>
+<tr><td class="X"><a href="#D20140414">14</a></td><td class="X"><a href="#D20140415">15</a></td><td class="X"><a href="#D20140416">16</a></td><td class="X"><a href="#D20140417">17</a></td><td class="X"><a href="#D20140418">18</a></td><td class="X"><a href="#D20140419">19</a></td><td class="X"><a href="#D20140420">20</a></td></tr>
+<tr><td class="X"><a href="#D20140421">21</a></td><td class="X"><a href="#D20140422">22</a></td><td class="Q T"><a href="#D20140423">23</a></td><td class=""><a href="#D20140424">24</a></td><td class=""><a href="#D20140425">25</a></td><td class=""><a href="#D20140426">26</a></td><td class=""><a href="#D20140427">27</a></td></tr>
+<tr><td class=""><a href="#D20140428">28</a></td><td class=""><a href="#D20140429">29</a></td><td class=""><a href="#D20140430">30</a></td><td class=""><a href="#D20140501"> 1</a></td><td class=""><a href="#D20140502"> 2</a></td><td class=""><a href="#D20140503"> 3</a></td><td class=""><a href="#D20140504"> 4</a></td></tr>
+</tbody></table><input type="hidden" value="20140423:20140423" id="CF_range"></div>
+
+			</div>
+		</div>
+			<div class="center" style="margin-top: 20px;"><a href="http://foodloverstour.wpengine.com/reviews/" class="btn btn-black btn-md">change dates</a></div>
+        </div>
+    </div>
+            <!--end calendar herer-->
           
           <h3 class="title-img">2. Contact Information</h3>
           <hr/>
