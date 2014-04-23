@@ -37,13 +37,15 @@ font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 */
 
 body {
-	font-family: 'Gotham SSm A', 'Gotham SSm B'; font-weight: 400; font-style: normal;
+	font-family: 'Gotham SSm A', 'Gotham SSm B',helvetica, sans-serif, arial; 
+	font-weight: 400; font-style: normal;
 	font-size: 14px;line-height: 22px;
         background:#eff4f6;
 }
 
 body h1, h2, h3, h4, h5, h6 {
-font-family: 'Gotham A', 'Gotham B'; font-weight: 500; font-style: normal;
+font-family: 'Gotham A', 'Gotham B',helvetica, sans-serif, arial; 
+ font-weight: 500; font-style: normal;
 
 }
 
@@ -502,7 +504,8 @@ select#adults ,select#children{
     margin-bottom: 8px;
 }
 .form-search h3 {
-    font-family: 'Gotham A', 'Gotham B'; font-weight: 400; font-style: normal;
+    font-family: 'Gotham A', 'Gotham B',helvetica, sans-serif, arial; 
+	font-weight: 400; font-style: normal;
     font-size: 20px;
     margin:0;
 }
@@ -648,8 +651,11 @@ font-size: 15px;
 }
 .home .page-header,.carousel-control {display: none;}
 .navbar-inverse .navbar-nav > li > a {
-    color: #161717;font-size: 15px;    font-family: arial; font-weight:bold;
+    color: #161717;font-size: 15px;    font-family: arial,helvetica, sans-serif, arial;  font-weight:bold;
     
+}
+.category-blog .main  .panel img {
+	border-radius: 20px;
 }
 .navbar-nav > li > a {
     padding: 0 15px;
@@ -875,7 +881,7 @@ text-align: center;
 -moz-border-radius: 15px;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
-font-family: 'Gotham SSm A', 'Gotham SSm B';
+font-family: 'Gotham SSm A', 'Gotham SSm B',helvetica, sans-serif, arial; 
 font-weight: 400;
 font-style: normal;
 
