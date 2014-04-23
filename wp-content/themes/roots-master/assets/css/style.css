@@ -480,7 +480,7 @@ header.navbar {margin-bottom: 0}
     background-image:url("http://londonfoodlovers.com/wp-content/themes/roots-master/assets/images/pattern.jpg");
 }
 .form-search {
-    margin-top: -220px;
+    margin-top: -268px;
     position: relative;
     z-index: 999;
    
@@ -994,11 +994,7 @@ border-right:0;
 .rev_slider_wrapper > div {
     max-width: 100% !important;
 }
-.footer .text-12 h3{
-    color:#e1754c;
-}
-.new-letter .btn{ width: 100%;font-size: 14px;font-weight: bold;}
-.new-letter .btn span {margin-left:5px;}
+
 @media (min-width: 980px) and (max-width: 1280px) { 
 .tp-caption.big_white {
     
@@ -1045,7 +1041,6 @@ border-right:0;
 }
 }
  @media screen and (max-width: 768px) {
-     .new-letter input,.new-letter .btn {max-width: 300px;}
      .row.three-col {width: 100%;}
      .home > .container {
            margin: auto;
