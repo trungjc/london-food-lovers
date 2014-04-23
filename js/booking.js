@@ -6,8 +6,15 @@ function getTours(cid){
            parts = data.split("@@@");
            jQuery("#calender").html(parts[0]);
            jQuery("#itemsDiv").html(parts[1]);
-           bindCalenderEvent();
            jQuery("#item_id").prop("selectedIndex",1);
+           
+           try{
+        	   jQuery("#calender2").html(parts[0]);
+        	   jQuery("#itemsDiv2").html(parts[1]);
+        	   jQuery(".item_id").prop("selectedIndex",1);
+           }catch(e){}
+           
+           bindCalenderEvent();
 	   },
 	   error:function(error){
 		   //alert(error);
@@ -31,6 +38,7 @@ function checkavail(){
            children : jQuery('#children').val() 
        },
        success:function(html){
+    	   html = jQuery.trim(html);
            if(html == 'Yes'){
                document.forms['booking'].submit();
            }
@@ -38,13 +46,14 @@ function checkavail(){
         	   alert("This Tour is not available on selected date or qty");
         	   return false; 
            }
+           
+           jQuery("#booknow").val("Book Now");
 	   },
 	   error:function(error){
 		   //alert(error);
 	   }
 	});
-
-	jQuery("#booknow").val("Book Now");
+	
 	return false; 
 }
 
@@ -53,6 +62,13 @@ function filldate(date){
     jQuery("#tour_month").val(date.substring(4,6));
     jQuery("#tour_date").val(date.substring(6));
     jQuery("#calender").hide();
+    
+    try{
+    	jQuery("#tour_year2").val(date.substring(0,4));
+        jQuery("#tour_month2").val(date.substring(4,6));
+        jQuery("#tour_date2").val(date.substring(6));
+    }
+    catch(e){}
 }
 
 function bindCalenderEvent(){
@@ -175,4 +191,38 @@ function validateForm(){
     }
 
 	return true;
+}
+
+function changeTourDate(){
+   jQuery("#changedate").val("Please wait...");
+	
+   url = host_path + '/cart/changedate.php?action=changedate';
+   jQuery.ajax({
+       url: url,
+       data: { 
+           item_id : jQuery('.item_id').val() , 
+           category_id : jQuery('#category_id2').val() , 
+           tour_year  : jQuery('#tour_year2').val() , 
+           tour_month : jQuery('#tour_month2').val() , 
+           tour_date  : jQuery('#tour_date2').val() , 
+           adults : jQuery('#adults').val() ,
+           children : jQuery('#children').val() 
+       },
+       success:function(html){
+    	   html = jQuery.trim(html);
+           if(html == 'Yes'){
+        	   alert("Tour date is changed");
+        	   window.location.reload();
+           }
+           else{
+        	   alert("This Tour is not available on selected date or qty");
+        	   return false; 
+           }
+           
+           jQuery("#changedate").val("Change Date");
+	   },
+	   error:function(error){
+		   //alert(error);
+	   }
+	});
 }

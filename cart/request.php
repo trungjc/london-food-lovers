@@ -17,7 +17,7 @@ if(@$_GET['category_id'] && @$_GET['action']=='items'){
 	);
 
 	if(count($items)){
-		$items_str = '<select class="form-control" name="item_id" id="item_id">';
+		$items_str = '<select class="form-control item_id" name="item_id" id="item_id">';
 		$items_str .= '<option value="">Select Tour</option>';
 		foreach($items as $item_id => $item) {
 			$items_str .= '<option value="'.$item_id.'">'.$item['name'].'</option>';

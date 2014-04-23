@@ -15,66 +15,13 @@ function sendOrderEmail($data , $order_id){
     $date = $_SESSION['cart']['tour_year']."-".$_SESSION['cart']['tour_month']."-".$_SESSION['cart']['tour_date'];
     $tour_date = date('m d, Y H:i A' , strtotime($date));
 
-    $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
+    $email_body = file_get_contents("email/TourDetails.html");
+    $params = array("{name}","{order_id}","{participants}","{tour_date}","{tour_amount}");
+    $values = array($data['customer_name'],$order_id,"Adults:".$_SESSION['cart']['adults'].", Kids:".$_SESSION['cart']['children'],$tour_date,$_SESSION['cart']['total']);
 
-    $email_body .= "<br /><div>";
-    $email_body .= "Dear ".$data['customer_name']." <br /><br />";
-    $email_body .= "Thank you for booking with London Food Lovers! Your order ID $order_id is Confirmed. <br /><br />
-					Below, you will find your Pre-Paid Voucher with all of your tour details, however if you have any further questions, please feel free to contact us!";
-    $email_body .= "My Pre-Paid Voucher <br />";
-    $email_body .= "<h2>Order Details</h2>";
-    $email_body .= "<table>
-    					<tr>
-    						<td colspan='2'>$tour_name</td>
-    					</tr>
-    					<tr>
-    						<td>Lead Participant</td>
-    						<td>".$data['customer_name']."</td>
-    					</tr>
-    					<tr>
-    						<td>Number of Participants</td>
-    						<td>Adults:".$_SESSION['cart']['adults'].", Kids:".$_SESSION['cart']['children']."</td>
-    					</tr>
-    					<tr>
-    						<td>Tour Date</td>
-    						<td>".$tour_date."</td>
-    					</tr>
-    					<tr>
-    						<td>Departure Time</td>
-    						<td>9:45am</td>
-    					</tr>
-    					<tr>
-    						<td>Total Amount</td>
-    						<td>".$_SESSION['cart']['total']."</td>
-    					</tr>
-    				</table>";
-    $email_body .= "</div><br />";
+    $email_body = str_ireplace($params,$values,$email_body);
 
-    $email_body .= "<h2>Tour Meeting Place Location&Instructions:</h2>";
-    $email_body .= "<p>Meeting Place Location: Golden Square, Soho, London W1F</p>";
-    $email_body .= "<p>When to get there: Please arrive at least 15 minutes prior to the tour departure, as tours depart on time. We have delicious food prepared for you and we want to make sure we arrive when our tastings are fresh.</p>";
-    $email_body .= "<p>How to get there:Golden Square is a 4 minute walk from Picadilly Circus! No matter how you decide to come, we can help you find us:</p>";
-    $email_body .= "<p>From the tube: The closest tube stop is Picadilly Circus. Exit the tube and cross Regent street heading North towards the massive television screens (you will see a big Barclays bank under the screens). Once you cross the street and are standing in front of the Barclay’s, turn LEFT (on Glasshouse Street), walk 50 meters, and then turn RIGHT on Sherwood street. Walk straight on Sherwood Street, as this is the street that will take you directly to Golden Square. Please note that once you pass Brewer Street, the street name changes from Sherwood to Lower St. John Street, but keep going 100 meters more and you will find Golden Square, where we will be waiting for you at the entrance of square, opposite the Nordic Bakery!</p>";
-    $email_body .= "<p>With a bus: There are many buses that go to Picadilly Circus. If you arrive by bus, get out at Picadilly Circus and head towards the massive television screens (you will see a big Barclays bank under the screens). Once you cross the street and are standing in front of the Barclay’s, turn LEFT (on Glasshouse Street), walk 50 meters, and then turn RIGHT on Sherwood street. Walk straight on Sherwood Street, as this is the street that will take you directly to Golden Square. Please note that once you pass Brewer Street, the street name changes from Sherwood to Lower St. John Street, but keep going 100 meters more and you will find Golden Square, where we will be waiting for you at the entrance of square, opposite the Nordic Bakery!</p>";
-    $email_body .= "<p>With a Taxi: If you arrive by taxi, tell the driver Golden Square. We will be waiting for you at the entrance of the square, opposite the Nordic Bakery!</p>";
-    $email_body .= "<p>Additional Instructions: The Soho Food Tour stops at nine different locations, where you will have over 10 food and drink tastings, serving enough food for a breakfast, lunch and snacks in between. For this reason, it’s important to COME HUNGRY! We recommend not eating breakfast, or if you absolutely have to - eat a REALLY light breakfast.</p>";
-    $email_body .= "<p>We also recommend bringing a water bottle. It’s nice to keep yourself hydrated between tastings!</p>";
-    $email_body .= "<p>London is known to rain, but a little rain won’t stop us from enjoying the delicious food and drink tastings. As the Londoners would say, Keep Calm and Bring An Umbrella – just in case!</p>";
-    $email_body .= "<p>Remember, this is a walking tour, and in between our tastings, we will be exploring Soho on foot, so good walking shoes are a plus!</p>";
-    $email_body .= "<p>Our tour finishes in a different location than the starting point. There are two tube stops nearby and many buses. At the end of our tour, we can help provide you with directions to get back to the starting point or help you get to the nearest Underground station or bus stop.</p>";
-    $email_body .= "<p>Your booking receipt and printable voucher are available on-line at the following link: [Link Here]</p>";
-
-    $email_body .= "<h3>Important !!</h3>";
-    $email_body .= "<p>Please let us know if you have any dietary restrictions so that we can make the necessary substitutions to accommodate your needs. You MUST notify us at least 48 hours prior to your tour. We can find substitutions for Vegetarian, vegan, glucose-free and lactose-intolerant dietary restrictions, but we must be notified in advance. If you didn’t note your dietary needs on your online booking form, then please call to confirm your special dietary restrictions as soon as possible.</p>";
-    $email_body .= "Tour Inclusions";
-    $email_body .= "<ul><li>10 different Food Tastings</li><li>Wine and Ale Tastings</li><li>Expert Food Guide</li><li>London Food Lovers Food Guide to London</li></ul>";
-
-    $email_body .= "<h3>Terms and conditions</h3>";
-    $email_body .= "<p>Tickets are non-refundable and non-exchangeable. Please check carefully for tour dates and times before placing your order. For the Full Terms and Conditions, please click here </p>";
-
-    $email_body .= "Best wishes, <br /> London Food Lovers";
-
-    $from = "no-reply@londonfoodlovers.com";
+    $from = "info@londonfoodlovers.com";
     $fromName = "London Food Lovers";
 
     $phpmailer = new PHPMailer();
@@ -95,17 +42,13 @@ function sendOrderEmail($data , $order_id){
 function sendGiftCertificateEmail($data){
     global $host_path;
 
-    $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
+    $email_body = file_get_contents("email/GiftCertificate.html");
+    $params = array("{name}","{gift_codes}");
+    $values = array($data['customer_name'],$_SESSION['voucher_code']);
 
-    $email_body .= "<br /><div>";
-    $email_body .= "Dear ".$data['customer_name']." <br /><br />";
-    $email_body .= "Your gift certtificate order has been placed successfully.<br /><br />";
-    $email_body .= "Your gift certtificate code is: ".$_SESSION['voucher_code']." <br /><br />";
-    $email_body .= "</div><br />";
+    $email_body = str_ireplace($params,$values,$email_body);
 
-    $email_body .= "Best wishes, <br /> London Food Lovers";
-
-    $from = "no-reply@londonfoodlovers.com";
+    $from = "info@londonfoodlovers.com";
     $fromName = "London Food Lovers";
 
     $phpmailer = new PHPMailer();
@@ -137,7 +80,7 @@ function sendFeedbackEmail($order_id , $data){
 
     $email_body .= "Best wishes, <br /> London Food Lovers";
 
-    $from = "no-reply@londonfoodlovers.com";
+    $from = "info@londonfoodlovers.com";
     $fromName = "London Food Lovers";
 
     $phpmailer = new PHPMailer();
@@ -227,9 +170,9 @@ function saveCertificate($data , $transaction_id){
         mysql_query($order_query) or die(mysql_error());
 
         mysql_query("Update vouchers SET is_used = 1 where code in (".$_SESSION['cart']['codes'].")");
-        
+
         mysql_query("delete from tmp_vouchers where id = '".session_id()."'");
-        
+
         //send email to cusotmer
         sendGiftCertificateEmail($data);
 

@@ -7,9 +7,13 @@ $qty = (int)$_POST['qty'];
 $tmp_vouchers = $wpdb->get_results("select codes from tmp_vouchers");
 $tmp_vouchers_str = '';
 foreach($tmp_vouchers as $code){
-    $tmp_vouchers_str .= $code->codes . ",";
+	if($code->codes){
+	    $tmp_vouchers_str .= $code->codes . ",";
+	}
 }
-$tmp_vouchers_str = substr($tmp_vouchers_str,0,-1);
+if($tmp_vouchers_str){
+	$tmp_vouchers_str = substr($tmp_vouchers_str,0,-1);
+}
 
 if($tmp_vouchers_str){
     $_query = "select code from vouchers where is_used = 0 and status = 1 and code not in ($tmp_vouchers_str) order by rand() ASC limit $qty";
