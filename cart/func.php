@@ -44,7 +44,7 @@ function sendGiftCertificateEmail($data){
 
     $email_body = file_get_contents("email/GiftCertificate.html");
     $params = array("{name}","{gift_codes}");
-    $values = array($data['customer_name'],$_SESSION['voucher_code']);
+    $values = array($data['customer_name'],$_SESSION['cart']['codes']);
 
     $email_body = str_ireplace($params,$values,$email_body);
 

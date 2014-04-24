@@ -5,7 +5,7 @@ $categories = $Booking->query_categories();
 
 if(!$_SESSION['cart']) {
     $url = home_url();
-  echo "<script>window.location.href='$url';</script>";
+    echo "<script>window.location.href='$url';</script>";
     exit;
 }
 
@@ -26,7 +26,7 @@ $tour_date = date('Y-m-d' , strtotime($date));
 $items = $Booking->query_inventory(
   array(
     'category_id' => $_SESSION['cart']['category_id'],
-      'start_date'  => $tour_date,
+    'start_date'  => $tour_date,
     'item_id' => (int)$_SESSION['cart']['item_id'],
     'discount_code' => $_SESSION['cart']['discount_code'],
     'available' => 1,
@@ -165,73 +165,113 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <hr/>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="Vegetarian" value="1" name="Vegetarian">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_pork" value="1" name="no_pork" placeholder="No Pork">
-          </div>
+              <label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
+              <div class="col-sm-6">
+              	<select id="Vegetarian" name="Vegetarian">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	</select>
+              </div>
           </div>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_fish" value="1" name="no_fish" placeholder="No Pork">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_alcohol" value="1" name="no_alcohol" placeholder="No Alcohol">
-          </div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
+              <div class="col-sm-6">
+              	 <select id="no_pork" name="no_pork">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="vegan" value="1" name="vegan" placeholder="No Alcohol">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_eggs" value="1" name="no_eggs" placeholder="No Alcohol">
-          </div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
+              <div class="col-sm-6">
+              	 <select id="no_fish" name="no_fish">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_gluten" value="1" name="no_gluten" placeholder="No Alcohol">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_nuts" value="1" name="no_nuts" placeholder="No Chocolate">
-          </div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
+              <div class="col-sm-6">
+              	<select id="no_alcohol" name="no_alcohol">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_lactose" value="1" name="no_lactose" placeholder="No Chocolate">
-          </div>
+              <label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
+              <div class="col-sm-6">
+              	<select id="vegan" name="vegan">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
-          <div class="col-sm-6">
-            <input type="checkbox" class="" id="no_shellfish" value="1" name="no_shellfish" placeholder="No Chocolate">
+              <label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
+              <div class="col-sm-6">
+              	<select id="no_eggs" name="no_eggs">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
+          
+          <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
+              <div class="col-sm-6">
+              	<select id="no_gluten" name="no_gluten">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
+              <div class="col-sm-6">
+              	 <select id="no_nuts" name="no_nuts">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
+              <div class="col-sm-6">
+              	<select id="no_lactose" name="no_lactose">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
+              <div class="col-sm-6">
+              	<select id="no_shellfish" name="no_shellfish">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">

@@ -72,6 +72,7 @@ if($_POST['placeOrder']){
         saveCertificate($data , $transaction_id);
         $message = "<h6>Your Order has been placed successfully.</h6> Your transaction ID : $transaction_id";
         unset($_SESSION['cart']);
+        unset($_SESSION['data']);
     }
     else{
         $error = true;

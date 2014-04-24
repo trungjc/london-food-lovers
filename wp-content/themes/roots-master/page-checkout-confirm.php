@@ -152,73 +152,113 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <hr/>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="Vegetarian" <?php if($_SESSION['data']['Vegetarian']):?> checked="checked" <?php endif;?> value="1" name="Vegetarian">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
+              <div class="col-sm-6">
+              	<select id="Vegetarian" name="Vegetarian">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['Vegetarian'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	</select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_pork" <?php if($_SESSION['data']['no_pork']):?> checked="checked" <?php endif;?> value="1" name="no_pork" placeholder="No Pork">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
+              <div class="col-sm-6">
+              	 <select id="no_pork" name="no_pork">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_pork'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_fish" <?php if($_SESSION['data']['no_fish']):?> checked="checked" <?php endif;?> value="1" name="no_fish" placeholder="No Pork">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
+              <div class="col-sm-6">
+              	 <select id="no_fish" name="no_fish">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_fish'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_alcohol" <?php if($_SESSION['data']['no_alcohol']):?> checked="checked" <?php endif;?> value="1" name="no_alcohol" placeholder="No Alcohol">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
+              <div class="col-sm-6">
+              	<select id="no_alcohol" name="no_alcohol">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_alcohol'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="vegan" <?php if($_SESSION['data']['vegan']):?> checked="checked" <?php endif;?> value="1" name="vegan" placeholder="No Alcohol">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
+              <div class="col-sm-6">
+              	<select id="vegan" name="vegan">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['vegan'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_eggs" <?php if($_SESSION['data']['no_eggs']):?> checked="checked" <?php endif;?> value="1" name="no_eggs" placeholder="No Alcohol">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
+              <div class="col-sm-6">
+              	<select id="no_eggs" name="no_eggs">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_eggs'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_gluten" <?php if($_SESSION['data']['no_gluten']):?> checked="checked" <?php endif;?> value="1" name="no_gluten" placeholder="No Alcohol">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
+              <div class="col-sm-6">
+              	<select id="no_gluten" name="no_gluten">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_gluten'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_nuts" <?php if($_SESSION['data']['no_nuts']):?> checked="checked" <?php endif;?> value="1" name="no_nuts" placeholder="No Chocolate">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
+              <div class="col-sm-6">
+              	 <select id="no_nuts" name="no_nuts">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_nuts'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_lactose" <?php if($_SESSION['data']['no_lactose']):?> checked="checked" <?php endif;?> value="1" name="no_lactose" placeholder="No Chocolate">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
+              <div class="col-sm-6">
+              	<select id="no_lactose" name="no_lactose">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_lactose'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
-        	<label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
-        	<div class="col-sm-6">
-        	  <input type="checkbox" class="" id="no_shellfish" <?php if($_SESSION['data']['no_shellfish']):?> checked="checked" <?php endif;?> value="1" name="no_shellfish" placeholder="No Chocolate">
-        	</div>
+              <label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
+              <div class="col-sm-6">
+              	<select id="no_shellfish" name="no_shellfish">
+              	   <?php for($i=1;$i<=10;$i++):?>
+              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['cart']['no_shellfish'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
+              	   <?php endfor;?>
+              	  </select>
+              </div>
           </div>
           
           <div class="form-group">
