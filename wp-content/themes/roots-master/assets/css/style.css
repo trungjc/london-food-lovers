@@ -89,7 +89,13 @@ margin: 10px 0;
 
 .blog-column img {border-radius:20px;} 
 .sidbar-blog  .form-search h3{color:#fff;} 
-
+.date-timex select {
+    float: left;
+    width: 30%;
+}
+.date-timex select  + select{
+    margin-left:10px;
+}
 .sidbar-blog  h4 a {font-size: 14px;}
 .sidbar-blog  h4 a ,.entry-title a{color:#333;}
 .top-menu .phone-number,.published {

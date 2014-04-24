@@ -45,15 +45,12 @@ if(isset($_POST['item_id'])) {
     }
   ?>
   
-  <?php if ( ! is_page('checkout') ) :      ?>
 
   <div class="home-section">
       
        <?php putRevSlider("blog") ?>
     </div>
   
-  
-<?php endif;     ?>
 
   <script type="text/javascript" src="<?php echo $host_path?>/js/booking.js"></script>
   <link href="<?php echo $host_path?>/css/calender.css" rel="stylesheet" type="text/css" />
