@@ -35,7 +35,7 @@ function roots_widgets_init() {
   register_sidebar(array(
     'name'          => __('Footer', 'roots'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="col-md-3 col-xs-12  widget %1$s %2$s">',
+     'before_widget' => '<section class="col-md-3 col-xs-12  widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',

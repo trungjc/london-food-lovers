@@ -100,7 +100,7 @@ The food on this tour was delicious, and carefully selected to ensure a gastrono
 
         </a>
         <div class="media-body">
-        <div class="author">Roisin Kelly, Rome/Italy </div>
+        <div class="author">Roisin Kelly, Rome, Italy </div>
             <div class="rate">
             <span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span>
             </div>
@@ -126,7 +126,7 @@ The food on this tour was delicious, and carefully selected to ensure a gastrono
 
         </a>
         <div class="media-body">
-        <div class="author">Cristiane B Mescollote</div>
+        <div class="author">Cristiane B Mescollote, Brazil</div>
             <div class="rate">
             <span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span>
             </div>
@@ -149,7 +149,7 @@ The food on this tour was delicious, and carefully selected to ensure a gastrono
 
         </a>
         <div class="media-body">
-        <div class="author">Ingrid Cabral Vaques Restelli</div>
+        <div class="author">Ingrid Cabral Vaques Restelli, Brazil</div>
             <div class="rate">
             <span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span><span class="glyphicon glyphicon-star rated"></span>
             </div>

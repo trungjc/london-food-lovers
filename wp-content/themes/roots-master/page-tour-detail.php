@@ -20,8 +20,10 @@
 <div class="tab-pane active" id="tour-detail">
 <div class="row">
 <div class="col-sm-6 col-md-8 col-xs-12">
-<h4 style="color: #ee794d; font-size: 18px;">Soho’s International Food Tour</h4>
-<p>Our Soho International Food Tour is an exploration of one of London’s most diverse and historically rich neighborhoods, Soho. </p>
+<h4 style="color: #ee794d; font-size: 18px;">Soho International Food Tour</h4>
+<p>Our exploration will begin with a breakfast tasting, in a tucked-away, historic location. After a delicious start to the day, more tastings are to follow, as you enjoy a colorful walk through some of Soho’s oldest and most charming streets, eating your way from one interesting international destination to another. </p>
+<p>In addition to the many world foods, we will also enjoy some British delicacies at a famous English pub – one of the five oldest in London, and an exclusive tea lounge.</p>
+<p>Our tour also includes a trip through Chinatown on our way to the final destination – the place that inspired the creation of London Food Lovers – an old wine-bar in London.    </p>
 <h4 style="color: #ee794d; font-size: 18px;">Discover Soho</h4>
 <p>Soho, London’s premier neighborhood for entertainment, is filled with pubs, bakeries, bars, restaurants & coffee shops.  From the traditional to some of the newest fusions in the city, Soho is the place to learn about London’s incredible International Food scene. </p>
     
@@ -33,18 +35,17 @@
 
 <h4 style="color: #ee794d; font-size: 18px;">Feel Like a Local</h4>
 
-<p>Our tour aims to give you the local feel of Soho and all it has to offer.Soho folklore is rich with colorful stories of writers, poets, artists and historical figures. It has been a landmark that influenced many artists, as well. It’s easy to walk around Soho and enjoy the vibrant atmosphere, but we want to also show you the layers underneath, that are not always visible to the eye.</p>
+<p>Our tour aims to give you the local feel of Soho and all it has to offer. Soho folklore is rich with colorful stories of writers, poets, artists and historical figures. Anyone can walk around Soho and enjoy the vibrant atmosphere, but we want to show you the layers underneath, that are not always visible to the eye.</p>
 
-<p>Our tour will take you through some of Soho’s most historically interesting streets, as we try a wide variety of International Foods from some of our favorite places in Soho. </p>
+<p>Our tour will take you through some of Soho’s most historically interesting streets, as we try a wide variety of International Foods from some of our favorite places. </p>
 
-<p>Don’t eat breakfast before this tour, as it fully includes breakfast, lunch and many snacks in between. </p>
+<p>We don’t recommend eating much before this tour, as it fully includes breakfast, lunch and many tastes in between. </p>
 
 <h4 style="color: #ee794d; font-size: 18px;">Multi-Cultural Influences = Amazing International Cuisine</h4>
 
-<p>The Theme of our Soho Food tour is “International Foods”, because Soho is considered one of London’s oldest multicultural areas. From the time of its development in the late 1600s, the rich never looked upon Soho as favorably as the other luxury boroughs. Immigrants moved in, and Soho initially became known as London’s “French Quarter”. 
-Most foreigners that came to London, found cheap housing in Soho, and brought with them their incredible cuisines. Amidst the music halls, small theatres and brothels, these immigrants opened up cheap “eating-houses” all over the neighborhood, making it the “in” place to eat for intellectuals, writers and artists, looking for delicious international cuisine.</p>
+<p>The Theme of our Soho Food tour is “International Foods”, because Soho is considered one of London’s oldest multicultural areas. From the time of its development in the late 1600s, the rich never looked upon Soho as favorably as the other luxury boroughs. Immigrants moved in, and Soho initially became known as London’s “French Quarter”. Most foreigners that came to London, found cheap housing in Soho, and brought with them their incredible cuisines. Amidst the music halls, small theatres and brothels, these immigrants opened up cheap “eating-houses” all over the neighborhood, making it the “in” place to eat for intellectuals, writers and artists, looking for delicious international cuisine.</p>
 
-<p>Your exploration of Soho, will bring to life layer up on layer of Soho’s rich history, and highlight the cultures that have brought so many of London’s diverse foods – often Soho being the first place to find them.</p>
+<p>Your exploration of Soho will bring to life layer upon layer of Soho’s rich history, and highlight the cultures that have created so many of London’s diverse foods – often Soho being the first place to find them.</p>
 
 
 
@@ -58,6 +59,7 @@ Most foreigners that came to London, found cheap housing in Soho, and brought wi
 <h3 style="font-size: 14px;">Tour Information</h3>
 </div>
 <div class="panel-body box-cal">
+    <div><span> Price:</span> Adult (12+): £59 <span style="margin-left: 45px; display: block; color: rgb(51, 51, 51); line-height: 26px;"> Child (4-12): £39</span> </div>
 <div><span> Duration:</span> 4.5 hours</div>
 <div><span> Operating Days:</span> Mon-Sun
 
@@ -97,11 +99,13 @@ Details provided upon booking.</div>
 <div class="row">
 <div class="col-sm-6 col-md-8 col-xs-12">
 <h4 style="color: #ee794d; font-size: 18px;">Itinerary</h4>
-<p>Soho is one of London’s oldest international neighborhoods, so our exploration will begin with breakfast, followed by a colorful walk through some of Soho’s oldest and most charming streets, while you eat your way from one interesting international destination to another.</p>
+<p>Our 4.5-hour exploration of Soho will begin with a delicious breakfast tasting at a unique, little restaurant.</p>
 
-<p>In addition to the many world foods, we will also enjoy some British delicacies at a famous English pub and an exclusive tea lounge.
+<p>From there, you will wander down one charming street after another, stopping for a variety of delicious international foods including Italian, Indian, Chinese and Mexican, along with local British food tastings in a famous English Pub – one of the five oldest in London, while learning about the importance of pubs in British culture. </p>
 
-Our exploration will also include a trip through Chinatown on our way to the final destination – the place that inspired the creation of London Food Lovers – the oldest wine-bar in London.
+<p>Then your tour tour guide will lead you through the bustling streets of Chinatown, as you head towards dessert.</p>
+
+<p>After enjoying some “well-needed” dessert in an exclusive Tea Lounge, you will head to London’s most historic wine bar for the grand finale – an international wine tasting.</p>
 
 
 
@@ -113,6 +117,7 @@ Our exploration will also include a trip through Chinatown on our way to the fin
 <h3 style="font-size: 14px;">Tour Information</h3>
 </div>
 <div class="panel-body box-cal">
+    <div><span> Price:</span> Adult (12+): £59 <span style="margin-left: 45px; display: block; color: rgb(51, 51, 51); line-height: 26px;"> Child (4-12): £39</span> </div>
 <div><span> Duration:</span> 4.5 hours</div>
 <div><span> Operating Days:</span> Mon-Sun
 
@@ -148,15 +153,17 @@ Details provided upon booking.</div>
 
 <div class="row">
 <div class="col-sm-6 col-md-8 col-xs-12">
-<h4 style="color: #ee794d; font-size: 18px;">Itinerary</h4>
+<h4 style="color: #ee794d; font-size: 18px;">Inclusions</h4>
 <ul>
  <li>10 Delicious Tastings – in and around Soho </li>
-<li> An expert Food Guide, who will bring you to a variety of Soho destinations, keeping you entertained as well as informed about food, cultures, and interesting historical anecdotes, as well as giving you tips on how to avoid tourist traps </li>
-<li> Our official London Food Lovers “Best of London” Food Guide and map of Soho </li>
+<li>  An expert Food Guide, who will bring you to a variety of Soho destinations, keeping you entertained as well as informed about food, cultures, and interesting historical anecdotes</li>
+<li>  Our official London Food Lovers “Best of London” Food Guide and map of Soho</li>
 <li>A British ale-tasting </li>
 <li> An International Wine tasting </li>
 <li> Exclusive access to number of Soho’s historical establishments </li>
 </ul>
+
+
 
 
 
@@ -168,6 +175,7 @@ Details provided upon booking.</div>
 <h3 style="font-size: 14px;">Inclusions</h3>
 </div>
 <div class="panel-body box-cal">
+    <div><span> Price:</span> Adult (12+): £59 <span style="margin-left: 45px; display: block; color: rgb(51, 51, 51); line-height: 26px;"> Child (4-12): £39</span> </div>
 <div><span> Duration:</span> 4.5 hours</div>
 <div><span> Operating Days:</span> Mon-Sun
 

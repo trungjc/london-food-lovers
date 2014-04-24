@@ -44,7 +44,7 @@ if($code_result){
           <h3 >Give a gift from the heart, a Food Lovers Gift Certificate!</h3>
     
           <ol class="guidle">
-              <li> <span class="badge badge-x orange">1</span><strong>Simply add to cart. Pay through Credit Card. </strong></li>
+              <li> <span class="badge badge-x orange">1</span><strong>Select the quantity and buy! Pay through Credit Card. </strong></li>
               <li> <span class="badge  badge-x orange">2</span><strong>   Get our confirmation and online gift certificate   </strong>  </li>
               <li> <span class="badge  badge-x orange">3</span> <strong> Use your voucher code to make a reservation of the tour of your choice. </strong>  </li>
           </ol>
@@ -52,10 +52,10 @@ if($code_result){
           <div class="center-block " style="width: 60%"> 
               <div class="form-groups center">
               	  <form method="post" action="<?php echo home_url()?>/checkout-certificate" id="certificate"> 
-                      <img style="margin-bottom: 5px" width="" src="../wp-content/uploads/2014/04/Gift-certificates.png">
+                      <a href="javascript://" onclick="document.forms['certificate'].submit();" ><img style="margin-bottom: 5px" width="" src="../wp-content/uploads/2014/04/buy_gift.png"> </a>
                       <div class="form-group center ">
                       	 <?php if($code):?>
-                      	 	 QTY: 
+                      	 	 Select the Quantity: 
                       	 	 <select name="qty">
                       	 	 	 <option value="1">1</option>
                       	 	 	 <option value="2">2</option>
@@ -69,9 +69,9 @@ if($code_result){
                       	 	 	 <option value="10">10</option>
                       	 	 </select>
                       	 	 
-                          	 <a class="btn btn-black btn-md" href="javascript://" onclick="document.forms['certificate'].submit();" style="border-radius: 13px;  padding: 3px 20px;">Add to Cart</a>
+                          	 <!-- <a class="btn btn-black btn-md" href="javascript://" onclick="document.forms['certificate'].submit();" style="border-radius: 13px;  padding: 3px 20px;">Add to Cart</a>
                           	 <a class="paypal-button" href="#">
-                              	<!--<img width="" src="../wp-content/uploads/2014/04/paypal.jpg"> -->
+                              <img width="" src="../wp-content/uploads/2014/04/paypal.jpg"> -->
                           	 </a>
                          <?php endif;?>  	 
                       </div>

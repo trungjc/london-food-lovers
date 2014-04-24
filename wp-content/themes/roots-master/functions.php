@@ -67,7 +67,7 @@ else
 
 {
 
-		$message =  '<div class="caption-slide has-button"><div class="header_manual" ><h2>'.$h2.'</h2>' ;
+	$message =  '<div class="caption-slide has-button"><div class="header_manual" ><h2>'.$h2.'</h2>' ;
 	$message .= '<p>' .$p. '</p></div>'; 
 	$message .= '<div class="buttons_manual"><div class="clearfix button"><a href="/gift-certificates" class="pull-left gift-certificates"></a><a href="/private-tours" class="pull-left private-tours"></a></div></div></div>';
 
@@ -104,4 +104,3 @@ add_shortcode( 'header_text', 'header_text' );
 
 
 ?>
-

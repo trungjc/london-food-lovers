@@ -46,7 +46,7 @@
             <div class="col-md-4 col-xs-12">
                 <h3 style="font-size: 15px;color: #ee794d">CONTACT</h3>
                 <p><strong>0777-409-9306</strong></p> 
-                258 Pentonville Rd<br>
+                258a Pentonville Rd<br>
                 London N1 9JY                   
                     
             </div>   

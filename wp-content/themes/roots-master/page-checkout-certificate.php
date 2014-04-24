@@ -146,15 +146,23 @@ $_SESSION['cart']['qty'] = $qty;
           <hr/>
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>
-        	<div class="col-sm-6">
+        	<div class="col-sm-3">
         	  <select id="authorizenet_cc_type" name="cc_type" class="validate[required]">
-                    <option value="">--Please Select--</option>
-                    <option value="AE">American Express</option>
+                    <option value="">Select Your Card</option>
+                
+                    
                     <option value="VI">Visa</option>
+
+                    
                     <option value="MC">MasterCard</option>
+                    
                     <option value="DI">Discover</option>
+    <option value="AE">American Express</option>
+                    
         	  </select>
         	</div>
+
+          <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/visa.png"><img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/master-card.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/discover.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/amex.png">
           </div>
           
           <div class="form-group">
@@ -168,7 +176,7 @@ $_SESSION['cart']['qty'] = $qty;
         	<label for="inputPassword3" class="col-sm-4 control-label">CVV code :</label>
         	<div class="col-sm-8">
         	  <input autocomplete="off" style="width: 90px;display: inline-block" type="text" class="form-control" maxlength="3" name="cvv" id="cvv" placeholder="CVV code">
-        	  <img width="40px"  src="<?php echo $host_path?>/images/cardsecfw.jpg" />
+        	  <img width="40px"  src="<?php echo $host_path?>/images/fir.png" />
         	  <span>(Last three digits on the back of your card)</span>
         	</div>
           </div>

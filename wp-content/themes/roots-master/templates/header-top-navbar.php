@@ -8,8 +8,8 @@
             <div class="clearfix top-menu">
                     <div class="pull-right">
                         <a class="phone-number" ><span class="glyphicon glyphicon-earphone"></span>+44 (777) 409 9306</a>
-                       <a href="/Private Tours">Private Tours</a>
-                            <a href="/Corporate Tours">Corporate Tours</a>
+                       <a href="/gift-certificates">Gift Certificates</a>
+                          
                             <a href="/FAQ">FAQ</a>
                             <a href="http://londonfoodlovers.com/category/blog">Blog</a>
                           <!--  <a class="SocIcon twitter-b" href="">twitter</a>

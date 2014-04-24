@@ -13,15 +13,29 @@ if(!$_SESSION['message']){
 $message = $_SESSION['message'];
 
 ?>
+
+<div class="panel"><div class="panel-body">
 <div align="center">
     <?php if($error):?>
     
-    	<p><?php echo $message;?></p>
+    <?php echo '<h2>' , $message, '</h2>'; ?>
     <?php else:?>
     
-        <p><?php echo $message;?></p>
+        <?php echo '<h2>' , $message, '</h2>'; ?>
         
-        <h6>Many thanks for your business and trust.</h6>
+
+
+
+
+
+<p>You will now recieve an email with detailed instructions on what to do next. Please check your mail, if you cannot find it please check your spam box 
+or contact us at info@londonfoodlovers.com
+
+</p>
+</div>
+</div>
+
+       
         
     <?php endif;?>
 </div>

@@ -67,11 +67,19 @@ if(isset($_POST['item_id'])) {
    <?php elseif(is_page('gift-certificates')) :      ?>
            <?php putRevSlider("gift") ?>
 
+   <?php elseif(is_page('checkout-certificate')) :      ?>
+           <?php putRevSlider("gift") ?>
+
    <?php elseif(is_page('faq')) :      ?>
            <?php putRevSlider("faq") ?>
 
        <?php elseif(is_page('contact-us')) :      ?>
            <?php putRevSlider("contact") ?>
+
+              <?php elseif(is_page('checkout')) :      ?>
+           <?php putRevSlider("gift") ?>
+
+
 
    <?php elseif(is_page('reviews')) :      ?>
            <?php putRevSlider("reviews") ?>
@@ -84,7 +92,7 @@ if(isset($_POST['item_id'])) {
          
       
       <?php else :      ?>
-          <?php putRevSlider("common") ?>
+      
       <?php endif;     ?>
  </div>
 
@@ -95,7 +103,7 @@ if(isset($_POST['item_id'])) {
              <?php if (is_page('private-tours') || is_page('corporate-tours') ) :      ?>
                  <?php  require_once locate_template('private-tour-information.php');       ?>
     
-        
+           
   
        
              <?php else :      ?>

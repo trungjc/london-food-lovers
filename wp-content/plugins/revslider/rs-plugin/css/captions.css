@@ -1,4 +1,5 @@
 .tp-caption.big_white{
+  		
 			position: absolute; 
 			color: #fff; 
 			text-shadow: none; 
@@ -12,7 +13,13 @@
 			border-width: 0px; 
 			border-style: none; 
 			background-color:#000;	
-			letter-spacing: -0.5px;										
+			letter-spacing: -0.5px;		
+  -webkit-border-bottom-left-radius: 100px;!important
+    -webkit-border-radius: 100px;!important
+    -moz-border-radius: 100px;!important
+ 
+     border-radius: 100px;!important
+     border-radius: 100px;!important
 		}
 
 .tp-caption.big_orange{
