@@ -47,14 +47,15 @@ echo $trimmed_content;
 </article>
 </div>
 <?php endwhile; ?>
+<div class="clearfix">
+<div class="btn btn-default pull-right">
+<?php
 
-<?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav class="post-nav">
-    <ul class="pager">
-      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
-      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
-    </ul>
-  </nav>
-<?php endif; ?>
+// get_next_posts_link() usage with max_num_pages
+echo get_next_posts_link( 'Older Entries', $top_cats->max_num_pages );
+echo get_previous_posts_link( 'Newer Entries' );
+?>
+</div>
+</div>
 
 </div>

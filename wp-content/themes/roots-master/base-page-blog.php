@@ -17,7 +17,6 @@
     }
   ?>
   
-  <?php if ( ! is_page('checkout') ) :      ?>
 
   <div class="home-section">
       
@@ -25,7 +24,6 @@
     </div>
   
   
-<?php endif;     ?>
 
   <div class="wrap container" role="document">
     <div class="content row">      

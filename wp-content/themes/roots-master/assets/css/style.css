@@ -1170,10 +1170,10 @@ border-right:0;
 	}
 }
    
-.page-template-feedback-php .form-search{
+.page-template-feedback-php .form-search/*,.single-post .form-search*/ {
 	margin-top: 0;
 }
 
-.page-template-feedback-php .banner {
+.page-template-feedback-php .banner/*,.single-post  .banner */{
 	min-height: 150px;
 }
