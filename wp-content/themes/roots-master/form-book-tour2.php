@@ -13,9 +13,9 @@
         </div>
         
         <div class="form-group">
-            <div class="date-timex">
+            <div class="date-time">
 		      <?php $y = date('Y') - 1;?>
-			  <select class="form-control" name="tour_year" id="tour_year2">
+			  <select class="" name="tour_year" id="tour_year2">
 				<option value="">Year</option>
 			    <?php for($i=1;$i<=2;$i++):?>
 						<option value="<?php echo $y+$i?>">
@@ -24,7 +24,7 @@
 				<?php endfor;?>
 			  </select>
 			  
-			  <select class="form-control" name="tour_month" id="tour_month2">
+			  <select class="" name="tour_month" id="tour_month2">
 				<option value="">Month</option>
 			    <?php for($i=0;$i<=12-Date('m');$i++):?>
 						<option value="<?php echo date('m',strtotime("+$i Month"));?>">
@@ -33,7 +33,7 @@
 				<?php endfor;?>
 			  </select>
 			  
-			  <select class="form-control" name="tour_date" id="tour_date2">
+			  <select class="" name="tour_date" id="tour_date2">
 				<option value="">Day</option>
 			    <?php for($i=1;$i<=31;$i++): $k=$i; if($i<10) $k="0".$i;?>
 						<option value="<?php echo $k?>">
@@ -54,19 +54,19 @@
 	    </div>
 	    
         <div class="form-group" id="detailsDiv">
-		  <div class="date-timex">
-			<select class="form-control" name="adults" id="adults" style="width:64px">
+		  <div class="date-time">
+			<select class="" name="adults" id="adults">
 				<?php for($i=1;$i<=10;$i++):?>
 						<option value="<?php echo $i;?>" <?php if($i == $_SESSION['cart']['adults']):?> selected="selected" <?php endif;?> ><?php echo $i;?></option>
 				<?php endfor;?>
 			  </select>
-			  &nbsp;<span class="label-option pull-left" style="margin:7px 5px">ADULTS (12+)</span>
-			  <select class="form-control" name="children" id="children" style="width:64px">
+			  &nbsp;<span class="label-option">ADULTS (12+)</span>
+			  <select class="" name="children" id="children">
 				<?php for($i=0;$i<=10;$i++):?>
 						<option value="<?php echo $i;?>" <?php if($i == $_SESSION['cart']['children']):?> selected="selected" <?php endif;?> ><?php echo $i;?></option>
 				<?php endfor;?>
 			  </select>
-			  &nbsp;<span class="label-option pull-left" style="margin:7px 5px">KIDS (4-12)</span>
+			  &nbsp;<span class="label-option">KIDS (4-12)</span>
 		   </div>				  
 		</div>
         <div class=" center ">
