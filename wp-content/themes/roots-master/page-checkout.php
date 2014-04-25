@@ -108,8 +108,9 @@ $item_data = $items[$_SESSION['cart']['item_id']];
 	                     </div>
 	                </div>
 	                <div class="center" style="margin-top: 20px;">  
-	                  <input type="button" class="btn btn-black btn-md" onclick="changeTourDate();" id="changedate" name="changedate" value="Change Date" />
-	                    </div>
+	                	<div id="errorMessage"></div>
+	                    <input type="button" class="btn btn-black btn-md" onclick="changeTourDate();" id="changedate" name="changedate" value="Change Date" />
+	                </div>
 	              </div>  
 	        </div>
           </div>

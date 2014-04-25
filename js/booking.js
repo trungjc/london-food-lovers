@@ -45,12 +45,8 @@ function checkavail(){
                jQuery("#errorMessage").html("");
            }
            else{
-
         	   //alert("This Tour is not available on selected date or qty");
         	   jQuery("#errorMessage").html("This Tour is not available on selected date or qty");
-
-        	   return false; 
-
            }
            
            jQuery("#booknow").val("Book Now");
@@ -144,11 +140,6 @@ function phoneFix(){
   Required - You only need to add a alert_placeholder div in your html page wherever you want to display these alerts "<div id="alert_placeholder"></div>"
   Written On - 14-Jun-2013
 **/
-
-
-
-
-
 function validateForm(){
     if(!jQuery('#customer_name').val()){
        alert("Please enter your name")
@@ -215,7 +206,8 @@ function validateForm(){
 
 function changeTourDate(){
    jQuery("#changedate").val("Please wait...");
-	
+   jQuery("#errorMessage").html("");
+   
    url = host_path + '/cart/changedate.php?action=changedate';
    jQuery.ajax({
        url: url,
@@ -231,15 +223,13 @@ function changeTourDate(){
        success:function(html){
     	   html = jQuery.trim(html);
            if(html == 'Yes'){
-        	   alert("Tour date is changed");
+        	   //alert("Tour date is changed");
+        	   jQuery("#changedate").val("Tour date is changed");
         	   window.location.reload();
            }
            else{
-        	   alert("This Tour is not available on selected date or qty");
-        	   return false; 
+        	   jQuery("#errorMessage").html("This Tour is not available on selected date or qty");
            }
-           
-           jQuery("#changedate").val("Change Date");
 	   },
 	   error:function(error){
 		   //alert(error);

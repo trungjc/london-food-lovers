@@ -43,7 +43,7 @@ function sendGiftCertificateEmail($data){
     global $host_path;
 
     $email_body = file_get_contents("email/GiftCertificate.html");
-    $params = array("{name}","<div style='padding:10px'>  {gift_codes} </div>");
+    $params = array("{name}","{gift_codes}");
     $values = array($data['customer_name'],$_SESSION['cart']['codes']);
 
     $email_body = str_ireplace($params,$values,$email_body);
@@ -69,16 +69,12 @@ function sendGiftCertificateEmail($data){
 function sendFeedbackEmail($order_id , $data){
     global $host_path;
 
-    $email_body = "<div align='right'><img src='$host_path/images/logo.png' alt='' /></div>";
+    $url = $host_path."/feedback?id=".base64_encode($order_id);
 
-    $email_body .= "<br /><div>";
-    $email_body .= "Dear ".$data['customer_name']." <br /><br />";
-    $email_body .= "Thanks for spending the day with London Food Lovers!<br/><br/>";
-    $email_body .= "We hope you enjoyed your Soho Food Tour as much as we do. We enjoy receiving feedback about our clients experiences and we'd love to know what YOU thought...";
-    $email_body .= "That said, please take 54 seconds to rate us !Click <a href='".$host_path."/feedback?id=".base64_encode($order_id)."'>this link</a> to start.";
-    $email_body .= "</div><br />";
-
-    $email_body .= "Best wishes, <br /> London Food Lovers";
+    $email_body = file_get_contents("email/Feedback.html");
+    $params = array("{name}","{url}");
+    $values = array($data['customer_name'],$url);
+    $email_body = str_ireplace($params,$values,$email_body);
 
     $from = "info@londonfoodlovers.com";
     $fromName = "London Food Lovers";
