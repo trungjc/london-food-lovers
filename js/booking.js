@@ -42,10 +42,15 @@ function checkavail(){
     	   html = jQuery.trim(html);
            if(html == 'Yes'){
                document.forms['booking'].submit();
+               jQuery("#errorMessage").html("");
            }
            else{
+
         	   //alert("This Tour is not available on selected date or qty");
         	   jQuery("#errorMessage").html("This Tour is not available on selected date or qty");
+
+        	   return false; 
+
            }
            
            jQuery("#booknow").val("Book Now");
@@ -130,9 +135,23 @@ function phoneFix(){
 	jQuery("#customer_phone").val(formatted);
 }
 
+/**
+  Bootstrap Alerts -
+  Function Name - showalert()
+  Inputs - message,alerttype
+  Example - showalert("Invalid Login","alert-error")
+  Types of alerts -- "alert-error","alert-success","alert-info"
+  Required - You only need to add a alert_placeholder div in your html page wherever you want to display these alerts "<div id="alert_placeholder"></div>"
+  Written On - 14-Jun-2013
+**/
+
+
+
+
+
 function validateForm(){
     if(!jQuery('#customer_name').val()){
-        alert('Please enter name');
+       alert("Please enter your name")
         jQuery('#customer_name').focus();
         return false;
     }

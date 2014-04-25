@@ -52,10 +52,10 @@ if($code_result){
           <div class="center-block " style="width: 60%"> 
               <div class="form-groups center">
               	  <form method="post" action="<?php echo home_url()?>/checkout-certificate" id="certificate"> 
-                      <a href="javascript://" onclick="document.forms['certificate'].submit();" ><img style="margin-bottom: 5px" width="" src="../wp-content/uploads/2014/04/buy_gift.png"> </a>
+                     
                       <div class="form-group center ">
                       	 <?php if($code):?>
-                      	 	 Select the Quantity: 
+                      	 	 Select the number of gifts to give! 
                       	 	 <select name="qty">
                       	 	 	 <option value="1">1</option>
                       	 	 	 <option value="2">2</option>
@@ -72,7 +72,7 @@ if($code_result){
                           	 <!-- <a class="btn btn-black btn-md" href="javascript://" onclick="document.forms['certificate'].submit();" style="border-radius: 13px;  padding: 3px 20px;">Add to Cart</a>
                           	 <a class="paypal-button" href="#">
                               <img width="" src="../wp-content/uploads/2014/04/paypal.jpg"> -->
-                          	 </a>
+                          	 <div></a> <a href="javascript://" onclick="document.forms['certificate'].submit();" ><img style="margin-bottom: 5px" width="" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/buy_gift.png"> </a></div>
                          <?php endif;?>  	 
                       </div>
                   </form>

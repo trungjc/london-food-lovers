@@ -83,6 +83,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 	if ($response->approved) {
 		$item_id = $_SESSION['cart']['item_id'];
 		$slip = $items[$item_id]['rate']['slip'];
+<<<<<<< HEAD
 
 		$Booking->clear();
 		$Booking->set($slip);
@@ -135,6 +136,60 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 	$url = home_url() . "/success";
 	header("Location:$url");
 	exit;
+=======
+		
+    	$Booking->clear();
+        $Booking->set($slip);
+        
+        $form  = $_POST;
+        $order = $Booking->create($form);
+        if($order){
+        	$Booking->update_booking($order['booking']['id']);
+        	
+            $transaction_id = $response->transaction_id;
+            if(!$transaction_id){
+                $transaction_id = $response->invoice_number;
+            }
+
+            $auth->captureOnly();
+
+            $data = array();
+            $data = $_POST;
+            $data['transaction_id'] = $transaction_id;
+            $data['result'] = $order;
+            $data['auth_response'] = $response;
+
+            $order_id = $order['booking']['id'];
+            //this function will send email, save order in database
+            //function written in func.php file
+            saveOrder($data , $order_id);
+            $message = "<h2>Your Order has been placed successfully.</h2> <h3> Your transaction ID : </h3> $transaction_id AND Booking ID: ".$order['booking']['id'];
+            unset($_SESSION['cart']);
+            unset($_SESSION['data']);
+        }
+        else{
+            $error = true;
+            //cancel the transaction
+            $auth->void($response->transaction_id);
+            $_SESSION['data'] = $_POST;
+
+            $message = "<h2>Your Order was not placed, following error occured: </h2>";
+            $message .= "{$order->request->status}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
+        }
+    }
+    else{
+        $error = true;
+        $_SESSION['data'] = $_POST;
+
+        $message = "<h2>Your Order is not placed, following error occured: </h2>";
+        $message .= "{$response->response_reason_text}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
+    }
+
+    $_SESSION['message'] = $message;
+    $url = home_url() . "/success";
+    header("Location:$url");
+    exit;
+>>>>>>> updated mail styling and checkout and gifts
 }
 else{
 	unset($_SESSION['booking_message']);

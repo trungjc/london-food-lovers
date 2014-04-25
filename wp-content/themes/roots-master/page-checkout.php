@@ -38,8 +38,9 @@ $items = $Booking->query_inventory(
 );
     
 $item_data = $items[$_SESSION['cart']['item_id']];
-?>
+?>  <div class='alert alert-info'></div>
 <div class="panel checkout-page">
+
     <div class="panel-body">
     <h3 class="title-img">1. <?php echo $category['name'] . " " .$item_data['name'];?></h3>
     
