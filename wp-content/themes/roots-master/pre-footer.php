@@ -1,5 +1,5 @@
 <div class="pre-footer">  
-    <div class="container">
+    <div class="container pre-footer-co">
         <?php dynamic_sidebar('bottom-widget'); ?>        
         <!--   <div class="row">
          <div class="col-md-6 col-xs-12">
