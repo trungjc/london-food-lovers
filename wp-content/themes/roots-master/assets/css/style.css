@@ -1247,7 +1247,9 @@ div.home-review-container {
 margin-top: -10px;
 }
 
-div.intro.center.jumbotron {
-margin-top: -25px;
+.home-entire-review-container {
+margin-top: -15px;
 margin-left: 30px;
 }
+
+element.style {height:0!importantpx;}
