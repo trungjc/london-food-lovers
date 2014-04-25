@@ -1,5 +1,5 @@
 <?php
-
+/* Template Name: gift-certificate */
 if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
     $redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     echo "<script>window.location.href='$redirect';</script>";

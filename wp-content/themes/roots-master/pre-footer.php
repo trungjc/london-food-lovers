@@ -1,4 +1,4 @@
-<div class="pre-footer ">  
+<div class="pre-footer ">
     <div class="container">
         <?php dynamic_sidebar('bottom-widget'); ?>        
         <!--   <div class="row">

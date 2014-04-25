@@ -8,7 +8,7 @@
             <div class="clearfix top-menu">
                     <div class="pull-right">
                         <a class="phone-number" ><span class="glyphicon glyphicon-earphone"></span>+44 (777) 409 9306</a>
-                       <a href="/gift-certificates">Gift Certificates</a>
+                       <a href="/london-food-tour-gift-certificate">Gift Certificates</a>
                           
                             <a href="/FAQ">FAQ</a>
                             <a href="http://londonfoodlovers.com/category/blog">Blog</a>
