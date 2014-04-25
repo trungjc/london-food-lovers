@@ -72,10 +72,10 @@ $cart = json_decode($result['cart'],true);
                      <div class="form-group">
                         <label for="rating" class="col-sm-4 control-label">Overall experience:</label>
                         <div class="col-sm-6">
-                            <input class="star" type="radio" name="rating" value="1" />
-    	             		<input class="star" type="radio" name="rating" value="2" />
-    	             		<input class="star" type="radio" name="rating" value="3" />
-    	             		<input class="star" type="radio" name="rating" value="4" />
+                            <input class="star" type="radio" name="overall_rating" value="1" />
+    	             		<input class="star" type="radio" name="overall_rating" value="2" />
+    	             		<input class="star" type="radio" name="overall_rating" value="3" />
+    	             		<input class="star" type="radio" name="overall_rating" value="4" />
     	             		<input class="star" checked="checked" type="radio" name="overall_rating" value="5" />
                         </div>
                     </div> 
