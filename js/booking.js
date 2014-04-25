@@ -43,8 +43,8 @@ function checkavail(){
                document.forms['booking'].submit();
            }
            else{
-        	   alert("This Tour is not available on selected date or qty");
-        	   return false; 
+        	   //alert("This Tour is not available on selected date or qty");
+        	   jQuery("#errorMessage").html("This Tour is not available on selected date or qty");
            }
            
            jQuery("#booknow").val("Book Now");

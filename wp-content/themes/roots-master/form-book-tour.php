@@ -76,14 +76,15 @@
 					  &nbsp;<span class="label-option">KIDS (4-12)</span>
 				   </div>				  
 				</div>
-
                 
                 <div class=" center ">
                     <a class="PROMOTION" href="javascript://" onclick="jQuery('#discount_code').toggle();" id="">ENTER PROMOTION CODE</a>
-					
-					 <input type="text" name="discount_code" value="" id="discount_code" style="display:none;" />
+					<input type="text" name="discount_code" value="" id="discount_code" style="display:none;" />
 				</div>
 				<hr>
+				<div id="errorMessage">
+				
+				</div>
 
 				<div class="center">
 			  	    <input type="submit" class="btn btn-orange btn-md" id="booknow" name="booknow" value="Book Now" />
