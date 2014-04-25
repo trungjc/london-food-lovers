@@ -109,7 +109,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             //this function will send email, save order in database
             //function written in func.php file
             saveOrder($data , $order_id);
-            $message = "<h6>Your Order has been placed successfully.</h6> Your transaction ID : $transaction_id AND Booking ID: ".$order['booking']['id'];
+            $message = "<h2>Your Order has been placed successfully.</h2> Your transaction ID : $transaction_id AND Booking ID: ".$order['booking']['id'];
             unset($_SESSION['cart']);
             unset($_SESSION['data']);
         }
@@ -119,7 +119,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             $auth->void($response->transaction_id);
             $_SESSION['data'] = $_POST;
 
-            $message = "<h6>Your Order is not placed, following error occured: </h6>";
+            $message = "<h2>Your Order was not placed, following error occured: </h2>";
             $message .= "{$order->request->status}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
         }
     }

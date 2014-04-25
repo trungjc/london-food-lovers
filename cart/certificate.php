@@ -70,7 +70,11 @@ if($_POST['placeOrder']){
         //this function will send email, save order in database
         //function written in func.php file
         saveCertificate($data , $transaction_id);
-        $message = "<h6>Your Order has been placed successfully.</h6> Your transaction ID : $transaction_id";
+        $message = "<h2>Your Order has been placed successfully.</h2> <div style= margin:0 0 20px;>Your transaction ID : </div> <p style='text-align: center;margin-bottom:30px;''>
+                                        <span style='color:#495478;padding:10px;border:1px solid #cdcfcf;font-family:arial;font-size: 30px;border-radius:5px;background:#f7f7f7'>
+                                            <strong> $transaction_id</strong>
+                                        </span>
+                                    </p>";
         unset($_SESSION['cart']);
         unset($_SESSION['data']);
     }
@@ -78,7 +82,7 @@ if($_POST['placeOrder']){
         $error = true;
         $_SESSION['data'] = $_POST;
 
-        $message = "<h6>Your Order is not placed, following error occured: </h6>";
+        $message = "<h2>Your Order is not placed, following error occured: </h2>";
         $message .= "{$response->response_reason_text}. Please <a href='".home_url()."/checkout-certificate'>go back</a> and try again";
     }
 
@@ -96,3 +100,5 @@ else{
 }
 
 ?>
+
+ 

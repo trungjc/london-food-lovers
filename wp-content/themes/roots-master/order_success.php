@@ -29,7 +29,7 @@ $message = $_SESSION['message'];
 
 
 <p>You will now recieve an email with detailed instructions on what to do next. Please check your mail, if you cannot find it please check your spam box 
-or contact us at info@londonfoodlovers.com
+and if that doesn't do the trick email us at <em>info@londonfoodlovers.com</em> or call us <em>at 44 (777) 409 9306</em>
 
 </p>
 </div>

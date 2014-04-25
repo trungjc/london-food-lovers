@@ -1216,3 +1216,29 @@ border-right:0;
         .page-template-feedback-php .banner { 
           min-height: 150px; 
         }
+
+
+ .page-template-order-success-php .form-search{ 
+       margin-top: 0; 
+        } 
+         
+        .order-success-php .banner { 
+          min-height: 150px; 
+        }
+
+
+  .page-template-certificate_success-php .form-search{ 
+       margin-top: 0; 
+        } 
+         
+        .page-template-certificate_success-php .banner { 
+          min-height: 150px; 
+        }
+
+ .checkout-confirm .form-search{ 
+       margin-top: 0; 
+        } 
+         
+        .checkout-confirm .banner { 
+          min-height: 150px; 
+        }
