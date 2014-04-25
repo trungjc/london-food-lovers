@@ -33,7 +33,6 @@ $items = $Booking->query_inventory(
       'param'  => array(
       'adults' => $_SESSION['cart']['adults'],
       'children' => $_SESSION['cart']['children']
-
     )
   )
 );

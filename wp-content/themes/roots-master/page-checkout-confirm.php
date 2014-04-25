@@ -42,7 +42,7 @@ $items = $Booking->query_inventory(
 		)
 	)
 );
-		
+
 $item_data = $items[$_SESSION['cart']['item_id']];
 
 ?>
@@ -354,7 +354,7 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           
           <div class="form-group">
         	   <label for="inputPassword3" class="col-sm-12 control-label">
-        	   <input type="checkbox" name="terms" id="terms" value="1" <?php if($_SESSION['data']['terms']):?> checked="checked" <?php endif;?>> I have read and agree to the terms and conditions</label>
+        	   <input type="checkbox" name="terms" id="terms" value="1" checked="checked"> I have read and agree to the terms and conditions</label>
           </div>
           
           <div class="form-group">
