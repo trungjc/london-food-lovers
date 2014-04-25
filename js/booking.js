@@ -24,6 +24,7 @@ function getTours(cid){
 
 function checkavail(){
     jQuery("#booknow").val("Please wait...");
+    jQuery("#errorMessage").html("");
     
 	url = host_path + '/cart/request.php?action=avails';
 	jQuery.ajax({
