@@ -78,6 +78,15 @@ input,selct,textarea {font-size: 14px;line-height: 22px;}
     border-left: 1px solid #999999;
     
 }
+
+.home-more {
+position: absolute;
+left: 1000px;
+top: -160px;
+z-index: 988;
+background: #759abb;
+}
+
 .sidbar-blog .recent-post-items {
 margin: 10px 0;
 }
@@ -89,6 +98,7 @@ margin: 10px 0;
 
 .blog-column img {border-radius:20px;} 
 .sidbar-blog  .form-search h3{color:#fff;} 
+
 .date-timex select {
     float: left;
     width: 30%;
@@ -96,6 +106,8 @@ margin: 10px 0;
 .date-timex select  + select{
     margin-left:10px;
 }
+
+
 .sidbar-blog  h4 a {font-size: 14px;}
 .sidbar-blog  h4 a ,.entry-title a{color:#333;}
 .top-menu .phone-number,.published {
@@ -133,8 +145,12 @@ margin:0 auto;
     color:#222;
 }
 .intro {
-    margin: 0px 0 40px;padding: 20px 0;
+    margin: 0px 0 40px;padding: 5px 0;
 }
+/* Home page edits  */
+
+.intro.center.jumbotron p {padding:5px 0px 10px 0px; margin:0;}
+
 .mgr15 {margin-right:15px;}
 .circle {
     border: 6px solid #FFFFFF!important;

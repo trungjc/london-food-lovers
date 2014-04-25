@@ -56,19 +56,18 @@ if(isset($_POST['item_id'])) {
       <?php putRevSlider("homepage") ?>
          <div class="container" style="position:relative">  <?php  require_once locate_template('form-book-tour.php');       ?></div>
            
-      <?php elseif(is_page('corporate-tours')) :      ?>
+      <?php elseif(is_page('london-corporate-food-tours')) :      ?>
            <?php putRevSlider("corporate-tours-inner") ?>
            
-      <?php elseif(is_page('private-tours')) :      ?>
+      <?php elseif(is_page('london-private-food-tours')) :      ?>
            <?php putRevSlider("private") ?>
-            <?php elseif(is_page('london-soho-tour')) :      ?>
+            <?php elseif(is_page('soho-food-tour')) :      ?>
            <?php putRevSlider("soho") ?>
 
-   <?php elseif(is_page('gift-certificates')) :      ?>
+   <?php elseif(is_page('london-food-tour-gift-certificate')) :      ?>
            <?php putRevSlider("gift") ?>
 
-   <?php elseif(is_page('checkout-certificate')) :      ?>
-           <?php putRevSlider("gift") ?>
+
 
    <?php elseif(is_page('faq')) :      ?>
            <?php putRevSlider("faq") ?>
@@ -87,7 +86,7 @@ if(isset($_POST['item_id'])) {
       
 
 
-   <?php elseif(is_page('why-us')) :      ?>
+   <?php elseif(is_page('why-london-food-lovers-tours')) :      ?>
            <?php putRevSlider("why-us") ?>
          
       
