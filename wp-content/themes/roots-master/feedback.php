@@ -83,6 +83,7 @@ $cart = json_decode($result['cart'],true);
                         </div>
                     </div> 
 	             
+	             	<br />
 	             	<h3>How was your tour?</h3>
 	             	<hr/>
 	             	
@@ -93,11 +94,12 @@ $cart = json_decode($result['cart'],true);
                         </div>
                     </div> 
                     
+                    <br />
                     <h3>What was your favorite food experience?</h3>
                     <hr/>
                     
                     <div class="form-group">
-                       <table width="90%" border="1" cellpadding="10" cellspacing="0" align="center">
+                       <table width="95%" border="0" cellpadding="10" cellspacing="0" align="center">
                        		<tr>
                        			<td> <input type="checkbox" name="Pancakes" id="Pancakes" value="1" /> Pancakes</td>
                        			
@@ -124,19 +126,21 @@ $cart = json_decode($result['cart'],true);
                        </table>
                     </div>
                     
+                    <br />
                     <div class="form-group">
-                        <label for="cultural_expertise" class="col-sm-4 control-label">Is there a food you wouldn’t try again?</label>
                         <div class="col-sm-6">
-                        	<input type="checkbox" name="foodnottry" value="1" />
-                        </div>
-                   </div>
+                        	<b>Is there a food you wouldn't try again?</b>
+                        	No <input type="checkbox" name="foodnottryno" value="1" />
+                        </div>	
+                    </div>
                    
-                   <div class="form-group">     	
-                        <label for="cultural_expertise" class="col-sm-4 control-label">Why:</label>
-                        <div class="col-sm-6">
-                        	<textarea rows="3" cols="40" name="foodwhy"></textarea>
-                        </div> 	
-                   </div>     
+                   <div class="form-group">
+                    	<div class="col-sm-6">
+                    		<b>Yes <input type="checkbox" name="foodnottry" value="1" /></b>
+                    		Which AND Why:
+                    		<textarea rows="3" cols="70" name="foodwhy"></textarea>
+                    	</div>	
+                   </div>
                    
                    <h3>How was the level of physical activity on the tour:</h3> <hr/>
                     <div class="form-group">
@@ -225,20 +229,23 @@ $cart = json_decode($result['cart'],true);
                     </div>
                     <br/>
                     
-                    <h2>THANKS for your Tour Feedback!</h2>
+                    <h3>THANKS for your Tour Feedback!</h3>
                     
-                    <h3>We would also LOVE to know more about you!</h3>
+                    <h4>We would also LOVE to know more about you!</h4>
                     
-                    <br/> <br/>
+                    <br/>
                     
                     <div class="form-group">
-                        <label for="org_abilities" class="col-sm-4 control-label">
-                        	Did you take any photos during you tour? 
+                        <div class="col-sm-6" style="width:100%">
+                        	<b>Did you take any photos during you tour?</b> 
                         	<br/>
-                        	We love to see our clients enjoying our tours, and we often feature great client photos in Newsletters and our Facebook, Twitter and Blog pages!
-                        </label>
-                        <div class="col-sm-6">
-                         <input type="file" name="image" value="" />
+                        	<b>We love to see our clients enjoying our tours, and we often feature great client photos in Newsletters and our Facebook, Twitter and Blog pages!</b>
+                        	
+                        	<div align="right">
+                                <input type="file" name="image1" value="" />
+                                <input type="file" name="image2" value="" />
+                                <input type="file" name="image3" value="" />
+                            </div>
                         </div>
                     </div>
                     <br/>
@@ -252,10 +259,10 @@ $cart = json_decode($result['cart'],true);
                       </div>
                      <br/>
                      
-                     <h3>If you answered Yes to the previous question, you can upload your photo here so we can add your review on our website</h3>
+                     <h3>If you answered ‘Yes’ to the previous question, please upload your photo here</h3>
                        <div class="form-group">
                           <div class="col-sm-6 col-md-offset-4">
-                          		<input type="checkbox" name="photocanuse" value="1" />
+                          		<input type="file" name="image" value="" />
                           </div>
                        </div>   
                      
