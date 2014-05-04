@@ -36,7 +36,7 @@ $items = $Booking->query_inventory(
     )
   )
 );
-    
+
 $item_data = $items[$_SESSION['cart']['item_id']];
 ?>  <div class='alert alert-info'></div>
 <div class="panel checkout-page">
@@ -171,125 +171,26 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <hr/>
           
           <p> Please select the number of persons in your party for each line </p>
-
+          
+          <?php $foods = array('Vegetarian?'=>'vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish')?>
+		  <?php for($i=1;$i<=$qty;$i++):?>
+		  	  <h4><u>Person <?php echo $i; ?></u></h4>
+              <?php foreach($foods as $key => $value):?>	
+                  <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-4 control-label"><?php echo $key;?></label>
+                      <div class="col-sm-6">
+                      	<input type="checkbox" <?php if($_SESSION['data'][$value][$i] == 1):?> checked="checked" <?php endif;?> id="<?php echo $value;?>" name="<?php echo $value;?>[<?php echo $i;?>]" value="1" class="form-control" />
+                      </div>
+                  </div>
+              <?php endforeach;?>
+          <?php endfor;?>    
+          
           <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
+              <label for="inputPassword3" class="col-sm-4 control-label">Other restriction(s):</label>
               <div class="col-sm-6">
-              	<select id="Vegetarian" name="Vegetarian" class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?> </option>
-              	   <?php endfor;?>
-
-              	</select>
+                <textarea class="form-control" name="other_note"><?php echo @$_SESSION['data']['other_note']?></textarea>
               </div>
           </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
-              <div class="col-sm-6">
-              	 <select id="no_pork" name="no_pork" class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
-              <div class="col-sm-6">
-              	 <select id="no_fish" name="no_fish" class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
-              <div class="col-sm-6">
-              	<select id="no_alcohol" name="no_alcohol" class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
-              <div class="col-sm-6">
-              	<select id="vegan" name="vegan"class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
-              <div class="col-sm-6">
-              	<select id="no_eggs" name="no_eggs"class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
-              <div class="col-sm-6">
-              	<select id="no_gluten" name="no_gluten"class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
-              <div class="col-sm-6">
-              	 <select id="no_nuts" name="no_nuts"class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
-              <div class="col-sm-6">
-              	<select id="no_lactose" name="no_lactose"class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
-              <div class="col-sm-6">
-              	<select id="no_shellfish" name="no_shellfish"class="form-control" style="20%">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>"><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Other restriction(s):</label>
-          <div class="col-sm-6">
-            <textarea class="form-control" name="other_note"><?php echo @$_SESSION['data']['other_note']?></textarea>
-          </div>
-          </div>
-          
           
           <h3 class="title-img">4. Enter your Payment details</h3>
           <hr/>
@@ -297,17 +198,12 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>
           <div class="col-sm-3">
             <select id="authorizenet_cc_type" name="cc_type" class="validate[required] form-control">
-                    <option value="">Your Card</option>
-                   
-
-                    <option value="VI" <?php if($_SESSION['data']['cc_type'] == 'VI'):?> selected="selected" <?php endif;?>>Visa</option>
-
-                    <option value="MC" <?php if($_SESSION['data']['cc_type'] == 'MC'):?> selected="selected" <?php endif;?>>MasterCard</option>
-
-                    <option value="DI" <?php if($_SESSION['data']['cc_type'] == 'DI'):?> selected="selected" <?php endif;?>>Discover</option>
-                     <option value="AE" <?php if($_SESSION['data']['cc_type'] == 'AE'):?> selected="selected" <?php endif;?>>American Express</option>
+                <option value="">Your Card</option>
+                <option value="VI" <?php if($_SESSION['data']['cc_type'] == 'VI'):?> selected="selected" <?php endif;?>>Visa</option>
+                <option value="MC" <?php if($_SESSION['data']['cc_type'] == 'MC'):?> selected="selected" <?php endif;?>>MasterCard</option>
+                <option value="DI" <?php if($_SESSION['data']['cc_type'] == 'DI'):?> selected="selected" <?php endif;?>>Discover</option>
+                <option value="AE" <?php if($_SESSION['data']['cc_type'] == 'AE'):?> selected="selected" <?php endif;?>>American Express</option>
             </select>
-
           </div>
           <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/visa.png"><img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/master-card.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/discover.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/amex.png">
           </div>
@@ -347,21 +243,21 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
           <label for="inputPassword3" class="col-sm-4 control-label">Billing Address:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" id="inputPassword3" id="bill_address" name="bill_address" placeholder="Billing Address">
+            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_address'];?>" id="inputPassword3" id="bill_address" name="bill_address" placeholder="Billing Address">
           </div>
           </div>
           
           <div class="form-group">
           <label for="inputPassword3" class="col-sm-4 control-label">Billing Country:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" id="inputPassword3" id="bill_country" name="bill_country" placeholder="Billing Country">
+            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_country'];?>" id="inputPassword3" id="bill_country" name="bill_country" placeholder="Billing Country">
           </div>
           </div>
           
           <div class="form-group">
           <label for="inputPassword3" class="col-sm-4 control-label">Card Holders Name:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" id="inputPassword3" id="holder_name" name="holder_name" placeholder="Card Holders Name">
+            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['holder_name'];?>" id="inputPassword3" id="holder_name" name="holder_name" placeholder="Card Holders Name">
           </div>
           </div>
           

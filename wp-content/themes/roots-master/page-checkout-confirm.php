@@ -151,115 +151,20 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <h3 class="title-img">3. Let us know about your Food Needs! </h3>
           <hr/>
           
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">Vegetarian?</label>
-              <div class="col-sm-6">
-              	<select id="Vegetarian" name="Vegetarian">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['Vegetarian'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	</select>
-              </div>
-          </div>
+          <p> Please select the number of persons in your party for each line </p>
           
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Pork?</label>
-              <div class="col-sm-6">
-              	 <select id="no_pork" name="no_pork">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_pork'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Fish?</label>
-              <div class="col-sm-6">
-              	 <select id="no_fish" name="no_fish">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_fish'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Alcohol?</label>
-              <div class="col-sm-6">
-              	<select id="no_alcohol" name="no_alcohol">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_alcohol'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">Vegan?</label>
-              <div class="col-sm-6">
-              	<select id="vegan" name="vegan">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['vegan'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Eggs?</label>
-              <div class="col-sm-6">
-              	<select id="no_eggs" name="no_eggs">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_eggs'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Gluten?</label>
-              <div class="col-sm-6">
-              	<select id="no_gluten" name="no_gluten">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_gluten'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Nuts?</label>
-              <div class="col-sm-6">
-              	 <select id="no_nuts" name="no_nuts">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_nuts'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Lactose?</label>
-              <div class="col-sm-6">
-              	<select id="no_lactose" name="no_lactose">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_lactose'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">No Shellfish?</label>
-              <div class="col-sm-6">
-              	<select id="no_shellfish" name="no_shellfish">
-              	   <?php for($i=0;$i<=10;$i++):?>
-              	   	    <option value="<?php echo $i;?>" <?php if($_SESSION['data']['no_shellfish'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
-              	   <?php endfor;?>
-              	  </select>
-              </div>
-          </div>
+          <?php $foods = array('Vegetarian?'=>'vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish')?>
+		  <?php for($i=1;$i<=$qty;$i++):?>
+		  	  <h4><u>Person <?php echo $i; ?></u></h4>
+              <?php foreach($foods as $key => $value):?>	
+                  <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-4 control-label"><?php echo $key;?></label>
+                      <div class="col-sm-6">
+                      	<input type="checkbox" <?php if($_SESSION['data'][$value][$i] == 1):?> checked="checked" <?php endif;?> readonly="readonly" id="<?php echo $value;?>" name="<?php echo $value;?>[<?php echo $i;?>]" value="1" class="form-control" />
+                      </div>
+                  </div>
+              <?php endforeach;?>
+          <?php endfor;?>    
           
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Other restriction(s): (here should be a box for person to write their special need)</label>
@@ -273,7 +178,7 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>
         	<div class="col-sm-6">
-        	  <select id="authorizenet_cc_type" name="cc_type" class="validate[required]">
+        	  <select id="authorizenet_cc_type" name="cc_type" class="validate[required]" readonly="readonly">
                     <option value="">--Please Select--</option>
                     <option value="AE" <?php if($_SESSION['data']['cc_type'] == 'AE'):?> selected="selected" <?php endif;?>>American Express</option>
                     <option value="VI" <?php if($_SESSION['data']['cc_type'] == 'VI'):?> selected="selected" <?php endif;?>>Visa</option>
@@ -302,12 +207,12 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
         	<label for="inputPassword3" class="col-sm-4 control-label">Expire Date:</label>
         	<div class="col-sm-6">
-        	  <select class="select" name="month">
+        	  <select class="select" name="month" readonly="readonly">
         		 <?php for($i=1;$i<=12;$i++): $k = $i; if($i < 10){ $k = '0'.$i; }?>
         		 		<option value="<?php echo $k;?>" <?php if($_SESSION['data']['month'] == $k):?> selected="selected" <?php endif;?>><?php echo $k;?></option>
         		 <?php endfor;?>
         	  </select>
-        	  <select class="select" name="year">
+        	  <select class="select" name="year" readonly="readonly">
         		 <?php for($i=date('Y');$i<=date('Y')+10;$i++):?>
         		 		<option value="<?php echo $i;?>" <?php if($_SESSION['data']['year'] == $i):?> selected="selected" <?php endif;?>><?php echo $i;?></option>
         		 <?php endfor;?>
