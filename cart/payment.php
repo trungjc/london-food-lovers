@@ -41,7 +41,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     );
 
     $item_data = $items[$_SESSION['cart']['item_id']];
-    
+
     $item_name = substr($item_data['name'],0,10);
 
     $auth->addLineItem("1" , $item_name, $item_data['rate']['summary']['details'], '1', $item_data['rate']['sub_total'], 'N');
@@ -87,14 +87,28 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
         $Booking->clear();
         $Booking->set($slip);
 
-        $foods = array('Vegetarian?'=>'Vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish');
+        $foods = array('Vegetarian?'=>'vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish');
+        $foods_values = array_values($foods);
+
+        $qty   = ($_SESSION['cart']['adults'] + $_SESSION['cart']['children']);
         foreach($_POST as $key => $value){
-            if(in_array($value,$foods) and is_array($_POST[$value])){
-               $_POST[$value] = @implode(" , ", $_POST[$value]);
+            if(in_array($key,$foods_values) and is_array($_POST[$key])){
+                $keyval = array();
+                for($j=1;$j<=$qty;$j++){
+                    if($_POST[$key][$j]){
+                        $keyval[] = 'Yes';
+                    }
+                    else{
+                        $keyval[] = 'No';
+                    }
+                }
+
+                $_POST[$key] = @implode(" , ", $keyval);
             }
         }
-        
+
         $form  = $_POST;
+
         $order = $Booking->create($form);
         if($order){
             $Booking->update_booking($order['booking']['id']);
