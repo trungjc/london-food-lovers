@@ -332,6 +332,10 @@ border-top: 1px dashed #d5d9db;
 .navbar-ex1-collapse button {
     margin-top: 3px;
 }
+input[type="checkbox"] ,input[type="radio"] {
+    height:auto!important;
+    box-shadow: none!important;
+}
 
 .banner-section input.form-control{   
     display: inline-block;
