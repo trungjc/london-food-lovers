@@ -89,6 +89,8 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
         $foods = array('Vegetarian?'=>'vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish');
         $foods_values = array_values($foods);
+        
+        $_POST['guestname'] = implode(" , ",$_POST['guestname']);
 
         $qty   = ($_SESSION['cart']['adults'] + $_SESSION['cart']['children']);
         foreach($_POST as $key => $value){

@@ -155,7 +155,13 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           
           <?php $foods = array('Vegetarian?'=>'vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish')?>
 		  <?php for($i=1;$i<=$qty;$i++):?>
-		  	  <h4><u>Person <?php echo $i; ?></u></h4>
+		  	  <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-4 control-label" style="color:#EE794D">Guest Name <?php echo $i; ?></label>
+                  <div class="col-sm-6">
+                  	<input type="text" id="guestname" name="guestname[<?php echo $i;?>]" value="<?php echo $_SESSION['data']['guestname'][$i]; ?>" class="form-control" />
+                  </div>
+              </div>
+              
               <?php foreach($foods as $key => $value):?>	
                   <div class="form-group">
                       <label for="inputPassword3" class="col-sm-4 control-label"><?php echo $key;?></label>
