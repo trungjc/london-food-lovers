@@ -1,5 +1,7 @@
 ﻿<?php
 
+@session_start();
+
 $Booking = new Booking();
 $categories = $Booking->query_categories();
 
