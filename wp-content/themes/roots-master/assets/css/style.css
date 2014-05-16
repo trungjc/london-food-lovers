@@ -655,7 +655,7 @@ background-color: #f2591f;
 text-align: center;
 line-height: 50px;
 border-radius: 4px;
-font-size: 15px;
+font-size: 18px;
 }
 
 
@@ -995,7 +995,10 @@ padding: 50px;
 }
 .panel-Primary .panel-heading h3{font-size: 16px;}
 .page-food-tour h3 {margin: 0 0 16px 0;}
-.page-food-tour h3 a{color:#333}
+
+.page-food-tour h3 a{color:#ee794d;} 
+.page-food-tour  img {border-radius: 5px;} 
+
 .date {
   margin-bottom: 10px;  
 }
@@ -1247,9 +1250,18 @@ border-right:0;
 
  
          
-        .page-template-certificate_success-php .banner { 
+.page-template-certificate_success-php  .form-search{  
+         margin-top: 0;  
+         } 
+
+
+ .page-template-certificate_success-php .banner {   
           min-height: 150px; 
         }
+
+  .page-template-order_success-php .banner {
+    min-height: 150px;  
+  }          
 
  .checkout-confirm .form-search{ 
        margin-top: 0; 
@@ -1268,6 +1280,37 @@ margin-top: -10px;
 .home-entire-review-container {
 margin-top: -15px;
 margin-left: 30px;
+}
+
+.checkout-certificate .form-search{ 
+       margin-top: 0; 
+        } 
+ .checkout-certificate .banner { 
+          min-height: 150px; 
+        }
+
+.page-template-page-tour-detail-php .caption-slide.has-button {
+    top: -200px!important;
+   
+    margin-right: -160px;
+}
+
+
+.tab-content p{padding: 5px 0px 5px 0px;}
+
+
+
+.spacer1 {  margin-top: 1px; }
+.spacer5 {  margin-top: 5px; }
+.spacer10 {margin-top: 10px;}
+
+
+.bspacer1 {margin-bottom: 1px; }
+.bspacer5 {margin-bottom: 5px; }
+.bspacer10 {margin-bottom: 10px;}
+
+.caption-slide p {
+font-size: 17px;
 }
 
 element.style {height:0!importantpx;}
