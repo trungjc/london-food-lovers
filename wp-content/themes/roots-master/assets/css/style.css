@@ -1066,12 +1066,14 @@ border-right:0;
  }
  .new-letter .btn{ width: 100%;font-size: 14px;font-weight: bold;}
  .new-letter .btn span {margin-left:5px;}*/
-
+@media (min-width: 1920px) {  
+             .why-choice-us  {background-size: 100%;}
+}  
 @media (max-width: 1920px) { 
                .caption-slide{right: 15%;} 
                .home-more{right: 25%;left:auto;} 
 } 
-           @media (max-width: 1600px) {  
+@media (max-width: 1600px) {  
              .caption-slide{right: 160px;} 
 } 
 
@@ -1318,6 +1320,6 @@ font-size: 17px;
 }
 
 element.style {height:0!importantpx;}
-.why-choice-us .box p {
-    margin-bottom: 43px;
+.why-choice-us .box p + p {
+    margin-top: 44px;
 }
