@@ -1068,8 +1068,10 @@ border-right:0;
  }
  .new-letter .btn{ width: 100%;font-size: 14px;font-weight: bold;}
  .new-letter .btn span {margin-left:5px;}*/
-@media (min-width: 1920px) {  
-            /* .why-choice-us  {background-size: 100%;}*/
+@media (min-width: 980px) and (max-width: 1336px) { 
+            .caption-slide h2, .caption-slide p {
+			white-space: nowrap;
+			}
 }  
 @media (max-width: 1920px) { 
                .caption-slide{right: 15%;} 
