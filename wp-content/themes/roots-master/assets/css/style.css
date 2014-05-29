@@ -1060,14 +1060,16 @@ border-right:0;
 .rev_slider_wrapper > div {
     max-width: 100% !important;
 }
-
+.why-choice-us {
+    background: url("../images/map.png") no-repeat fixed center center / cover  rgba(0, 0, 0, 0);
+}
 /*.footer .text-12 h3{
      color:#e1754c;
  }
  .new-letter .btn{ width: 100%;font-size: 14px;font-weight: bold;}
  .new-letter .btn span {margin-left:5px;}*/
 @media (min-width: 1920px) {  
-             .why-choice-us  {background-size: 100%;}
+            /* .why-choice-us  {background-size: 100%;}*/
 }  
 @media (max-width: 1920px) { 
                .caption-slide{right: 15%;} 
@@ -1076,6 +1078,11 @@ border-right:0;
 @media (max-width: 1600px) {  
              .caption-slide{right: 160px;} 
 } 
+@media (min-width: 1336px) {  
+         .why-choice-us .box p + p {
+		margin-top: 44px;
+	}
+}  
 
 @media (min-width: 980px) and (max-width: 1280px) { 
 .why-choice-us .box > p {
@@ -1128,8 +1135,9 @@ border-right:0;
     padding-top: 110px;
     text-align: left;
 }
-}
+}	
  @media screen and (max-width: 768px) {
+
     .home-more {display: none} 
    /* .new-letter input,.new-letter .btn {max-width: 300px;}*/
      .row.three-col {width: 100%;}
@@ -1317,9 +1325,4 @@ margin-left: 30px;
 
 .caption-slide p {
 font-size: 17px;
-}
-
-element.style {height:0!importantpx;}
-.why-choice-us .box p + p {
-    margin-top: 44px;
 }
