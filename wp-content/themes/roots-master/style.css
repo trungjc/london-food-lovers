@@ -242,24 +242,24 @@ border-top: 1px dashed #d5d9db;
 
 .center {text-align: center;}
 
-.why-choice-us .well {
+width:200px .well {
 	margin:0;border-radius: 0;box-shadow: 0 0 0 transparent;min-height: 240px;
 }
-.why-choice-us  .nav-tabs {
+width:200px  .nav-tabs {
 	border: none;
 }
 .panel-heading h3 {
 	margin: 0;
 }
-.contact-box ,.why-choice-us {
+.contact-box ,width:200px {
 	margin: 20px auto;
 }
 .Subscribe {min-height: 319px;}
 .Subscribe  .btn{width: 100%;}
-.why-choice-us .nav-tabs > li {
+width:200px .nav-tabs > li {
 width: 50%;
 }
-.why-choice-us .nav-tabs > li  > a,.why-choice-us .nav-tabs > li  > a:hover{
+width:200px .nav-tabs > li  > a,width:200px .nav-tabs > li  > a:hover{
 	border: 1px solid #DDDDDD; 
 	background:white; border-radius: 0;
     margin: 0;
@@ -269,10 +269,10 @@ width: 50%;
 .question,.answer {
 	margin: 15px 0;
 }
-.why-choice-us .nav-tabs > li  + li > a,
-.why-choice-us .nav-tabs > li  + li > a:hover{ border-left: none;}
-.why-choice-us .nav-tabs > li.active a,
-.why-choice-us .nav-tabs > li > a:hover{ background:#FE682B;font-weight: bold;color:white}
+width:200px .nav-tabs > li  + li > a,
+width:200px .nav-tabs > li  + li > a:hover{ border-left: none;}
+width:200px .nav-tabs > li.active a,
+width:200px .nav-tabs > li > a:hover{ background:#FE682B;font-weight: bold;color:white}
 
 .bg-line,.one-column  .page-header {
 background: url(../images/BgTitle.png) no-repeat center bottom;
@@ -410,9 +410,9 @@ header.navbar {margin-bottom: 0}
 }
 .home-section .form-search{position:absolute;top: 65px;z-index: 99;left:10%;min-width: 280px;margin-top: 0;}
 .form-search select + span {margin-left: 2px}
-.why-choice-us h3 {text-align: center;}
+width:200px h3 {text-align: center;}
 .home .intro {margin-bottom: 0;background:white}
-.why-choice-us {background: url(../images/map.png) no-repeat center top;margin-top: 0;padding:20px 0}
+width:200px {background: url(../images/map.png) no-repeat center top;margin-top: 0;padding:20px 0}
 .item *{text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);color: #FFFFFF;}
 .carousel-inner {height: 410px;}
 .home-section .glyphicon {
