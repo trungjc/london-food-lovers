@@ -48,7 +48,7 @@ $item_data = $items[$_SESSION['cart']['item_id']];
     
     <hr/>
     
-      <form class="form-horizontal" method="post" role="form" id="checkout" action="<?php echo home_url();?>/cart/confirm.php" onsubmit="return validateForm();">
+      <form class="form-horizontal" method="post" role="form" id="checkout" action="<?php echo home_url();?>/cart/payment.php" onsubmit="return validateForm();">
           <div class="form-group">
           <label for="inputEmail3" class="col-sm-4 control-label">Tour Date:</label>
           <div class="col-sm-6">
@@ -292,7 +292,7 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           
           <div class="form-group">
              <label for="inputPassword3" class="col-sm-12 control-label">
-             <input type="checkbox" name="newsletter" id="newsletter" value="1"> Would you like subscribe to newsletter?</label>
+             <input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"> Subscribe me to your updates and news?</label>
           </div>
           
           <hr/>

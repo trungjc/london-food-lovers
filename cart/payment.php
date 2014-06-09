@@ -44,7 +44,10 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
     $item_name = substr($item_data['name'],0,10);
 
-    $auth->addLineItem("1" , $item_name, $item_data['rate']['summary']['details'], '1', $item_data['rate']['sub_total'], 'N');
+    //$item_data['rate']['summary']['details']
+	$desc = "Adults: ".$_SESSION['cart']['adults']."\n Kids: ".$_SESSION['cart']['children'];
+
+    $auth->addLineItem("1" , $item_name , $desc , '1', $item_data['rate']['sub_total'], 'N');
     $auth->amount = $item_data['rate']['sub_total'];
     $_SESSION['cart']['total'] = $item_data['rate']['sub_total'];
 
