@@ -61,7 +61,7 @@ $_SESSION['cart']['qty'] = $qty;
           <div class="form-group">
         	<label for="inputEmail3" class="col-sm-4 control-label">Unit Price:</label>
         	<div class="col-sm-6">
-        	   <?php echo "£80";?>
+        	   <?php echo "£65";?>
         	</div>
           </div>
           
@@ -75,7 +75,7 @@ $_SESSION['cart']['qty'] = $qty;
           <div class="form-group">
         	<label for="inputEmail3" class="col-sm-4 control-label">Total:</label>
         	<div class="col-sm-6">
-        	   <?php echo "£". 80*$qty;?>
+        	   <?php echo "£". 65*$qty;?>
         	</div>
           </div>
           

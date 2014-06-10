@@ -18,9 +18,9 @@ if($_POST['placeOrder']){
 
     $auth = new AuthorizeNetAIM;
 
-    $auth->addLineItem(1 , "Gift Certificate", "Gift Certificate", $_SESSION['cart']['qty'] , 80, 'N');
+    $auth->addLineItem(1 , "Gift Certificate", "Gift Certificate", $_SESSION['cart']['qty'] , 65, 'N');
     $auth->amount = $_SESSION['cart']['qty']*80;
-    $_SESSION['cart']['total'] = $_SESSION['cart']['qty']*80;
+    $_SESSION['cart']['total'] = $_SESSION['cart']['qty']*65;
 
     $_POST['expire_date'] = $_POST['month'] ."-".$_POST['year'];
     $auth->card_num   = $_POST['card_number'];
