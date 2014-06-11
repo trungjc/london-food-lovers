@@ -2,6 +2,10 @@
 
 include_once '../wp-load.php';
 
+if(!session_id()){
+	session_start();
+}
+
 include_once 'func.php';
 include 'lib/foodloverstours.php';
 
@@ -12,7 +16,7 @@ $error = false;
 if($_POST['placeOrder'] && $_SESSION['cart']){
     require_once 'authnet/AuthorizeNet.php';
 
-    /*define("AUTHORIZENET_API_LOGIN_ID", "2hfYT85W");
+     /*define("AUTHORIZENET_API_LOGIN_ID", "2hfYT85W");
      define("AUTHORIZENET_TRANSACTION_KEY", "23m2qL9tW7f43TUV");
      define("AUTHORIZENET_SANDBOX", true);*/
 
@@ -83,6 +87,12 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     unset($_POST['expire_date']);
     unset($_POST['cvv']);
 
+	mail("vipin.garg12@gmail.com","payment error",print_r($response,true));
+
+	$message = "Order details ". print_r($_SESSION,true) . " POST : ". print_r($_POST,true) . " Response: ".print_r($response,true);
+
+	error_log($message , 3 , "paymentlogs.txt");
+
     if ($response->approved) {
         $item_id = $_SESSION['cart']['item_id'];
         $slip = $items[$item_id]['rate']['slip'];
@@ -135,8 +145,9 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             //this function will send email, save order in database
             //function written in func.php file
             saveOrder($data , $order_id);
-            $message = "<h2>Your Order has been placed successfully.</h2> <h3>Your transaction ID :</h3> $transaction_id AND Booking ID: ".$order['booking']['id'];
-            unset($_SESSION['cart']);
+            $message = "<h3>Your Order has been placed successfully.</h3> <h3>Your transaction ID :</h3> $transaction_id AND Booking ID: ".$order['booking']['id'];
+            $message .= "<br /><br /><a href='".home_url()."'>Click here </a>  go to back to website.";
+			unset($_SESSION['cart']);
             unset($_SESSION['data']);
         }
         else{
@@ -158,7 +169,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     }
 
     $_SESSION['booking_message'] = $message;
-    $url = home_url() . "/success";
+    $url = home_url() . "/order_result.php";
     header("Location:$url");
     exit;
 
