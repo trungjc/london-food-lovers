@@ -1,6 +1,8 @@
 <?php
 
-include_once '../wp-load.php';
+//include_once '../wp-load.php';
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
+
 include_once 'phpmailer/class-phpmailer.php';
 
 if($_POST['booknow'] && $_POST['firstname'] && $_POST['email']){

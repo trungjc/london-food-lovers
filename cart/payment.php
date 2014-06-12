@@ -1,13 +1,13 @@
 <?php
 
-include_once '../wp-load.php';
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
 
 if(!session_id()){
-	session_start();
+    session_start();
 }
 
 include_once 'func.php';
-include 'lib/foodloverstours.php';
+include_once 'lib/foodloverstours.php';
 
 $Booking = new Booking();
 
@@ -16,12 +16,12 @@ $error = false;
 if($_POST['placeOrder'] && $_SESSION['cart']){
     require_once 'authnet/AuthorizeNet.php';
 
-     /*define("AUTHORIZENET_API_LOGIN_ID", "2hfYT85W");
+    /*define("AUTHORIZENET_API_LOGIN_ID", "2hfYT85W");
      define("AUTHORIZENET_TRANSACTION_KEY", "23m2qL9tW7f43TUV");
      define("AUTHORIZENET_SANDBOX", true);*/
 
     define("AUTHORIZENET_API_LOGIN_ID", "4za9QX58");
-    define("AUTHORIZENET_TRANSACTION_KEY", "27342GzTN5rjx7Un");
+    define("AUTHORIZENET_TRANSACTION_KEY", "43Hgk84e3C2gSDqH");
     define("AUTHORIZENET_SANDBOX", false);
 
     $auth = new AuthorizeNetAIM;
@@ -32,28 +32,33 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
     $items = $Booking->query_inventory(
     array(
-    		'category_id' => $_SESSION['cart']['category_id'],
-    	    'start_date'  => $tour_date,
-    		'item_id' => (int)$_SESSION['cart']['item_id'],
-    		'discount_code' => $_SESSION['cart']['discount_code'],
-    		'available' => 1,
-    	    'param'  => array(
-    			'adults' => $_SESSION['cart']['adults'],
-    			'children' => $_SESSION['cart']['children']
+		'category_id' => $_SESSION['cart']['category_id'],
+	    'start_date'  => $tour_date,
+		'item_id' => (int)$_SESSION['cart']['item_id'],
+		'discount_code' => $_SESSION['cart']['discount_code'],
+		'available' => 1,
+	    'param'  => array(
+			'adults' => $_SESSION['cart']['adults'],
+			'children' => $_SESSION['cart']['children']
     )
     )
     );
 
     $item_data = $items[$_SESSION['cart']['item_id']];
-
     $item_name = substr($item_data['name'],0,10);
 
-    //$item_data['rate']['summary']['details']
-	$desc = "Adults: ".$_SESSION['cart']['adults']."\n Kids: ".$_SESSION['cart']['children'];
+    $item_id = $_SESSION['cart']['item_id'];
+    $slip = $items[$item_id]['rate']['slip'];
 
-    $auth->addLineItem("1" , $item_name , $desc , '1', $item_data['rate']['sub_total'], 'N');
-    $auth->amount = $item_data['rate']['sub_total'];
-    $_SESSION['cart']['total'] = $item_data['rate']['sub_total'];
+    $Booking->clear();
+    $Booking->set($slip);
+
+    //$item_data['rate']['summary']['details']
+    $desc = "Adults: ".$_SESSION['cart']['adults']."\n Kids: ".$_SESSION['cart']['children'];
+
+    $auth->addLineItem("1" , $item_name , $desc , '1', $_SESSION['total'], 'N');
+    $auth->amount = $_SESSION['total'];
+    $_SESSION['cart']['total'] = $_SESSION['total'];
 
     $_POST['expire_date'] = $_POST['month'] ."-".$_POST['year'];
     $auth->card_num   = $_POST['card_number'];
@@ -87,22 +92,16 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     unset($_POST['expire_date']);
     unset($_POST['cvv']);
 
-	mail("vipin.garg12@gmail.com","payment error",print_r($response,true));
+    $message = "Order details ". print_r($_SESSION,true) . " POST : ". print_r($_POST,true) . " Response: ".print_r($response,true);
 
-	$message = "Order details ". print_r($_SESSION,true) . " POST : ". print_r($_POST,true) . " Response: ".print_r($response,true);
+    //@mail("vipin.garg12@gmail.com","payment error",$message);
 
-	error_log($message , 3 , "paymentlogs.txt");
+    file_put_contents("paymentlogs.txt",$message,FILE_APPEND);
 
     if ($response->approved) {
-        $item_id = $_SESSION['cart']['item_id'];
-        $slip = $items[$item_id]['rate']['slip'];
-
-        $Booking->clear();
-        $Booking->set($slip);
-
         $foods = array('Vegetarian?'=>'vegetarian','No Pork?'=>'no_pork','No Fish?'=>'no_fish','No Alcohol?'=>'no_alcohol','Vegan?'=>'vegan','No Eggs?'=>'no_eggs','No Gluten?'=>'no_gluten','No Nuts?'=>'no_nuts','No Lactose?'=>'no_lactose','No Shellfish?'=>'no_shellfish');
         $foods_values = array_values($foods);
-        
+
         $_POST['guestname'] = implode(" , ",$_POST['guestname']);
 
         $qty   = ($_SESSION['cart']['adults'] + $_SESSION['cart']['children']);
@@ -146,15 +145,14 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             //function written in func.php file
             saveOrder($data , $order_id);
             $message = "<h3>Your Order has been placed successfully.</h3> <h3>Your transaction ID :</h3> $transaction_id AND Booking ID: ".$order['booking']['id'];
-            $message .= "<br /><br /><a href='".home_url()."'>Click here </a>  go to back to website.";
-			unset($_SESSION['cart']);
+            unset($_SESSION['cart']);
             unset($_SESSION['data']);
         }
         else{
             $error = true;
             //cancel the transaction
             $auth->void($response->transaction_id);
-            $_SESSION['data'] = array_merge($_SESSION['data'],$_POST);
+            $_SESSION['data'] = array_merge($_POST);
 
             $message = "<h2>Your Order was not placed, following error occured: </h2>";
             $message .= "{$order->request->status}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
@@ -162,7 +160,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     }
     else{
         $error = true;
-        $_SESSION['data'] = array_merge($_SESSION['data'],$_POST);
+        $_SESSION['data'] = array_merge($_POST);
 
         $message = "<h2>Your Order is not placed, following error occured: </h2>";
         $message .= "{$response->response_reason_text}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
@@ -172,7 +170,6 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     $url = home_url() . "/order_result.php";
     header("Location:$url");
     exit;
-
 }
 else{
     unset($_SESSION['booking_message']);

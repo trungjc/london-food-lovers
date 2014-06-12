@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Success Order */
+include_once 'wp-load.php';
 
 if(!session_id()){
 	session_start();

@@ -1,7 +1,11 @@
 <?php
 
-include_once '../wp-load.php';
+//include_once '../wp-load.php';
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
+
 include_once 'func.php';
+
+$cost = 65;
 
 $error = false;
 
@@ -12,15 +16,15 @@ if($_POST['placeOrder']){
      define("AUTHORIZENET_TRANSACTION_KEY", "23m2qL9tW7f43TUV");
      define("AUTHORIZENET_SANDBOX", true);*/
 
-    define("AUTHORIZENET_API_LOGIN_ID", "4za9QX58");
-    define("AUTHORIZENET_TRANSACTION_KEY", "27342GzTN5rjx7Un");
+  	define("AUTHORIZENET_API_LOGIN_ID", "4za9QX58");
+    define("AUTHORIZENET_TRANSACTION_KEY", "43Hgk84e3C2gSDqH");
     define("AUTHORIZENET_SANDBOX", false);
 
     $auth = new AuthorizeNetAIM;
 
-    $auth->addLineItem(1 , "Gift Certificate", "Gift Certificate", $_SESSION['cart']['qty'] , 65, 'N');
-    $auth->amount = $_SESSION['cart']['qty']*80;
-    $_SESSION['cart']['total'] = $_SESSION['cart']['qty']*65;
+    $auth->addLineItem(1 , "Gift Certificate", "Gift Certificate", $_SESSION['cart']['qty'] , $cost, 'N');
+    $auth->amount = $_SESSION['cart']['qty']*$cost;
+    $_SESSION['cart']['total'] = $_SESSION['cart']['qty']*$cost;
 
     $_POST['expire_date'] = $_POST['month'] ."-".$_POST['year'];
     $auth->card_num   = $_POST['card_number'];
@@ -53,6 +57,10 @@ if($_POST['placeOrder']){
     unset($_POST['card_number']);
     unset($_POST['expire_date']);
     unset($_POST['cvv']);
+
+	$message = "Order details ". print_r($_SESSION,true) . " POST : ". print_r($_POST,true) . " Response: ".print_r($response,true);
+
+	file_put_contents("paymentlogs.txt",$message,FILE_APPEND);
 
     if ($response->approved) {
         $transaction_id = $response->transaction_id;

@@ -194,6 +194,24 @@ function validateForm(){
         jQuery('#cvv').focus();
         return false;
     }
+    
+    if(!jQuery('#bill_address').val()){
+        alert('Please Billing address');
+        jQuery('#bill_address').focus();
+        return false;
+    }
+
+    if(!jQuery('#bill_country').val()){
+        alert('Please enter Billing Country');
+        jQuery('#bill_country').focus();
+        return false;
+    }
+
+    if(!jQuery('#holder_name').val()){
+        alert('Please enter card holder name');
+        jQuery('#holder_name').focus();
+        return false;
+    }
 
     if(!jQuery('#terms').is(":checked")){
     	alert('Please select checkbox of terms and conditions');

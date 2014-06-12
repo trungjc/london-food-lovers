@@ -40,7 +40,13 @@ $items = $Booking->query_inventory(
 );
 
 $item_data = $items[$_SESSION['cart']['item_id']];
-?>  <div class='alert alert-info'></div>
+
+$slip = $item_data['rate']['slip'];
+$Booking->clear();
+$Booking->set($slip);
+        
+?>  
+<div class='alert alert-info'></div>
 <div class="panel checkout-page">
 
     <div class="panel-body">
@@ -251,38 +257,52 @@ $item_data = $items[$_SESSION['cart']['item_id']];
           <div class="form-group">
           <label for="inputPassword3" class="col-sm-4 control-label">Billing Address:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_address'];?>" id="inputPassword3" id="bill_address" name="bill_address" placeholder="Billing Address">
+            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_address'];?>" id="bill_address" name="bill_address" placeholder="Billing Address">
           </div>
           </div>
           
           <div class="form-group">
           <label for="inputPassword3" class="col-sm-4 control-label">Billing Country:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_country'];?>" id="inputPassword3" id="bill_country" name="bill_country" placeholder="Billing Country">
+            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_country'];?>" id="bill_country" name="bill_country" placeholder="Billing Country">
           </div>
           </div>
           
           <div class="form-group">
           <label for="inputPassword3" class="col-sm-4 control-label">Card Holders Name:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['holder_name'];?>" id="inputPassword3" id="holder_name" name="holder_name" placeholder="Card Holders Name">
+            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['holder_name'];?>" id="holder_name" name="holder_name" placeholder="Card Holders Name">
           </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">Subtotal:</label>
+              <div class="col-sm-6">
+                <strong><?php echo $item_data['rate']['summary']['price']['total'];?></strong>
+              </div>
           </div>
           
           <?php if($_SESSION['cart']['discount_code']):?>
             <div class="form-group">
-            <label for="inputPassword3" class="col-sm-4 control-label">Promotion Code:</label>
-            <div class="col-sm-6">
-              <strong><?php echo $_SESSION['cart']['discount_code'];?></strong>
-            </div>
+                <label for="inputPassword3" class="col-sm-4 control-label">Promotion Code:</label>
+                <div class="col-sm-6">
+                    <strong><?php echo $_SESSION['cart']['discount_code'];?></strong>
+                </div>
+             </div>
+             
+             <div class="form-group">   
+                <label for="inputPassword3" class="col-sm-4 control-label">Discount:</label>
+                <div class="col-sm-6">
+                    <strong>£<?php echo $_SESSION['flat_discount']['total'];?></strong>
+                </div>
             </div>
           <?php endif;?>
           
           <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Subtotal:</label>
-          <div class="col-sm-6">
-            <strong><?php echo $item_data['rate']['summary']['price']['total'];?></strong>
-          </div>
+              <label for="inputPassword3" class="col-sm-4 control-label">Total:</label>
+              <div class="col-sm-6">
+                <strong>£<?php echo $_SESSION['total'];?></strong>
+              </div>
           </div>
           
           <div class="form-group">
