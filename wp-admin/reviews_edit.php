@@ -106,8 +106,11 @@ if($_POST['submitfeedback']){
     
     $image_name = $order_id."_".time().".jpg";
 	$save_path  = $_SERVER['DOCUMENT_ROOT'] . "/cart/images/".$image_name;
-	if(move_uploaded_file($_FILES['image']['tmp_name'],$save_path)){
+	if($_FILES['image']['tmp_name'] AND move_uploaded_file($_FILES['image']['tmp_name'],$save_path)){
 		$data['image'] = $image_name;
+	}
+	else{
+	    unset($data['image']);
 	}
     
     $extra_str = '';

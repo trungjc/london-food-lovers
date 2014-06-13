@@ -13,7 +13,7 @@ function sendOrderEmail($data , $order_id){
     $tour_name  = $tour_data['name'];
 
     $date = $_SESSION['cart']['tour_year']."-".$_SESSION['cart']['tour_month']."-".$_SESSION['cart']['tour_date'];
-    $tour_date = date('m d, Y H:i A' , strtotime($date));
+    $tour_date = date('d M Y, H:i A' , strtotime($date));
 
     $email_body = file_get_contents("email/TourDetails.html");
     $params = array("{name}","{order_id}","{participants}","{tour_date}","{tour_amount}");

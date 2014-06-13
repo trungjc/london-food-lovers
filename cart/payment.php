@@ -1,16 +1,15 @@
 <?php
 
-include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
-
-if(!session_id()){
-    session_start();
-}
-
 include_once 'func.php';
 include_once 'lib/foodloverstours.php';
 
-$Booking = new Booking();
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
 
+if(!session_id()){
+    //session_start();
+}
+
+$Booking = new Booking();
 $error = false;
 
 if($_POST['placeOrder'] && $_SESSION['cart']){
@@ -152,7 +151,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             $error = true;
             //cancel the transaction
             $auth->void($response->transaction_id);
-            $_SESSION['data'] = array_merge($_POST);
+            $_SESSION['data'] = $_POST;
 
             $message = "<h2>Your Order was not placed, following error occured: </h2>";
             $message .= "{$order->request->status}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
@@ -160,7 +159,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     }
     else{
         $error = true;
-        $_SESSION['data'] = array_merge($_POST);
+        $_SESSION['data'] = $_POST;
 
         $message = "<h2>Your Order is not placed, following error occured: </h2>";
         $message .= "{$response->response_reason_text}. Please <a href='".home_url()."/checkout'>go back</a> and try again";
@@ -172,7 +171,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     exit;
 }
 else{
-    unset($_SESSION['booking_message']);
+    //unset($_SESSION['booking_message']);
 
     $url = home_url();
     header("Location:$url");

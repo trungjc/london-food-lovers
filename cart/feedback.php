@@ -1,6 +1,7 @@
 <?php
 
-include_once '../wp-load.php';
+//include_once '../wp-load.php';
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
 
 //$order_id = $_GET['id'];
 $order_id = base64_decode($_GET['id']);

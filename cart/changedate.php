@@ -1,7 +1,8 @@
 <?php
 
 header("content-type:text/html;charset=utf8");
-include_once '../wp-load.php';
+//include_once '../wp-load.php';
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
 
 include 'lib/foodloverstours.php';
 $Booking = new Booking();

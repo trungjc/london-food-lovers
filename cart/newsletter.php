@@ -1,6 +1,7 @@
 <?php
 
-include_once '../wp-load.php';
+//include_once '../wp-load.php';
+include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
 include_once 'Mailchimp.php';
 
 if($_POST['newslettersubmit']){
