@@ -8,8 +8,21 @@ if(!session_id()){
 
 if(!$_SESSION['booking_message']){
 	$url = home_url();
-	echo "<script>window.location.href='$url';</script>";
-	exit;
+	//echo "<script>window.location.href='$url';</script>";
+	//exit;
+}
+
+if(!$_SESSION['booking_message']){
+    //check recent order by current session
+    $result = $wpdb->get_row("select order_id , transaction_id from orders where session_id = '".session_id()."' order by order_date DESC limit 1");
+    if($result){
+        $_SESSION['booking_message'] = "<h3>Your Order has been placed successfully.</h3> <h3>Your transaction ID :</h3> {$result->transaction_id} AND Booking ID: ".$result->order_id;
+    }
+    else{
+        //$message = "<h2>Your Order is not placed.</h2>";
+        //$message .= "Please <a href='".home_url()."/checkout'>go back</a> and try again";
+        //$_SESSION['booking_message'] = $message;
+    }
 }
 
 $message = $_SESSION['booking_message'];
@@ -226,11 +239,11 @@ Gain access to the best restaurants around London and to our exclusive discounts
 
 <p><b>Effective Date: April 15, 2014</b></p>
 
-<p>Food Lovers Tours LTD. (the “Company”) strives to offer its visitors the many advantages of Internet 
+<p>Food Lovers Tours LTD. (the â€œCompanyâ€�) strives to offer its visitors the many advantages of Internet 
 
 technology and to provide an interactive and personalized experience. We may use your name, e-mail 
 
-address, street address, telephone number (“Personally Identifiable Information”) subject to the terms 
+address, street address, telephone number (â€œPersonally Identifiable Informationâ€�) subject to the terms 
 
 of this Privacy Policy. Please note that this Privacy Policy applies only to information collected through 
 
@@ -264,7 +277,7 @@ and password for certain features.<p/>
 
 tools that may be transparent to our visitors. For example, we may log the name of your Internet Service 
 
-Provider or use “cookie” technology. Among other things, the cookie may store your user name and 
+Provider or use â€œcookieâ€� technology. Among other things, the cookie may store your user name and 
 
 password, sparing you from having to re-enter that information each time you visit, or may control the 
 
@@ -275,13 +288,13 @@ additional technology, we may also gather information through other means. In ce
 can choose not to provide us with information, for example by setting your browser to refuse to accept 
 
 cookies, but doing so may limit your ability to access certain portions of the Site or may require you to re-
-enter your user name and password. Additionally we may not be able to customize the Site’s features 
+enter your user name and password. Additionally we may not be able to customize the Siteâ€™s features 
 
 according to your preferences.</p>
 
 <p><b>2. What we do with the information we collect. </b> We will use your information only as permitted by law. 
 
-Information that does not personally identify you (“Aggregated Information”) may be used in various 
+Information that does not personally identify you (â€œAggregated Informationâ€�) may be used in various 
 
 ways. For example, we may combine information about your usage patterns with similar information 
 
@@ -377,7 +390,7 @@ containing information about the Site and its products</li>
 
 <li>The Site will not disclose information collected from children to any third parties;</li>
 
-<li>Parents of children have the option to consent to the collection and use of their child’s information 
+<li>Parents of children have the option to consent to the collection and use of their childâ€™s information 
 
 without consenting to the disclosure of the information to third parties;</li>
 
@@ -389,9 +402,9 @@ necessary to participate in an activity as a condition of participation; </li>
 
 Site or any other site; and </li>
 
-<li>Parents of children can review their child’s personal information, ask to have it deleted and refuse 
+<li>Parents of children can review their childâ€™s personal information, ask to have it deleted and refuse 
 
-to allow any further collection or use of the child’s information. Should a parent elect this option, that 
+to allow any further collection or use of the childâ€™s information. Should a parent elect this option, that 
 
 parent can contact the Site at the address listed in Section 6 below. </li> </ul>
 
@@ -433,7 +446,7 @@ United Kingdom, please note the information you provide to us will be transferre
 
 This Privacy Policy also hereby incorporates in full by this reference the terms and conditions contained in 
 
-the Company’s Terms and Conditions of Use Agreement. </p>
+the Companyâ€™s Terms and Conditions of Use Agreement. </p>
 
 
 
@@ -463,9 +476,9 @@ the Company’s Terms and Conditions of Use Agreement. </p>
 
 <p><b>Effective Date: April 15, 2014</b></p>
 
-<p>Welcome to <b>londonfoodlovers.com</b> (the “Site”). Please read the following Terms and Conditions of 
+<p>Welcome to <b>londonfoodlovers.com</b> (the â€œSiteâ€�). Please read the following Terms and Conditions of 
 
-Use Agreement (this “Agreement”) carefully before using the Site. The following Agreement governs your 
+Use Agreement (this â€œAgreementâ€�) carefully before using the Site. The following Agreement governs your 
 
 use of the Site. By accessing and using the Site, you signify and acknowledge your acceptance of this 
 
@@ -479,7 +492,7 @@ and cultural walking tours. This limited, temporary and non-exclusive license an
 
 revocable at any time, for any reason whatsoever, and with or without notice, by Food Lovers Tours LTD 
 
-(the “Company”) as described more fully below. If you do not agree to this Agreement, please do not use 
+(the â€œCompanyâ€�) as described more fully below. If you do not agree to this Agreement, please do not use 
 
 the Site or purchase tickets for our tours. Please print a copy of this Agreement for your records.</p>
 
@@ -489,9 +502,9 @@ through, or used in connection with the Site including, for example and without 
 
 photographs, images, illustrations, audio clips, video, html, source and object code, trademarks, logos, 
 
-and the like (collectively, the “Content”), as well as its selection and arrangement, is owned by the 
+and the like (collectively, the â€œContentâ€�), as well as its selection and arrangement, is owned by the 
 
-Company, and/or the Company’s affiliated entities, licensors and/or suppliers. You may use the Content 
+Company, and/or the Companyâ€™s affiliated entities, licensors and/or suppliers. You may use the Content 
 
 online only, and solely for your personal, non-commercial use. If you operate a website and wish to link 
 
@@ -517,23 +530,23 @@ reverse engineer or disassemble any software or other products or processes acce
 
 Site, not to insert any code or product or manipulate the content of the Site in any way that affects the 
 
-user’s experience, and not to use any data mining, data gathering or extraction method.</p>
+userâ€™s experience, and not to use any data mining, data gathering or extraction method.</p>
 
 <p>Requests to use Content for any purpose other than as permitted in this Agreement should be directed to 
 
-the email address listed below under the heading “Contact Us.”</p>
+the email address listed below under the heading â€œContact Us.â€�</p>
 
 <p><b>2. Infringement Complaints.</b> The Site respects the intellectual property of others. If you believe your 
 
 rights have been infringed and/or are aware of any infringing material on the Site, please contact us at the 
 
-email address listed below under the heading “Contact Us.”</p>
+email address listed below under the heading â€œContact Us.â€�</p>
 
  
 
 <p><b>3. User-Provided Information and Content. </b> By providing information to, communicating with, and/
 
-or placing material on the Site (collectively, “User-Provided Content”), you represent and warrant that 
+or placing material on the Site (collectively, â€œUser-Provided Contentâ€�), you represent and warrant that 
 
 you, in consideration of being allowed to use the Site, irrevocably and unconditionally grant, transfer 
 
@@ -569,7 +582,7 @@ transactions and order fulfillment may be handled by a third party processing ag
 
 institution. While in most cases transactions are completed without difficulty, there is no such thing as 
 
-“perfect security” on the Internet or offline. If you’re concerned about online credit card safety, in most 
+â€œperfect securityâ€� on the Internet or offline. If youâ€™re concerned about online credit card safety, in most 
 
 cases a telephone number will be made available so you can call us and place your order by phone. The 
 
@@ -601,7 +614,7 @@ Under no circumstances will the Company or the Site be liable for any goods, ser
 
 content available through such third party dealings or communications, or for any harm related thereto. 
 
-Please review carefully that third party’s policies and practices and make sure you are comfortable with 
+Please review carefully that third partyâ€™s policies and practices and make sure you are comfortable with 
 
 them before you engage in any transaction. Complaints, concerns or questions relating to materials 
 
@@ -633,7 +646,7 @@ infringe rights of third parties. The Company and the Site have no responsibilit
 
 or for content provided or posted by others. </p>
 
-<p>Use of the site is at your own risk. all content is provided “as is” and “as available.” neither the company, 
+<p>Use of the site is at your own risk. all content is provided â€œas isâ€� and â€œas available.â€� neither the company, 
 
 the site, nor any of their affiliated or related companies, nor any of the past, present or future employees, 
 
@@ -677,9 +690,9 @@ officers, directors, shareholders, employees, representatives, contractors and a
 
 claims (including, but not limited to, claims for defamation, trade disparagement, privacy and intellectual 
 
-property infringement) and damages (including attorneys’ fees and court costs) arising from or relating 
+property infringement) and damages (including attorneysâ€™ fees and court costs) arising from or relating 
 
-to any allegation regarding: (1) your use of the site; (2) the company or the site’s use of any content or 
+to any allegation regarding: (1) your use of the site; (2) the company or the siteâ€™s use of any content or 
 
 information you provide, as long as such use is not inconsistent with this agreement; (3) information or 
 
@@ -701,7 +714,7 @@ follows, with the knowledge that the Company will rely on same:
 
 A. You desire to participate in the food tasting and cultural walking tours offered by the Company (the 
 
-“Tours”); </p>
+â€œToursâ€�); </p>
 
 <p>B. You are in good health and suffer from no minor or serious physical or mental injury, illness or 
 
@@ -727,7 +740,7 @@ without limitation, those arising out of self-inflicted accidents or mishaps, ot
 
 pedestrians and the like) and death; </p>
 
-<p>E. You grant to Company and Company’s assigns the irrevocable, sub-licensable right and authority 
+<p>E. You grant to Company and Companyâ€™s assigns the irrevocable, sub-licensable right and authority 
 
 to use your name, likeness, photograph and/or picture for any and all commercial or non-commercial 
 
@@ -739,11 +752,11 @@ compensation to you; </p>
 
 or entity claiming through or on your behalf, hereby forever and unconditionally release and discharge
 
-the company, the company’s related and affiliated entities, the present and former employees, owners, 
+the company, the companyâ€™s related and affiliated entities, the present and former employees, owners, 
 
 officers, members, managers, partners, contractors, insurers, representatives and agents of the foregoing 
 
-(including, without limitation, foodtourpros.com, brown paper tickets) (collectively, “released parties”) from 
+(including, without limitation, foodtourpros.com, brown paper tickets) (collectively, â€œreleased partiesâ€�) from 
 
 any and all claims, actions, damages, liabilities, losses, costs and expenses in any way arising out of, 
 
@@ -759,7 +772,7 @@ through or on your behalf, further agree to defend and indemnify the released pa
 
 released parties harmless, from any and all liabilities, claims, actions, damages, expenses (including, 
 
-without limitation, attorney’s fees) and losses of any kind or nature whatsoever in any way arising out of, 
+without limitation, attorneyâ€™s fees) and losses of any kind or nature whatsoever in any way arising out of, 
 
 or resulting from, your participation in the tours; and </p>
 
@@ -790,13 +803,13 @@ divisions, or any entity that acquires the Company, the Site or any of their ass
 the Privacy Policy of londonfoodlovers.com</p>
 
 <p><b>11. Refund and Cancellation Policy: </b>:</p>
-<p>•	Food Lovers Tours will reimburse in full any tours cancelled no later than 3 weeks before the confirmed tour date.</p>
-<p>•	Cancellations must be communicated via email to info@londonfoodlovers.com no less than 3 weeks in advance in order to receive a full refund.</p>
-<p>•	Approval of cancellation of any and all bookings will be confirmed via email</p>
-<p>•		Any and all changes or adjustments made in reference to a confirmed booking must be made 72 hours prior to the originally scheduled tour in order to be approved</p>
+<p>â€¢	Food Lovers Tours will reimburse in full any tours cancelled no later than 3 weeks before the confirmed tour date.</p>
+<p>â€¢	Cancellations must be communicated via email to info@londonfoodlovers.com no less than 3 weeks in advance in order to receive a full refund.</p>
+<p>â€¢	Approval of cancellation of any and all bookings will be confirmed via email</p>
+<p>â€¢		Any and all changes or adjustments made in reference to a confirmed booking must be made 72 hours prior to the originally scheduled tour in order to be approved</p>
 <p>a.	If the client wishes to execute any changes 72 hours prior to the commencement of the tour we will do everything possible to accommodate their requests, dependent on availability and circumstance; if we cannot entertain these changes and subsequently the client wishes to cancel, we will refund half of the ticket price of the scheduled tour.</p>
 <p>b.	If the client requests changes in relation to the tour within the 72-hour window of the scheduled start, we will do what we can to best accommodate the changes, but in the event that the client chooses to cancel their booking, no refund will be issued.</p>
-<p>•	 No partial (or full) refunds are available once a tour has commenced.
+<p>â€¢	 No partial (or full) refunds are available once a tour has commenced.
  </p>
 
 <p><b>12. Contact Us. </b>To contact the Company:</p>
@@ -847,7 +860,7 @@ the Privacy Policy of londonfoodlovers.com</p>
 				</div>
 			</div>
 			<p class="copyright center">
-					©2014 Food Lovers Tours LTD. All Rights Reserved
+					Â©2014 Food Lovers Tours LTD. All Rights Reserved
 			</p>
 		</div>
 	</div>

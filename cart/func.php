@@ -94,7 +94,7 @@ function sendFeedbackEmail($order_id , $data){
     }
 }
 
-function saveOrder($data , $order_id){
+function saveOrder($data , $order_id , $transaction_id){
     $orderExist = mysql_query("select * from orders where order_id = '$order_id'");
     if(mysql_numrows($orderExist) > 0){
         return -1;
@@ -119,6 +119,8 @@ function saveOrder($data , $order_id){
 						cart  = '".mysql_real_escape_string(json_encode($_SESSION))."',
 						order_date  = '".mysql_real_escape_string(date('Y-m-d H:i:s'))."',
 						tour_date  = '".mysql_real_escape_string($tour_date)."',
+						session_id  = '".session_id()."',
+						transaction_id  = '".$transaction_id."',
 						dateofmodification = '".date('Y-m-d H:i:s')."'";
 
         mysql_query($order_query) or die(mysql_error());

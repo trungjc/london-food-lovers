@@ -3,20 +3,20 @@ Order details Array
     [cart] => Array
         (
             [category_id] => 1
-            [item_id] => 6
+            [item_id] => 9
             [adults] => 1
             [children] => 0
             [tour_year] => 2014
             [tour_month] => 06
-            [tour_date] => 11
-            [discount_code] => FoodLovers2014
-            [total] => 1.00
+            [tour_date] => 15
+            [discount_code] => 
+            [total] => 1
         )
 
-    [id] => qt2rs1vo84v0lstqgesp5sk5p4
-    [age] => 1183
+    [id] => bb85a2ccf11a74ff88a6d8b5b8a3f160
+    [age] => 1703
     [qty] => 0
-    [total] => 0.00
+    [total] => 1
     [sub_total] => 0.00
     [tax_total] => 0.00
     [tax_inc_total] => 0.00
@@ -29,741 +29,83 @@ Order details Array
     [currency_id] => GBP
     [due] => 0.00
     [time_desc] => 
-    [date_desc] => Wed Jun 11, 2014
-    [start_date] => 1402499033
-    [end_date] => 1402499033
+    [date_desc] => Sun Jun 15, 2014
+    [start_date] => 1402812551
+    [end_date] => 1402812551
     [item] => 
-)
- POST : Array
-(
-    [customer_name] => test user
-    [note] => 
-    [category_id] => 1
-    [tour_year] => 2014
-    [tour_month] => 06
-    [tour_date] => 11
-    [month] => 01
-    [item_id] => 6
-    [adults] => 1
-    [children] => 0
-    [discount_code] => 
-    [cf-month] => 20140611
-    [customer_email] => growthlabsdev@gmail.com
-    [customer_phone] => 888-888-888
-    [customer_country] => USA
-    [customer_address] => test
-    [customer_region] => NY
-    [customer_city] => NY
-    [customer_postal_zip] => 10003
-    [guestname] => Array
+    [data] => Array
         (
-            [1] => test1
-        )
-
-    [vegetarian] => Array
-        (
-            [1] => 1
-        )
-
-    [no_pork] => Array
-        (
-            [1] => 1
-        )
-
-    [other_note] => 
-    [cc_type] => VI
-    [year] => 2018
-    [bill_address] => test
-    [bill_country] => usa
-    [holder_name] => test user
-    [terms] => 1
-    [newsletter] => 1
-    [placeOrder] => placeOrder
-)
- Response: AuthorizeNetAIM_Response Object
-(
-    [_response_array:AuthorizeNetAIM_Response:private] => Array
-        (
-            [0] => 1
-            [1] => 1
-            [2] => 1
-            [3] => This transaction has been approved.
-            [4] => G6MEC6
-            [5] => Y
-            [6] => 2214715142
-            [7] => 1402499038
-            [8] => 
-            [9] => 1.00
-            [10] => CC
-            [11] => auth_only
-            [12] => 
-            [13] => test
-            [14] => user
-            [15] => 
-            [16] => test
-            [17] => NY
-            [18] => NY
-            [19] => 10003
-            [20] => USA
-            [21] => 
-            [22] => 
-            [23] => growthlabsdev@gmail.com
-            [24] => test user
-            [25] => 
-            [26] => 
-            [27] => test
-            [28] => NY
-            [29] => NY
-            [30] => 10003
-            [31] => usa
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 121FD39EA98464417A5D7DC07F682A59
-            [38] => P
-            [39] => 2
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
-            [49] => 
-            [50] => XXXX1111
-            [51] => Visa
-            [52] => 
-            [53] => 
-            [54] => 
-            [55] => 
-            [56] => 
-            [57] => 
-            [58] => 
-            [59] => 
-            [60] => 
-            [61] => 
-            [62] => 
-            [63] => 
-            [64] => 
-            [65] => 
-            [66] => 
-            [67] => 
-        )
-
-    [approved] => 1
-    [declined] => 
-    [error] => 
-    [held] => 
-    [response_code] => 1
-    [response_subcode] => 1
-    [response_reason_code] => 1
-    [response_reason_text] => This transaction has been approved.
-    [authorization_code] => G6MEC6
-    [avs_response] => Y
-    [transaction_id] => 2214715142
-    [invoice_number] => 1402499038
-    [description] => 
-    [amount] => 1.00
-    [method] => CC
-    [transaction_type] => auth_only
-    [customer_id] => 
-    [first_name] => test
-    [last_name] => user
-    [company] => 
-    [address] => test
-    [city] => NY
-    [state] => NY
-    [zip_code] => 10003
-    [country] => USA
-    [phone] => 
-    [fax] => 
-    [email_address] => growthlabsdev@gmail.com
-    [ship_to_first_name] => test user
-    [ship_to_last_name] => 
-    [ship_to_company] => 
-    [ship_to_address] => test
-    [ship_to_city] => NY
-    [ship_to_state] => NY
-    [ship_to_zip_code] => 10003
-    [ship_to_country] => usa
-    [tax] => 
-    [duty] => 
-    [freight] => 
-    [tax_exempt] => 
-    [purchase_order_number] => 
-    [md5_hash] => 121FD39EA98464417A5D7DC07F682A59
-    [card_code_response] => P
-    [cavv_response] => 2
-    [account_number] => XXXX1111
-    [card_type] => Visa
-    [split_tender_id] => 
-    [requested_amount] => 
-    [balance_on_card] => 
-    [response] => |1|,|1|,|1|,|This transaction has been approved.|,|G6MEC6|,|Y|,|2214715142|,|1402499038|,||,|1.00|,|CC|,|auth_only|,||,|test|,|user|,||,|test|,|NY|,|NY|,|10003|,|USA|,||,||,|growthlabsdev@gmail.com|,|test user|,||,||,|test|,|NY|,|NY|,|10003|,|usa|,||,||,||,||,||,|121FD39EA98464417A5D7DC07F682A59|,|P|,|2|,||,||,||,||,||,||,||,||,||,||,|XXXX1111|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
-)
-Order details Array
-(
-    [cart] => Array
-        (
+            [customer_name] => test user
+            [note] => test
             [category_id] => 1
+            [tour_year] => 2014
+            [tour_month] => 06
+            [tour_date] => 15
+            [month] => 01
             [item_id] => 6
             [adults] => 1
             [children] => 0
-            [tour_year] => 2014
-            [tour_month] => 06
-            [tour_date] => 11
-            [discount_code] => FoodLovers2014
-            [total] => 1.00
-        )
-
-    [id] => qt2rs1vo84v0lstqgesp5sk5p4
-    [age] => 1372
-    [qty] => 1
-    [total] => 0
-    [sub_total] => 1.00
-    [tax_total] => 0.00
-    [tax_inc_total] => 0.00
-    [tax] => Array
-        (
-        )
-
-    [discount] => 1.00
-    [summary] => Morning Tour - English - 09:45AM
-    [currency_id] => GBP
-    [due] => 0.00
-    [time_desc] => 
-    [date_desc] => Wed Jun 11, 2014
-    [start_date] => 1402441200
-    [end_date] => 1402441200
-    [item] => Array
-        (
-            [1] => Array
-                (
-                    [sku] => morningtoure
-                    [item_id] => 6
-                    [name] => Morning Tour - English - 09:45AM
-                    [rate] => Array
-                        (
-                            [total] => 1.00
-                            [item_total] => 1.00
-                            [qty] => 1
-                            [summary] => <strong>Adults:</strong> 1 x  1 Day  @  &#163;1.00 <em>(£59 - Discount Activated)</em>
-                        )
-
-                    [date] => Array
-                        (
-                            [summary] => Wed Jun 11, 2014
-                            [start_date] => 1402441200
-                            [end_date] => 1402441200
-                        )
-
-                    [slip] => 6.20140611X1-qty.0-adults.1-children.0|FoodLovers2014
-                    [available] => 5
-                )
-
-        )
-
-    [flat_discount] => Array
-        (
-            [amount] => 6
-            [type] => F
-            [total] => 6
-        )
-
-)
- POST : Array
-(
-    [customer_name] => test user
-    [note] => 
-    [category_id] => 1
-    [tour_year] => 2014
-    [tour_month] => 06
-    [tour_date] => 11
-    [month] => 01
-    [item_id] => 6
-    [adults] => 1
-    [children] => 0
-    [discount_code] => 
-    [cf-month] => 20140611
-    [customer_email] => growthlabsdev@gmail.com
-    [customer_phone] => 888-888-888
-    [customer_country] => USA
-    [customer_address] => test
-    [customer_region] => NY
-    [customer_city] => NY
-    [customer_postal_zip] => 10003
-    [guestname] => Array
-        (
-            [1] => test1
-        )
-
-    [vegetarian] => Array
-        (
-            [1] => 1
-        )
-
-    [no_pork] => Array
-        (
-            [1] => 1
-        )
-
-    [other_note] => 
-    [cc_type] => VI
-    [year] => 2018
-    [bill_address] => test
-    [bill_country] => usa
-    [holder_name] => test user
-    [terms] => 1
-    [newsletter] => 1
-    [placeOrder] => placeOrder
-)
- Response: AuthorizeNetAIM_Response Object
-(
-    [_response_array:AuthorizeNetAIM_Response:private] => Array
-        (
-            [0] => 1
-            [1] => 1
-            [2] => 1
-            [3] => This transaction has been approved.
-            [4] => EDGUMJ
-            [5] => Y
-            [6] => 2214715244
-            [7] => 1402499227
-            [8] => 
-            [9] => 1.00
-            [10] => CC
-            [11] => auth_only
-            [12] => 
-            [13] => test
-            [14] => user
-            [15] => 
-            [16] => test
-            [17] => NY
-            [18] => NY
-            [19] => 10003
-            [20] => USA
-            [21] => 
-            [22] => 
-            [23] => growthlabsdev@gmail.com
-            [24] => test user
-            [25] => 
-            [26] => 
-            [27] => test
-            [28] => NY
-            [29] => NY
-            [30] => 10003
-            [31] => usa
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 82800AA8D8009C2A848101A743324167
-            [38] => P
-            [39] => 2
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
-            [49] => 
-            [50] => XXXX1111
-            [51] => Visa
-            [52] => 
-            [53] => 
-            [54] => 
-            [55] => 
-            [56] => 
-            [57] => 
-            [58] => 
-            [59] => 
-            [60] => 
-            [61] => 
-            [62] => 
-            [63] => 
-            [64] => 
-            [65] => 
-            [66] => 
-            [67] => 
-        )
-
-    [approved] => 1
-    [declined] => 
-    [error] => 
-    [held] => 
-    [response_code] => 1
-    [response_subcode] => 1
-    [response_reason_code] => 1
-    [response_reason_text] => This transaction has been approved.
-    [authorization_code] => EDGUMJ
-    [avs_response] => Y
-    [transaction_id] => 2214715244
-    [invoice_number] => 1402499227
-    [description] => 
-    [amount] => 1.00
-    [method] => CC
-    [transaction_type] => auth_only
-    [customer_id] => 
-    [first_name] => test
-    [last_name] => user
-    [company] => 
-    [address] => test
-    [city] => NY
-    [state] => NY
-    [zip_code] => 10003
-    [country] => USA
-    [phone] => 
-    [fax] => 
-    [email_address] => growthlabsdev@gmail.com
-    [ship_to_first_name] => test user
-    [ship_to_last_name] => 
-    [ship_to_company] => 
-    [ship_to_address] => test
-    [ship_to_city] => NY
-    [ship_to_state] => NY
-    [ship_to_zip_code] => 10003
-    [ship_to_country] => usa
-    [tax] => 
-    [duty] => 
-    [freight] => 
-    [tax_exempt] => 
-    [purchase_order_number] => 
-    [md5_hash] => 82800AA8D8009C2A848101A743324167
-    [card_code_response] => P
-    [cavv_response] => 2
-    [account_number] => XXXX1111
-    [card_type] => Visa
-    [split_tender_id] => 
-    [requested_amount] => 
-    [balance_on_card] => 
-    [response] => |1|,|1|,|1|,|This transaction has been approved.|,|EDGUMJ|,|Y|,|2214715244|,|1402499227|,||,|1.00|,|CC|,|auth_only|,||,|test|,|user|,||,|test|,|NY|,|NY|,|10003|,|USA|,||,||,|growthlabsdev@gmail.com|,|test user|,||,||,|test|,|NY|,|NY|,|10003|,|usa|,||,||,||,||,||,|82800AA8D8009C2A848101A743324167|,|P|,|2|,||,||,||,||,||,||,||,||,||,||,|XXXX1111|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
-)
-Order details Array
-(
-    [cart] => Array
-        (
-            [category_id] => 1
-            [item_id] => 6
-            [adults] => 1
-            [children] => 0
-            [tour_year] => 2014
-            [tour_month] => 06
-            [tour_date] => 11
-            [discount_code] => FoodLovers2014
-            [total] => 0
-        )
-
-    [id] => qt2rs1vo84v0lstqgesp5sk5p4
-    [age] => 2109
-    [qty] => 1
-    [total] => 0
-    [sub_total] => 1.00
-    [tax_total] => 0.00
-    [tax_inc_total] => 0.00
-    [tax] => Array
-        (
-        )
-
-    [discount] => 1.00
-    [summary] => Morning Tour - English - 09:45AM
-    [currency_id] => GBP
-    [due] => 0.00
-    [time_desc] => 
-    [date_desc] => Wed Jun 11, 2014
-    [start_date] => 1402441200
-    [end_date] => 1402441200
-    [item] => Array
-        (
-            [1] => Array
-                (
-                    [sku] => morningtoure
-                    [item_id] => 6
-                    [name] => Morning Tour - English - 09:45AM
-                    [rate] => Array
-                        (
-                            [total] => 1.00
-                            [item_total] => 1.00
-                            [qty] => 1
-                            [summary] => <strong>Adults:</strong> 1 x  1 Day  @  &#163;1.00 <em>(£59 - Discount Activated)</em>
-                        )
-
-                    [date] => Array
-                        (
-                            [summary] => Wed Jun 11, 2014
-                            [start_date] => 1402441200
-                            [end_date] => 1402441200
-                        )
-
-                    [slip] => 6.20140611X1-qty.0-adults.1-children.0|FoodLovers2014
-                    [available] => 5
-                )
-
-        )
-
-    [flat_discount] => Array
-        (
-            [amount] => 6
-            [type] => F
-            [total] => 6
-        )
-
-)
- POST : Array
-(
-    [customer_name] => test user
-    [note] => 
-    [category_id] => 1
-    [tour_year] => 2014
-    [tour_month] => 06
-    [tour_date] => 11
-    [month] => 01
-    [item_id] => 6
-    [adults] => 1
-    [children] => 0
-    [discount_code] => 
-    [cf-month] => 20140611
-    [customer_email] => growthlabsdev@gmail.com
-    [customer_phone] => 888-888-888
-    [customer_country] => USA
-    [customer_address] => test
-    [customer_region] => NY
-    [customer_city] => NY
-    [customer_postal_zip] => 10003
-    [guestname] => Array
-        (
-            [1] => 
-        )
-
-    [other_note] => 
-    [cc_type] => 
-    [year] => 2018
-    [bill_address] => test
-    [bill_country] => usa
-    [holder_name] => test user
-    [terms] => 1
-    [newsletter] => 1
-    [placeOrder] => placeOrder
-)
- Response: AuthorizeNetAIM_Response Object
-(
-    [_response_array:AuthorizeNetAIM_Response:private] => Array
-        (
-            [0] => 1
-            [1] => 1
-            [2] => 1
-            [3] => This transaction has been approved.
-            [4] => SHZ4BY
-            [5] => Y
-            [6] => 2214715575
-            [7] => 1402499962
-            [8] => 
-            [9] => 0.00
-            [10] => CC
-            [11] => auth_only
-            [12] => 
-            [13] => test
-            [14] => user
-            [15] => 
-            [16] => test
-            [17] => NY
-            [18] => NY
-            [19] => 10003
-            [20] => USA
-            [21] => 
-            [22] => 
-            [23] => growthlabsdev@gmail.com
-            [24] => test user
-            [25] => 
-            [26] => 
-            [27] => test
-            [28] => NY
-            [29] => NY
-            [30] => 10003
-            [31] => usa
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 7176817DEBF1E83A8AA2CAA1E61321B1
-            [38] => P
-            [39] => 2
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
-            [49] => 
-            [50] => XXXX1111
-            [51] => Visa
-            [52] => 
-            [53] => 
-            [54] => 
-            [55] => 
-            [56] => 
-            [57] => 
-            [58] => 
-            [59] => 
-            [60] => 
-            [61] => 
-            [62] => 
-            [63] => 
-            [64] => 
-            [65] => 
-            [66] => 
-            [67] => 
-        )
-
-    [approved] => 1
-    [declined] => 
-    [error] => 
-    [held] => 
-    [response_code] => 1
-    [response_subcode] => 1
-    [response_reason_code] => 1
-    [response_reason_text] => This transaction has been approved.
-    [authorization_code] => SHZ4BY
-    [avs_response] => Y
-    [transaction_id] => 2214715575
-    [invoice_number] => 1402499962
-    [description] => 
-    [amount] => 0.00
-    [method] => CC
-    [transaction_type] => auth_only
-    [customer_id] => 
-    [first_name] => test
-    [last_name] => user
-    [company] => 
-    [address] => test
-    [city] => NY
-    [state] => NY
-    [zip_code] => 10003
-    [country] => USA
-    [phone] => 
-    [fax] => 
-    [email_address] => growthlabsdev@gmail.com
-    [ship_to_first_name] => test user
-    [ship_to_last_name] => 
-    [ship_to_company] => 
-    [ship_to_address] => test
-    [ship_to_city] => NY
-    [ship_to_state] => NY
-    [ship_to_zip_code] => 10003
-    [ship_to_country] => usa
-    [tax] => 
-    [duty] => 
-    [freight] => 
-    [tax_exempt] => 
-    [purchase_order_number] => 
-    [md5_hash] => 7176817DEBF1E83A8AA2CAA1E61321B1
-    [card_code_response] => P
-    [cavv_response] => 2
-    [account_number] => XXXX1111
-    [card_type] => Visa
-    [split_tender_id] => 
-    [requested_amount] => 
-    [balance_on_card] => 
-    [response] => |1|,|1|,|1|,|This transaction has been approved.|,|SHZ4BY|,|Y|,|2214715575|,|1402499962|,||,|0.00|,|CC|,|auth_only|,||,|test|,|user|,||,|test|,|NY|,|NY|,|10003|,|USA|,||,||,|growthlabsdev@gmail.com|,|test user|,||,||,|test|,|NY|,|NY|,|10003|,|usa|,||,||,||,||,||,|7176817DEBF1E83A8AA2CAA1E61321B1|,|P|,|2|,||,||,||,||,||,||,||,||,||,||,|XXXX1111|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
-)
-Order details Array
-(
-    [cart] => Array
-        (
-            [category_id] => 1
-            [item_id] => 6
-            [adults] => 1
-            [children] => 0
-            [tour_year] => 2014
-            [tour_month] => 06
-            [tour_date] => 12
             [discount_code] => 
-            [total] => 1.00
-        )
-
-    [id] => 2k9vl9oj93d7tmlr199dc19tv6
-    [age] => 183
-    [qty] => 1
-    [total] => 1.00
-    [sub_total] => 1.00
-    [tax_total] => 0.00
-    [tax_inc_total] => 0.00
-    [tax] => Array
-        (
-        )
-
-    [discount] => 0
-    [summary] => Morning Tour - English - 09:45AM
-    [currency_id] => GBP
-    [due] => 1.00
-    [time_desc] => 
-    [date_desc] => Thu Jun 12, 2014
-    [start_date] => 1402527600
-    [end_date] => 1402527600
-    [item] => Array
-        (
-            [1] => Array
+            [cf-month] => 20140615
+            [customer_email] => growthlabsdev@gmail.com
+            [customer_phone] => 888-888-888
+            [customer_country] => USA
+            [customer_address] => test
+            [customer_region] => NY
+            [customer_city] => NY
+            [customer_postal_zip] => 10003
+            [guestname] => Array
                 (
-                    [sku] => morningtoure
-                    [item_id] => 6
-                    [name] => Morning Tour - English - 09:45AM
-                    [rate] => Array
-                        (
-                            [total] => 1.00
-                            [item_total] => 1.00
-                            [qty] => 1
-                            [summary] => <strong>Adults:</strong> 1 x  1 Day  @  &#163;1.00
-                        )
-
-                    [date] => Array
-                        (
-                            [summary] => Thu Jun 12, 2014
-                            [start_date] => 1402527600
-                            [end_date] => 1402527600
-                        )
-
-                    [slip] => 6.20140612X1-qty.0-adults.1-children.0
-                    [available] => 11
+                    [1] => test1
                 )
 
+            [vegetarian] => Array
+                (
+                    [1] => 1
+                )
+
+            [no_pork] => Array
+                (
+                    [1] => 1
+                )
+
+            [other_note] => 
+            [cc_type] => VI
+            [year] => 2022
+            [bill_address] => test
+            [bill_country] => usa
+            [holder_name] => test user
+            [terms] => 1
+            [newsletter] => 1
+            [placeOrder] => placeOrder
         )
 
+    [booking_message] => <h2>Your Order is not placed, following error occured: </h2>Line item 1 is invalid.. Please <a href='https://londonfoodlovers.com/checkout'>go back</a> and try again
 )
  POST : Array
 (
-    [customer_name] => test
-    [note] => 
+    [customer_name] => test user
+    [note] => test
     [category_id] => 1
     [tour_year] => 2014
     [tour_month] => 06
-    [tour_date] => 12
-    [month] => 01
+    [tour_date] => 15
+    [month] => 04
     [item_id] => 6
     [adults] => 1
     [children] => 0
     [discount_code] => 
-    [cf-month] => 20140612
-    [customer_email] => test
-    [customer_phone] => 123-123-12
-    [customer_country] => essss
-    [customer_address] => 123123
-    [customer_region] => 123
-    [customer_city] => 3123
-    [customer_postal_zip] => 1231
+    [cf-month] => 20140615
+    [customer_email] => growthlabsdev@gmail.com
+    [customer_phone] => 888-888-888
+    [customer_country] => USA
+    [customer_address] => test
+    [customer_region] => NY
+    [customer_city] => NY
+    [customer_postal_zip] => 10003
     [guestname] => Array
         (
-            [1] => 12312
+            [1] => test1
         )
 
     [vegetarian] => Array
@@ -771,9 +113,24 @@ Order details Array
             [1] => 1
         )
 
-    [other_note] => 23123
+    [no_pork] => Array
+        (
+            [1] => 1
+        )
+
+    [no_lactose] => Array
+        (
+            [1] => 1
+        )
+
+    [no_shellfish] => Array
+        (
+            [1] => 1
+        )
+
+    [other_note] => 
     [cc_type] => VI
-    [year] => 2019
+    [year] => 2020
     [bill_address] => test
     [bill_country] => usa
     [holder_name] => test user
@@ -786,43 +143,43 @@ Order details Array
     [_response_array:AuthorizeNetAIM_Response:private] => Array
         (
             [0] => 3
-            [1] => 2
-            [2] => 326
-            [3] => The following field is invalid:  bill to email.
+            [1] => 1
+            [2] => 270
+            [3] => Line item 1 is invalid.
             [4] => 
             [5] => P
-            [6] => 6249536638
-            [7] => 1402536294
+            [6] => 0
+            [7] => 1402812551
             [8] => 
             [9] => 1.00
-            [10] => CC
+            [10] => 
             [11] => auth_only
             [12] => 
             [13] => test
             [14] => user
             [15] => 
-            [16] => 123123
-            [17] => 3123
-            [18] => 123
-            [19] => 1231
-            [20] => essss
+            [16] => test
+            [17] => NY
+            [18] => NY
+            [19] => 10003
+            [20] => USA
             [21] => 
             [22] => 
-            [23] => test
-            [24] => test
+            [23] => growthlabsdev@gmail.com
+            [24] => test user
             [25] => 
             [26] => 
-            [27] => 123123
-            [28] => 3123
-            [29] => 123
-            [30] => 1231
+            [27] => test
+            [28] => NY
+            [29] => NY
+            [30] => 10003
             [31] => usa
             [32] => 
             [33] => 
             [34] => 
             [35] => 
             [36] => 
-            [37] => 0503FE3414EF64954F344E57D7C3A414
+            [37] => 8AB6380A76C57B9716CD1EA62AFFEC15
             [38] => 
             [39] => 
             [40] => 
@@ -835,8 +192,8 @@ Order details Array
             [47] => 
             [48] => 
             [49] => 
-            [50] => XXXX1111
-            [51] => Visa
+            [50] => 
+            [51] => 
             [52] => 
             [53] => 
             [54] => 
@@ -860,55 +217,316 @@ Order details Array
     [error] => 1
     [held] => 
     [response_code] => 3
-    [response_subcode] => 2
-    [response_reason_code] => 326
-    [response_reason_text] => The following field is invalid:  bill to email.
+    [response_subcode] => 1
+    [response_reason_code] => 270
+    [response_reason_text] => Line item 1 is invalid.
     [authorization_code] => 
     [avs_response] => P
-    [transaction_id] => 6249536638
-    [invoice_number] => 1402536294
+    [transaction_id] => 0
+    [invoice_number] => 1402812551
     [description] => 
     [amount] => 1.00
-    [method] => CC
+    [method] => 
     [transaction_type] => auth_only
     [customer_id] => 
     [first_name] => test
     [last_name] => user
     [company] => 
-    [address] => 123123
-    [city] => 3123
-    [state] => 123
-    [zip_code] => 1231
-    [country] => essss
+    [address] => test
+    [city] => NY
+    [state] => NY
+    [zip_code] => 10003
+    [country] => USA
     [phone] => 
     [fax] => 
-    [email_address] => test
-    [ship_to_first_name] => test
+    [email_address] => growthlabsdev@gmail.com
+    [ship_to_first_name] => test user
     [ship_to_last_name] => 
     [ship_to_company] => 
-    [ship_to_address] => 123123
-    [ship_to_city] => 3123
-    [ship_to_state] => 123
-    [ship_to_zip_code] => 1231
+    [ship_to_address] => test
+    [ship_to_city] => NY
+    [ship_to_state] => NY
+    [ship_to_zip_code] => 10003
     [ship_to_country] => usa
     [tax] => 
     [duty] => 
     [freight] => 
     [tax_exempt] => 
     [purchase_order_number] => 
-    [md5_hash] => 0503FE3414EF64954F344E57D7C3A414
+    [md5_hash] => 8AB6380A76C57B9716CD1EA62AFFEC15
     [card_code_response] => 
     [cavv_response] => 
-    [account_number] => XXXX1111
+    [account_number] => 
+    [card_type] => 
+    [split_tender_id] => 
+    [requested_amount] => 
+    [balance_on_card] => 
+    [response] => |3|,|1|,|270|,|Line item 1 is invalid.|,||,|P|,|0|,|1402812551|,||,|1.00|,||,|auth_only|,||,|test|,|user|,||,|test|,|NY|,|NY|,|10003|,|USA|,||,||,|growthlabsdev@gmail.com|,|test user|,||,||,|test|,|NY|,|NY|,|10003|,|usa|,||,||,||,||,||,|8AB6380A76C57B9716CD1EA62AFFEC15|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
+    [error_message] => AuthorizeNet Error:
+                Response Code: 3
+                Response Subcode: 1
+                Response Reason Code: 270
+                Response Reason Text: Line item 1 is invalid.
+                
+)
+Order details Array
+(
+    [cart] => Array
+        (
+            [category_id] => 1
+            [item_id] => 9
+            [adults] => 1
+            [children] => 0
+            [tour_year] => 2014
+            [tour_month] => 06
+            [tour_date] => 15
+            [discount_code] => 
+            [total] => 1.00
+        )
+
+    [id] => 396b261a670dd47918ecd5f037f8e8fe
+    [age] => 1602
+    [qty] => 2
+    [total] => 1.00
+    [sub_total] => 1.00
+    [tax_total] => 0.00
+    [tax_inc_total] => 0.00
+    [tax] => Array
+        (
+        )
+
+    [discount] => 0
+    [summary] => test
+    [currency_id] => GBP
+    [due] => 1.00
+    [time_desc] => 
+    [date_desc] => Sun Jun 15, 2014
+    [start_date] => 1402786800
+    [end_date] => 1402786800
+    [item] => Array
+        (
+            [1] => Array
+                (
+                    [sku] => test
+                    [item_id] => 9
+                    [name] => test
+                    [rate] => Array
+                        (
+                            [total] => 1.00
+                            [item_total] => 1.00
+                            [qty] => 2
+                            [summary] => <strong>Qty:</strong> 1
+<strong>Adults:</strong> 1 @ &#163;1.00
+                        )
+
+                    [date] => Array
+                        (
+                            [summary] => Sun Jun 15, 2014
+                            [start_date] => 1402786800
+                            [end_date] => 1402786800
+                        )
+
+                    [slip] => 9.20140615X1-qty.0-adults.1-children.0
+                    [available] => 100
+                )
+
+        )
+
+    [data] => Array
+        (
+            [customer_name] => Paolo
+            [note] => 
+            [category_id] => 1
+            [tour_year] => 2014
+            [tour_month] => 06
+            [tour_date] => 15
+            [month] => 05
+            [item_id] => 6
+            [adults] => 1
+            [children] => 0
+            [discount_code] => 
+            [cf-month] => 20140615
+            [customer_email] => paolo@growthlabs.ca
+            [customer_phone] => 514-616-9695
+            [customer_country] => Canada
+            [customer_address] => 67 Skywood Drive
+            [customer_region] => Ontario
+            [customer_city] => Richmond Hill
+            [customer_postal_zip] => L4E4L1
+            [guestname] => Array
+                (
+                    [1] => Paolo
+                )
+
+            [other_note] => 
+            [cc_type] => VI
+            [year] => 2017
+            [bill_address] => 67 Skywood Drive
+            [bill_country] => Canada
+            [holder_name] => Minerva Melgarejo
+            [terms] => 1
+            [placeOrder] => placeOrder
+        )
+
+    [booking_message] => <h2>Your Order is not placed, following error occured: </h2>Line item 1 is invalid.. Please <a href='https://londonfoodlovers.com/checkout'>go back</a> and try again
+)
+ POST : Array
+(
+    [customer_name] => Paolo
+    [note] => 
+    [category_id] => 1
+    [tour_year] => 2014
+    [tour_month] => 06
+    [tour_date] => 15
+    [month] => 05
+    [item_id] => 6
+    [adults] => 1
+    [children] => 0
+    [discount_code] => 
+    [cf-month] => 20140615
+    [customer_email] => paolo@growthlabs.ca
+    [customer_phone] => 514-616-9695
+    [customer_country] => Canada
+    [customer_address] => 67 Skywood Drive
+    [customer_region] => Ontario
+    [customer_city] => Richmond Hill
+    [customer_postal_zip] => L4E4L1
+    [guestname] => Array
+        (
+            [1] => Paolo
+        )
+
+    [other_note] => 
+    [cc_type] => VI
+    [year] => 2017
+    [bill_address] => 67 Skywood Drive
+    [bill_country] => Canada
+    [holder_name] => Minerva Melgarejo
+    [terms] => 1
+    [placeOrder] => placeOrder
+)
+ Response: AuthorizeNetAIM_Response Object
+(
+    [_response_array:AuthorizeNetAIM_Response:private] => Array
+        (
+            [0] => 1
+            [1] => 1
+            [2] => 1
+            [3] => This transaction has been approved.
+            [4] => 009126
+            [5] => Y
+            [6] => 6257587143
+            [7] => 1402812626
+            [8] => 
+            [9] => 1.00
+            [10] => CC
+            [11] => auth_only
+            [12] => 
+            [13] => Minerva
+            [14] => Melgarejo
+            [15] => 
+            [16] => 67 Skywood Drive
+            [17] => Richmond Hill
+            [18] => Ontario
+            [19] => L4E4L1
+            [20] => Canada
+            [21] => 
+            [22] => 
+            [23] => paolo@growthlabs.ca
+            [24] => Paolo
+            [25] => 
+            [26] => 
+            [27] => 67 Skywood Drive
+            [28] => Richmond Hill
+            [29] => Ontario
+            [30] => L4E4L1
+            [31] => Canada
+            [32] => 
+            [33] => 
+            [34] => 
+            [35] => 
+            [36] => 
+            [37] => 1CA4274DD809497DDD1971B7335751C9
+            [38] => M
+            [39] => 
+            [40] => 
+            [41] => 
+            [42] => 
+            [43] => 
+            [44] => 
+            [45] => 
+            [46] => 
+            [47] => 
+            [48] => 
+            [49] => 
+            [50] => XXXX2982
+            [51] => Visa
+            [52] => 
+            [53] => 
+            [54] => 
+            [55] => 
+            [56] => 
+            [57] => 
+            [58] => 
+            [59] => 
+            [60] => 
+            [61] => 
+            [62] => 
+            [63] => 
+            [64] => 
+            [65] => 
+            [66] => 
+            [67] => 
+        )
+
+    [approved] => 1
+    [declined] => 
+    [error] => 
+    [held] => 
+    [response_code] => 1
+    [response_subcode] => 1
+    [response_reason_code] => 1
+    [response_reason_text] => This transaction has been approved.
+    [authorization_code] => 009126
+    [avs_response] => Y
+    [transaction_id] => 6257587143
+    [invoice_number] => 1402812626
+    [description] => 
+    [amount] => 1.00
+    [method] => CC
+    [transaction_type] => auth_only
+    [customer_id] => 
+    [first_name] => Minerva
+    [last_name] => Melgarejo
+    [company] => 
+    [address] => 67 Skywood Drive
+    [city] => Richmond Hill
+    [state] => Ontario
+    [zip_code] => L4E4L1
+    [country] => Canada
+    [phone] => 
+    [fax] => 
+    [email_address] => paolo@growthlabs.ca
+    [ship_to_first_name] => Paolo
+    [ship_to_last_name] => 
+    [ship_to_company] => 
+    [ship_to_address] => 67 Skywood Drive
+    [ship_to_city] => Richmond Hill
+    [ship_to_state] => Ontario
+    [ship_to_zip_code] => L4E4L1
+    [ship_to_country] => Canada
+    [tax] => 
+    [duty] => 
+    [freight] => 
+    [tax_exempt] => 
+    [purchase_order_number] => 
+    [md5_hash] => 1CA4274DD809497DDD1971B7335751C9
+    [card_code_response] => M
+    [cavv_response] => 
+    [account_number] => XXXX2982
     [card_type] => Visa
     [split_tender_id] => 
     [requested_amount] => 
     [balance_on_card] => 
-    [response] => |3|,|2|,|326|,|The following field is invalid:  bill to email.|,||,|P|,|6249536638|,|1402536294|,||,|1.00|,|CC|,|auth_only|,||,|test|,|user|,||,|123123|,|3123|,|123|,|1231|,|essss|,||,||,|test|,|test|,||,||,|123123|,|3123|,|123|,|1231|,|usa|,||,||,||,||,||,|0503FE3414EF64954F344E57D7C3A414|,||,||,||,||,||,||,||,||,||,||,||,||,|XXXX1111|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
-    [error_message] => AuthorizeNet Error:
-                Response Code: 3
-                Response Subcode: 2
-                Response Reason Code: 326
-                Response Reason Text: The following field is invalid:  bill to email.
-                
+    [response] => |1|,|1|,|1|,|This transaction has been approved.|,|009126|,|Y|,|6257587143|,|1402812626|,||,|1.00|,|CC|,|auth_only|,||,|Minerva|,|Melgarejo|,||,|67 Skywood Drive|,|Richmond Hill|,|Ontario|,|L4E4L1|,|Canada|,||,||,|paolo@growthlabs.ca|,|Paolo|,||,||,|67 Skywood Drive|,|Richmond Hill|,|Ontario|,|L4E4L1|,|Canada|,||,||,||,||,||,|1CA4274DD809497DDD1971B7335751C9|,|M|,||,||,||,||,||,||,||,||,||,||,||,|XXXX2982|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
 )

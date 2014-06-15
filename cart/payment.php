@@ -54,6 +54,10 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
     //$item_data['rate']['summary']['details']
     $desc = "Adults: ".$_SESSION['cart']['adults']."\n Kids: ".$_SESSION['cart']['children'];
+    
+    if((float)$_SESSION['total'] <= 0){
+    	$_SESSION['total'] = 1;
+    }
 
     $auth->addLineItem("1" , $item_name , $desc , '1', $_SESSION['total'], 'N');
     $auth->amount = $_SESSION['total'];
@@ -142,7 +146,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
             $order_id = $order['booking']['id'];
             //this function will send email, save order in database
             //function written in func.php file
-            saveOrder($data , $order_id);
+            saveOrder($data , $order_id , $transaction_id);
             $message = "<h3>Your Order has been placed successfully.</h3> <h3>Your transaction ID :</h3> $transaction_id AND Booking ID: ".$order['booking']['id'];
             unset($_SESSION['cart']);
             unset($_SESSION['data']);

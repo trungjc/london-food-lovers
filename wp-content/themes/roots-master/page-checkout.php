@@ -44,6 +44,8 @@ $item_data = $items[$_SESSION['cart']['item_id']];
 $slip = $item_data['rate']['slip'];
 $Booking->clear();
 $Booking->set($slip);
+
+print_r($_SESSION); exit;
         
 ?>  
 <div class='alert alert-info'></div>
