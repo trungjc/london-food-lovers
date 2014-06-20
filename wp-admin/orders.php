@@ -15,20 +15,34 @@ require_once(ABSPATH . 'wp-admin/includes/dashboard.php');
 wp_dashboard_setup();
 
 if($_GET['action'] == 'delete' && $_GET['id']){
-    mysql_query("delete from feedbacks where id = '".(int)$_REQUEST['id']."'") or die(mysql_error());
-    $_SESSION['message'] = 'Feedback is deleted successfully';
+    mysql_query("delete from orders where id = '".(int)$_REQUEST['id']."'") or die(mysql_error());
+    
+    $_SESSION['message'] = 'Order is deleted successfully';
 }
-elseif($_REQUEST['action'] == 'active' && $_REQUEST['id']){
-    mysql_query("update feedbacks SET status = 1 where id = '".(int)$_REQUEST['id']."'") or die(mysql_error());
-    $_SESSION['message'] = 'Feedback status is changed to active';
-}
-elseif($_REQUEST['action'] == 'inactive' && $_REQUEST['id']){
-    mysql_query("update feedbacks SET status = 0 where id = '".(int)$_REQUEST['id']."'") or die(mysql_error());
-    $_SESSION['message'] = 'Feedback status is changed to inactive';
+elseif($_GET['action'] == 'refund' && $_GET['id']){
+	require_once '../cart/authnet/AuthorizeNet.php';
+	
+	define("AUTHORIZENET_API_LOGIN_ID", "4za9QX58");
+	define("AUTHORIZENET_TRANSACTION_KEY", "43Hgk84e3C2gSDqH");
+	define("AUTHORIZENET_SANDBOX", false);
+	
+	$order = $wpdb->get_row("select * from orders where id = '".(int)$_REQUEST['id']."'");
+	if($order && $order->transaction_id){
+		$auth = new AuthorizeNetAIM;
+		$response = $auth->void($order->transaction_id);
+	}
+	
+	if($response->approved){
+		mysql_query("update orders SET status = 'refunded' where id = '".(int)$_REQUEST['id']."'") or die(mysql_error());
+		$_SESSION['message'] = 'Order status is changed to refunded.';
+	}
+	else{
+		$_SESSION['message'] = 'Order status refund fail because '. $response->response_reason_text;
+	}
 }
 
 if($_REQUEST['action']){
-    $url = home_url(). "/wp-admin/reviews.php";
+    $url = home_url(). "/wp-admin/orders.php";
     wp_redirect($url);
     exit;
 }
@@ -120,61 +134,54 @@ if(!$page){
     $page = 1;
 }
 
-$query = "Select f.* , c.name as category_name from feedbacks f left join categories c on (c.category_id = f.category_id)";
+$query = "Select * from orders order by order_date desc";
 
-$split_page = new splitPageResults($query , 20 , 'reviews.php' , $page);
-$reviews = $wpdb->get_results($split_page->sql_query);
+$split_page = new splitPageResults($query , 20 , 'orders.php' , $page);
+$orders = $wpdb->get_results($split_page->sql_query);
 
 ?>
 <div class="wrap">
-	<h2>Manage Reviews</h2> <br />
+	<h2>Manage Orders</h2> <br />
 	
 	<div align="center" style="color:red;"><?php echo @$_SESSION['message']; unset($_SESSION['message']);?></div>
 	
     <table border="1" width="100%" cellpadding="5" cellspacing="0">
     	<tr>
     		<td>Order ID</td>
+    		<td>Trans ID</td>
     		<td>Customer Name</td>
-    		<td>Category</td>
-    		<td>Rating</td>
+    		<td>Email</td>
     		<td>Date</td>
-    		<td>City/State</td>
+    		<td>Phone</td>
     		<td>Status</td>
     		<td>Action</td>
     	</tr>
-    	<?php foreach($reviews as $review):?>
+    	<?php foreach($orders as $order):?>
     		<tr>
-    			<td><?php echo $review->order_id;?></td>
+    			<td><a target="_blank" href="https://foodloverstours.checkfront.co.uk/booking/<?php echo $order->order_id;?>"><?php echo $order->order_id;?></a></td>
     			
-        		<td><?php echo $review->name;?></td>
+    			<td><?php echo $order->transaction_id;?></td>
+    			
+        		<td><?php echo $order->customer_name;?></td>
         		
-        		<td><?php echo $review->category_name;?></td>
+        		<td><?php echo $order->email;?></td>
         		
-        		<td><?php echo $review->overall_rating;?></td>
+        		<td><?php echo $order->order_date;?></td>
         		
-        		<td><?php echo $review->dateofmodification;?></td>
-        		
-        		<td><?php echo $review->city . " ". $review->state;?></td>
+        		<td><?php echo $order->phone;?></td>
         		
         		<td>
-        		    <?php if($review->status):?>
-        		    	Active
-        		    <?php else:?>
-        		    	InActive
-        		    <?php endif;?>
+        		   <?php echo $order->status;?>
         		</td>
         		
         		<td>
-        			<a href="reviews_edit.php?id=<?php echo $review->id?>">Edit</a> |
+        			<?php if($order->status != 'refunded'):?>
         			
-        		    <a href="reviews.php?id=<?php echo $review->id?>&action=delete" onclick="">Delete</a> |
-        		    
-        		    <?php if($review->status == 0):?>
-        		    	<a href="reviews.php?id=<?php echo $review->id?>&action=active">Active</a>
-        		    <?php else:?>
-        		    
-        		       <a href="reviews.php?id=<?php echo $review->id?>&action=inactive">Inactive</a>
-        		    <?php endif;?>	
+        				<a href="orders.php?id=<?php echo $order->id?>&action=refund" onclick="if(!confirm('Are you sure? You can not redo this action.')){ return false;}">Refund</a> |
+        			
+        			<?php endif;?>	
+        			
+        		    <a href="orders.php?id=<?php echo $order->id?>&action=delete" onclick="if(!confirm('Are you sure? You want to delete this order.')){ return false;}">Delete</a>
         		</td>
         	</tr>
     	<?php endforeach;?>
