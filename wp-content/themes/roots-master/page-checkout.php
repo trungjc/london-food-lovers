@@ -45,8 +45,15 @@ $slip = $item_data['rate']['slip'];
 $Booking->clear();
 $Booking->set($slip);
 
-print_r($_SESSION); exit;
-        
+//print "<pre>";
+//print_r($_SESSION); exit;
+
+if($_SESSION['sub_total'] == $_SESSION['total']){
+	$_SESSION['price_total'] = $_SESSION['sub_total'] + $_SESSION['discount'];
+}
+else{
+	$_SESSION['price_total'] = $_SESSION['sub_total'];
+}
 ?>  
 <div class='alert alert-info'></div>
 <div class="panel checkout-page">
@@ -58,33 +65,62 @@ print_r($_SESSION); exit;
     
       <form class="form-horizontal" method="post" role="form" id="checkout" action="<?php echo home_url();?>/cart/payment.php" onsubmit="return validateForm();">
           <div class="form-group">
-          <label for="inputEmail3" class="col-sm-4 control-label">Tour Date:</label>
-          <div class="col-sm-6">
-            <?php $date = $_SESSION['cart']['tour_year']."-".$_SESSION['cart']['tour_month']."-".$_SESSION['cart']['tour_date'];?>
-              <?php echo date('d-M-Y',strtotime($date));?>
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputEmail3" class="col-sm-4 control-label">Subtotal:</label>
-          <div class="col-sm-6">
-             <?php print_r($item_data['rate']['summary']['details']);?> <br />
-             <?php echo $item_data['rate']['summary']['price']['total'];?>
-          </div>
+			  <label for="inputEmail3" class="col-sm-4 control-label">Tour Date:</label>
+			  <div class="col-sm-6">
+				<?php $date = $_SESSION['cart']['tour_year']."-".$_SESSION['cart']['tour_month']."-".$_SESSION['cart']['tour_date'];?>
+				  <?php echo date('d-M-Y',strtotime($date));?>
+			  </div>
           </div>
           
           <div class="form-group">
-          <label for="inputEmail3" class="col-sm-4 control-label">Number Of Adults:</label>
-          <div class="col-sm-6">
-            <?php echo $_SESSION['cart']['adults']?>
+			  <label for="inputEmail3" class="col-sm-4 control-label">Details:</label>
+			  <div class="col-sm-6">
+				 <?php print_r($item_data['rate']['summary']['details']);?> <br />
+			  </div>
           </div>
+
+		   <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">Subtotal:</label>
+              <div class="col-sm-6">
+                <strong>£<?php echo $_SESSION['price_total'];?></strong>
+              </div>
+          </div>
+          
+          <?php if($_SESSION['cart']['discount_code']):?>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-4 control-label">Promotion Code:</label>
+                <div class="col-sm-6">
+                    <strong><?php echo $_SESSION['cart']['discount_code'];?></strong>
+                </div>
+             </div>
+             
+             <div class="form-group">   
+                <label for="inputPassword3" class="col-sm-4 control-label">Discount:</label>
+                <div class="col-sm-6">
+                    <strong>£<?php echo $_SESSION['discount'];?></strong>
+                </div>
+            </div>
+          <?php endif;?>
+
+		  <div class="form-group">
+              <label for="inputPassword3" class="col-sm-4 control-label">Total:</label>
+              <div class="col-sm-6">
+                <strong>£<?php echo $_SESSION['total'];?></strong>
+              </div>
           </div>
           
           <div class="form-group">
-          <label for="inputEmail3" class="col-sm-4 control-label">Number Of Children:</label>
-          <div class="col-sm-6">
-            <?php echo $_SESSION['cart']['children']?>
+			  <label for="inputEmail3" class="col-sm-4 control-label">Number Of Adults:</label>
+			  <div class="col-sm-6">
+				<?php echo $_SESSION['cart']['adults']?>
+			  </div>
           </div>
+          
+          <div class="form-group">
+			  <label for="inputEmail3" class="col-sm-4 control-label">Number Of Children:</label>
+			  <div class="col-sm-6">
+				<?php echo $_SESSION['cart']['children']?>
+			  </div>
           </div>
           
           <div class="form-group">
@@ -276,31 +312,8 @@ print_r($_SESSION); exit;
             <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['holder_name'];?>" id="holder_name" name="holder_name" placeholder="Card Holders Name">
           </div>
           </div>
-          
-          <div class="form-group">
-              <label for="inputPassword3" class="col-sm-4 control-label">Subtotal:</label>
-              <div class="col-sm-6">
-                <strong><?php echo $item_data['rate']['summary']['price']['total'];?></strong>
-              </div>
-          </div>
-          
-          <?php if($_SESSION['cart']['discount_code']):?>
-            <div class="form-group">
-                <label for="inputPassword3" class="col-sm-4 control-label">Promotion Code:</label>
-                <div class="col-sm-6">
-                    <strong><?php echo $_SESSION['cart']['discount_code'];?></strong>
-                </div>
-             </div>
-             
-             <div class="form-group">   
-                <label for="inputPassword3" class="col-sm-4 control-label">Discount:</label>
-                <div class="col-sm-6">
-                    <strong>£<?php echo $_SESSION['flat_discount']['total'];?></strong>
-                </div>
-            </div>
-          <?php endif;?>
-          
-          <div class="form-group">
+       
+		  <div class="form-group">
               <label for="inputPassword3" class="col-sm-4 control-label">Total:</label>
               <div class="col-sm-6">
                 <strong>£<?php echo $_SESSION['total'];?></strong>

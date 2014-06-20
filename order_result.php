@@ -13,16 +13,7 @@ if(!$_SESSION['booking_message']){
 }
 
 if(!$_SESSION['booking_message']){
-    //check recent order by current session
-    $result = $wpdb->get_row("select order_id , transaction_id from orders where session_id = '".session_id()."' order by order_date DESC limit 1");
-    if($result){
-        $_SESSION['booking_message'] = "<h3>Your Order has been placed successfully.</h3> <h3>Your transaction ID :</h3> {$result->transaction_id} AND Booking ID: ".$result->order_id;
-    }
-    else{
-        //$message = "<h2>Your Order is not placed.</h2>";
-        //$message .= "Please <a href='".home_url()."/checkout'>go back</a> and try again";
-        //$_SESSION['booking_message'] = $message;
-    }
+	$_SESSION['booking_message'] = $_COOKIE['booking_message'];
 }
 
 $message = $_SESSION['booking_message'];

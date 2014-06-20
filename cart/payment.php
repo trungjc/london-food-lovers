@@ -170,6 +170,8 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
     }
 
     $_SESSION['booking_message'] = $message;
+    setcookie('booking_message',$message);
+    
     $url = home_url() . "/order_result.php";
     header("Location:$url");
     exit;

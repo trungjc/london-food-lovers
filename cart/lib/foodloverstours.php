@@ -53,8 +53,10 @@ class Checkfront extends CheckfrontAPI {
 	}
 
 	public function session($session_id,$data=array()) {
-		session_id($session_id);
-		if(!empty($data)) $_SESSION = array_merge($_SESSION,$data);
+		//session_id($session_id);
+		if(!empty($data)){
+			$_SESSION = array_merge($_SESSION,$data);
+		}
 	}
 }
 
@@ -78,18 +80,18 @@ class Booking {
 
 	function __construct() {
 		// apply a session_id to the request if one is specified
-		if (!empty($_GET['cart_id'])) session_id($_GET['cart_id']);
-		@session_start();
+		//if (!empty($_GET['cart_id'])) session_id($_GET['cart_id']);
+		//@session_start();
 		// create api connection to Checkfront
 		// you can generate a token pair under Manage / Developer in your account
 		$this->Checkfront = new Checkfront(
-		array(
-	    				'host' => 'foodloverstours.checkfront.co.uk',
-	    				'auth_type' => 'token',
-	    				'api_key' => '1eeadb1c44fdcde1a2638e0950c3bf7298becc3c',
-	    				'api_secret' => 'cad70bf0257de60c58fd0d408850d80fc376e042280bf261e6e0286fc5c5f36e',
-	    				'account_id' => 'off',
-		)
+			array(
+    			'host' => 'foodloverstours.checkfront.co.uk',
+    			'auth_type' => 'token',
+    			'api_key' => '1eeadb1c44fdcde1a2638e0950c3bf7298becc3c',
+    			'api_secret' => 'cad70bf0257de60c58fd0d408850d80fc376e042280bf261e6e0286fc5c5f36e',
+    			'account_id' => 'off',
+			)
 		);
 
 		// init shopping cart
