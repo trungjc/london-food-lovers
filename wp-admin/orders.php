@@ -32,6 +32,9 @@ elseif($_GET['action'] == 'refund' && $_GET['id']){
 		$response = $auth->void($order->transaction_id);
 	}
 	
+	$data = array($order , $response);
+	file_put_contents("../cart/refundlogs.txt",print_r($data,true) , FILE_APPEND);
+	
 	if($response->approved){
 		mysql_query("update orders SET status = 'refunded' where id = '".(int)$_REQUEST['id']."'") or die(mysql_error());
 		$_SESSION['message'] = 'Order status is changed to refunded.';
