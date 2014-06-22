@@ -171,8 +171,13 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
 	$_SESSION['booking_message'] = $message;
 	setcookie('booking_message',$message);
-
-	$url = home_url() . "/order_result.php";
+	
+	if(!$error){
+		$url = home_url() . "/order_result.php";
+	}
+	else{
+		$url = home_url() . "/error.php";
+	}
 	header("Location:$url");
 	exit;
 }

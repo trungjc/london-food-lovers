@@ -36,6 +36,7 @@ function sendOrderEmail($data , $order_id){
 		 
 		// send email to admin also
 		$phpmailer->AddAddress($from,$fromName);
+		$phpmailer->AddAddress("doriharpaz@gmail.com",$fromName);
 		$phpmailer->Send();
 		 
 		return 1;

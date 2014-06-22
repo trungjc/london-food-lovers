@@ -138,13 +138,21 @@ $message = $_SESSION['booking_message'];
   <div class="wrap container" role="document">
     <div class="content row">      
 		<div class="panel panel-default" style="width:700px; margin-left: auto; margin-right: auto; margin-top:100px; margin-bottom:50px;">
-	         <div class="panel-body">
-				 <?php echo '<h2>' , $message, '</h2>'; ?>
-		        
-		         <h3>Congratulations! Your Booking Has Been Confirmed!</h3>
+			<div class="panel-body">
+	        	<?php if(!$message):?>
+	        	
+		        	<h3>Your Order is not placed, following error occured: </h3>
 		
-				 <p> An email has sent to you with your booking ID and detailed instructions on the meeting place and the next steps. If you cannot find the email, please check your spam box and if that doesn’t do the trick, email us at <em>info@londonfoodlovers.com</em> or call us at<em> +44 (0)7884 852 151</em></p>
-			 </div>		 
+					<p> Please <a href="<?php home_url();?>/checkout">go back</a> and try again</p>
+					
+				<?php else:?>
+				
+					<?php echo '<h3>' , $message, '</h3>'; ?>
+							
+				<?php endif;?>	
+				
+				<p>If your difficulties persist, please contact us at <em>info@londonfoodlovers.com</em> or call us at<em> +44 (0)7884 852 151</em></p>		
+			</div>
 	    </div>
     </div><!-- /.content -->
   </div><!-- /.wrap -->
