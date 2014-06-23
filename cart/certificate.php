@@ -68,7 +68,7 @@ if($_POST['placeOrder']){
             $transaction_id = $response->invoice_number;
         }
 
-        $auth->captureOnly();
+        $auth->priorAuthCapture($response->transaction_id);
 
         $data = array();
         $data = $_POST;

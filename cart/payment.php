@@ -135,7 +135,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 				$transaction_id = $response->invoice_number;
 			}
 
-			$auth->priorAuthCapture();
+			$auth->priorAuthCapture($response->transaction_id);
 
 			$data = array();
 			$data = $_POST;
