@@ -244,74 +244,77 @@ else{
               </div>
           </div>
           
-          <h3 class="title-img">4. Enter your Payment details</h3>
-          <hr/>
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>
-          <div class="col-sm-3">
-            <select id="authorizenet_cc_type" name="cc_type" class="validate[required] form-control">
-                <option value="">Your Card</option>
-                <option value="VI" <?php if($_SESSION['data']['cc_type'] == 'VI'):?> selected="selected" <?php endif;?>>Visa</option>
-                <option value="MC" <?php if($_SESSION['data']['cc_type'] == 'MC'):?> selected="selected" <?php endif;?>>MasterCard</option>
-                <option value="DI" <?php if($_SESSION['data']['cc_type'] == 'DI'):?> selected="selected" <?php endif;?>>Discover</option>
-                <option value="AE" <?php if($_SESSION['data']['cc_type'] == 'AE'):?> selected="selected" <?php endif;?>>American Express</option>
-            </select>
-          </div>
-          <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/visa.png"><img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/master-card.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/discover.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/amex.png">
-          </div>
+          <?php if($_SESSION['total'] > 0):?>
           
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Card Number:</label>
-          <div class="col-sm-6">
-            <input type="text" class="form-control" autocomplete="off" name="card_number" id="card_number" placeholder="Card Number">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">CVV code:</label>
-          <div class="col-sm-8">
-            <input autocomplete="off" style="width: 90px;display: inline-block" type="text" class="form-control" maxlength="3" name="cvv" id="cvv" placeholder="CVV code">
-            <img width="40px"  src="<?php echo $host_path?>/images/fir.png" />
-            <span>(Last three digits on the back of your card)</span>
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Expire Date:</label>
-          <div class="col-sm-6">
-            <select class="select-x form-control pull-left" name="month">
-             <?php for($i=1;$i<=12;$i++): $k = $i; if($i < 10){ $k = '0'.$i; }?>
-                <option value="<?php echo $k;?>"><?php echo $k;?></option>
-             <?php endfor;?>
-            </select>
-            <select class="select-x form-control pull-left" name="year">
-             <?php for($i=date('Y');$i<=date('Y')+10;$i++):?>
-                <option value="<?php echo $i;?>"><?php echo $i;?></option>
-             <?php endfor;?>
-            </select>
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Billing Address:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_address'];?>" id="bill_address" name="bill_address" placeholder="Billing Address">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Billing Country:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_country'];?>" id="bill_country" name="bill_country" placeholder="Billing Country">
-          </div>
-          </div>
-          
-          <div class="form-group">
-          <label for="inputPassword3" class="col-sm-4 control-label">Card Holders Name:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['holder_name'];?>" id="holder_name" name="holder_name" placeholder="Card Holders Name">
-          </div>
-          </div>
+	          <h3 class="title-img">4. Enter your Payment details</h3>
+	          <hr/>
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">Card Type:</label>
+	          <div class="col-sm-3">
+	            <select id="authorizenet_cc_type" name="cc_type" class="validate[required] form-control">
+	                <option value="">Your Card</option>
+	                <option value="VI" <?php if($_SESSION['data']['cc_type'] == 'VI'):?> selected="selected" <?php endif;?>>Visa</option>
+	                <option value="MC" <?php if($_SESSION['data']['cc_type'] == 'MC'):?> selected="selected" <?php endif;?>>MasterCard</option>
+	                <option value="DI" <?php if($_SESSION['data']['cc_type'] == 'DI'):?> selected="selected" <?php endif;?>>Discover</option>
+	                <option value="AE" <?php if($_SESSION['data']['cc_type'] == 'AE'):?> selected="selected" <?php endif;?>>American Express</option>
+	            </select>
+	          </div>
+	          <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/visa.png"><img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/master-card.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/discover.png"> <img class= "pull-left" src="http://londonfoodlovers.com/wp-content/uploads/2014/04/amex.png">
+	          </div>
+	          
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">Card Number:</label>
+	          <div class="col-sm-6">
+	            <input type="text" class="form-control" autocomplete="off" name="card_number" id="card_number" placeholder="Card Number">
+	          </div>
+	          </div>
+	          
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">CVV code:</label>
+	          <div class="col-sm-8">
+	            <input autocomplete="off" style="width: 90px;display: inline-block" type="text" class="form-control" maxlength="3" name="cvv" id="cvv" placeholder="CVV code">
+	            <img width="40px"  src="<?php echo $host_path?>/images/fir.png" />
+	            <span>(Last three digits on the back of your card)</span>
+	          </div>
+	          </div>
+	          
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">Expire Date:</label>
+	          <div class="col-sm-6">
+	            <select class="select-x form-control pull-left" name="month">
+	             <?php for($i=1;$i<=12;$i++): $k = $i; if($i < 10){ $k = '0'.$i; }?>
+	                <option value="<?php echo $k;?>"><?php echo $k;?></option>
+	             <?php endfor;?>
+	            </select>
+	            <select class="select-x form-control pull-left" name="year">
+	             <?php for($i=date('Y');$i<=date('Y')+10;$i++):?>
+	                <option value="<?php echo $i;?>"><?php echo $i;?></option>
+	             <?php endfor;?>
+	            </select>
+	          </div>
+	          </div>
+	          
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">Billing Address:</label>
+	          <div class="col-sm-6">
+	            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_address'];?>" id="bill_address" name="bill_address" placeholder="Billing Address">
+	          </div>
+	          </div>
+	          
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">Billing Country:</label>
+	          <div class="col-sm-6">
+	            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['bill_country'];?>" id="bill_country" name="bill_country" placeholder="Billing Country">
+	          </div>
+	          </div>
+	          
+	          <div class="form-group">
+	          <label for="inputPassword3" class="col-sm-4 control-label">Card Holders Name:</label>
+	          <div class="col-sm-6">
+	            <input type="text" autocomplete="off" class="form-control" value="<?php echo $_SESSION['data']['holder_name'];?>" id="holder_name" name="holder_name" placeholder="Card Holders Name">
+	          </div>
+	          </div>
+	      <?php endif;?>    
        
 		  <div class="form-group">
               <label for="inputPassword3" class="col-sm-4 control-label">Total:</label>

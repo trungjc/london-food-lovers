@@ -530,3 +530,423 @@ Order details Array
     [balance_on_card] => 
     [response] => |1|,|1|,|1|,|This transaction has been approved.|,|009126|,|Y|,|6257587143|,|1402812626|,||,|1.00|,|CC|,|auth_only|,||,|Minerva|,|Melgarejo|,||,|67 Skywood Drive|,|Richmond Hill|,|Ontario|,|L4E4L1|,|Canada|,||,||,|paolo@growthlabs.ca|,|Paolo|,||,||,|67 Skywood Drive|,|Richmond Hill|,|Ontario|,|L4E4L1|,|Canada|,||,||,||,||,||,|1CA4274DD809497DDD1971B7335751C9|,|M|,||,||,||,||,||,||,||,||,||,||,||,|XXXX2982|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
 )
+Order details Array
+(
+    [cart] => Array
+        (
+            [category_id] => 1
+            [item_id] => 6
+            [adults] => 1
+            [children] => 0
+            [tour_year] => 2014
+            [tour_month] => 07
+            [tour_date] => 04
+            [discount_code] => FOODLOVER-AAEN-YHCH
+            [total] => 6.00
+        )
+
+    [id] => nprukp5pso4d6uepc1ggi5a027
+    [age] => 688
+    [qty] => 1
+    [total] => 6.00
+    [sub_total] => 65.00
+    [tax_total] => 0.00
+    [tax_inc_total] => 0.00
+    [tax] => Array
+        (
+        )
+
+    [discount] => 59
+    [summary] => Morning Tour - English - 09:45AM
+    [currency_id] => GBP
+    [due] => 6.00
+    [time_desc] => 
+    [date_desc] => Fri Jul 4, 2014
+    [start_date] => 1404428400
+    [end_date] => 1404428400
+    [item] => Array
+        (
+            [1] => Array
+                (
+                    [sku] => morningtoure
+                    [item_id] => 6
+                    [name] => Morning Tour - English - 09:45AM
+                    [rate] => Array
+                        (
+                            [total] => 65.00
+                            [item_total] => 65.00
+                            [qty] => 1
+                            [summary] => <strong>Adults:</strong> 1 x  1 Day  @  &#163;65.00 <em>(Gift Certificate Adult)</em>
+                        )
+
+                    [date] => Array
+                        (
+                            [summary] => Fri Jul 4, 2014
+                            [start_date] => 1404428400
+                            [end_date] => 1404428400
+                        )
+
+                    [slip] => 6.20140704X1-qty.0-adults.1-children.0|FOODLOVER-AAEN-YHCH
+                    [available] => 12
+                )
+
+        )
+
+    [price_total] => 65.00
+    [voucher] => 12
+    [flat_discount] => Array
+        (
+            [amount] => 59
+            [type] => F
+            [total] => 59
+        )
+
+)
+ POST : Array
+(
+    [customer_name] => test user
+    [note] => 
+    [category_id] => 1
+    [tour_year] => 2014
+    [tour_month] => 07
+    [tour_date] => 04
+    [month] => 01
+    [item_id] => 6
+    [adults] => 1
+    [children] => 0
+    [discount_code] => 
+    [cf-month] => 20140704
+    [customer_email] => growthlabsdev@gmail.com
+    [customer_phone] => 888-888-888
+    [customer_country] => USA
+    [customer_address] => test
+    [customer_region] => NY
+    [customer_city] => new york
+    [customer_postal_zip] => 10003
+    [guestname] => Array
+        (
+            [1] => test1
+        )
+
+    [vegetarian] => Array
+        (
+            [1] => 1
+        )
+
+    [no_pork] => Array
+        (
+            [1] => 1
+        )
+
+    [other_note] => 
+    [cc_type] => VI
+    [year] => 2017
+    [bill_address] => xvxcvxc
+    [bill_country] => vxcvx
+    [holder_name] => cvxcvxc  xcxcvxc
+    [terms] => 1
+    [newsletter] => 1
+    [placeOrder] => placeOrder
+)
+ Response: AuthorizeNetAIM_Response Object
+(
+    [_response_array:AuthorizeNetAIM_Response:private] => Array
+        (
+            [0] => 3
+            [1] => 2
+            [2] => 33
+            [3] => Bill To Last Name is required.
+            [4] => 
+            [5] => P
+            [6] => 0
+            [7] => 1404484646
+            [8] => 
+            [9] => 6.00
+            [10] => CC
+            [11] => auth_only
+            [12] => 
+            [13] => cvxcvxc
+            [14] => 
+            [15] => 
+            [16] => test
+            [17] => new york
+            [18] => NY
+            [19] => 10003
+            [20] => USA
+            [21] => 
+            [22] => 
+            [23] => growthlabsdev@gmail.com
+            [24] => test user
+            [25] => 
+            [26] => 
+            [27] => test
+            [28] => new york
+            [29] => NY
+            [30] => 10003
+            [31] => vxcvx
+            [32] => 
+            [33] => 
+            [34] => 
+            [35] => 
+            [36] => 
+            [37] => 37AD5476CCEB907CA3AD765677E51E6B
+            [38] => 
+            [39] => 
+            [40] => 
+            [41] => 
+            [42] => 
+            [43] => 
+            [44] => 
+            [45] => 
+            [46] => 
+            [47] => 
+            [48] => 
+            [49] => 
+            [50] => XXXX1111
+            [51] => Visa
+            [52] => 
+            [53] => 
+            [54] => 
+            [55] => 
+            [56] => 
+            [57] => 
+            [58] => 
+            [59] => 
+            [60] => 
+            [61] => 
+            [62] => 
+            [63] => 
+            [64] => 
+            [65] => 
+            [66] => 
+            [67] => 
+        )
+
+    [approved] => 
+    [declined] => 
+    [error] => 1
+    [held] => 
+    [response_code] => 3
+    [response_subcode] => 2
+    [response_reason_code] => 33
+    [response_reason_text] => Bill To Last Name is required.
+    [authorization_code] => 
+    [avs_response] => P
+    [transaction_id] => 0
+    [invoice_number] => 1404484646
+    [description] => 
+    [amount] => 6.00
+    [method] => CC
+    [transaction_type] => auth_only
+    [customer_id] => 
+    [first_name] => cvxcvxc
+    [last_name] => 
+    [company] => 
+    [address] => test
+    [city] => new york
+    [state] => NY
+    [zip_code] => 10003
+    [country] => USA
+    [phone] => 
+    [fax] => 
+    [email_address] => growthlabsdev@gmail.com
+    [ship_to_first_name] => test user
+    [ship_to_last_name] => 
+    [ship_to_company] => 
+    [ship_to_address] => test
+    [ship_to_city] => new york
+    [ship_to_state] => NY
+    [ship_to_zip_code] => 10003
+    [ship_to_country] => vxcvx
+    [tax] => 
+    [duty] => 
+    [freight] => 
+    [tax_exempt] => 
+    [purchase_order_number] => 
+    [md5_hash] => 37AD5476CCEB907CA3AD765677E51E6B
+    [card_code_response] => 
+    [cavv_response] => 
+    [account_number] => XXXX1111
+    [card_type] => Visa
+    [split_tender_id] => 
+    [requested_amount] => 
+    [balance_on_card] => 
+    [response] => |3|,|2|,|33|,|Bill To Last Name is required.|,||,|P|,|0|,|1404484646|,||,|6.00|,|CC|,|auth_only|,||,|cvxcvxc|,||,||,|test|,|new york|,|NY|,|10003|,|USA|,||,||,|growthlabsdev@gmail.com|,|test user|,||,||,|test|,|new york|,|NY|,|10003|,|vxcvx|,||,||,||,||,||,|37AD5476CCEB907CA3AD765677E51E6B|,||,||,||,||,||,||,||,||,||,||,||,||,|XXXX1111|,|Visa|,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||,||
+    [error_message] => AuthorizeNet Error:
+                Response Code: 3
+                Response Subcode: 2
+                Response Reason Code: 33
+                Response Reason Text: Bill To Last Name is required.
+                
+)
+Order details Array
+(
+    [cart] => Array
+        (
+            [category_id] => 1
+            [item_id] => 6
+            [adults] => 1
+            [children] => 0
+            [tour_year] => 2014
+            [tour_month] => 07
+            [tour_date] => 04
+            [discount_code] => FOODLOVER-AAEN-YHCH
+            [total] => 6.00
+        )
+
+    [id] => nprukp5pso4d6uepc1ggi5a027
+    [age] => 2421
+    [qty] => 1
+    [total] => 6.00
+    [sub_total] => 65.00
+    [tax_total] => 0.00
+    [tax_inc_total] => 0.00
+    [tax] => Array
+        (
+        )
+
+    [discount] => 59
+    [summary] => Morning Tour - English - 09:45AM
+    [currency_id] => GBP
+    [due] => 6.00
+    [time_desc] => 
+    [date_desc] => Fri Jul 4, 2014
+    [start_date] => 1404428400
+    [end_date] => 1404428400
+    [item] => Array
+        (
+            [1] => Array
+                (
+                    [sku] => morningtoure
+                    [item_id] => 6
+                    [name] => Morning Tour - English - 09:45AM
+                    [rate] => Array
+                        (
+                            [total] => 65.00
+                            [item_total] => 65.00
+                            [qty] => 1
+                            [summary] => <strong>Adults:</strong> 1 x  1 Day  @  &#163;65.00 <em>(Gift Certificate Adult)</em>
+                        )
+
+                    [date] => Array
+                        (
+                            [summary] => Fri Jul 4, 2014
+                            [start_date] => 1404428400
+                            [end_date] => 1404428400
+                        )
+
+                    [slip] => 6.20140704X1-qty.0-adults.1-children.0|FOODLOVER-AAEN-YHCH
+                    [available] => 12
+                )
+
+        )
+
+    [price_total] => 65.00
+    [voucher] => 12
+    [flat_discount] => Array
+        (
+            [amount] => 59
+            [type] => F
+            [total] => 59
+        )
+
+    [data] => Array
+        (
+            [customer_name] => test user
+            [note] => 
+            [category_id] => 1
+            [tour_year] => 2014
+            [tour_month] => 07
+            [tour_date] => 04
+            [month] => 01
+            [item_id] => 6
+            [adults] => 1
+            [children] => 0
+            [discount_code] => 
+            [cf-month] => 20140704
+            [customer_email] => growthlabsdev@gmail.com
+            [customer_phone] => 888-888-888
+            [customer_country] => USA
+            [customer_address] => test
+            [customer_region] => NY
+            [customer_city] => new york
+            [customer_postal_zip] => 10003
+            [guestname] => Array
+                (
+                    [1] => test1
+                )
+
+            [vegetarian] => Array
+                (
+                    [1] => 1
+                )
+
+            [no_pork] => Array
+                (
+                    [1] => 1
+                )
+
+            [other_note] => 
+            [cc_type] => VI
+            [year] => 2017
+            [bill_address] => xvxcvxc
+            [bill_country] => vxcvx
+            [holder_name] => cvxcvxc  xcxcvxc
+            [terms] => 1
+            [newsletter] => 1
+            [placeOrder] => placeOrder
+        )
+
+    [booking_message] => <h2>Your Order is not placed, following error occured: </h2>Bill To Last Name is required.. Please <a href='https://localhost/london-food-lovers/checkout'>go back</a> and try again
+)
+ POST : Array
+(
+    [customer_name] => test user
+    [note] => 
+    [category_id] => 1
+    [tour_year] => 2014
+    [tour_month] => 07
+    [tour_date] => 04
+    [month] => 01
+    [item_id] => 6
+    [adults] => 1
+    [children] => 0
+    [discount_code] => 
+    [cf-month] => 20140704
+    [customer_email] => growthlabsdev@gmail.com
+    [customer_phone] => 888-888-888
+    [customer_country] => USA
+    [customer_address] => test
+    [customer_region] => NY
+    [customer_city] => new york
+    [customer_postal_zip] => 10003
+    [guestname] => Array
+        (
+            [1] => test1
+        )
+
+    [vegetarian] => Array
+        (
+            [1] => 1
+        )
+
+    [no_pork] => Array
+        (
+            [1] => 1
+        )
+
+    [other_note] => 
+    [cc_type] => VI
+    [year] => 2014
+    [bill_address] => xvxcvxc
+    [bill_country] => vxcvx
+    [holder_name] => aa aaa
+    [terms] => 1
+    [newsletter] => 1
+    [placeOrder] => placeOrder
+)
+ Response: stdClass Object
+(
+    [approved] => 1
+    [transaction_id] => FREE
+)

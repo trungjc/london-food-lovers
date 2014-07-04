@@ -3,7 +3,12 @@
 include_once 'func.php';
 include_once 'lib/foodloverstours.php';
 
-include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
+if($_SERVER['HTTP_HOST'] == 'localhost'){
+	include_once '../wp-load.php';
+}
+else{
+	include_once '/nas/wp/www/cluster-2188/foodloverstour/wp-load.php';
+}
 
 if(!session_id()){
 	//session_start();
@@ -55,7 +60,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 	//$item_data['rate']['summary']['details']
 	$desc = "Adults: ".$_SESSION['cart']['adults']."\n Kids: ".$_SESSION['cart']['children'];
 
-	if((float)$_SESSION['total'] <= 0){
+	if((float)$_SESSION['total'] > 0 && (float)$_SESSION['total'] < 1){
 		$_SESSION['total'] = 1;
 	}
 
@@ -89,7 +94,15 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
 	// Set Invoice Number:
 	$auth->invoice_num = time();
-	$response = $auth->authorizeOnly();
+
+	if($_SESSION['total'] > 0){
+		$response = $auth->authorizeOnly();
+	}
+	else{
+		$response = new stdClass();
+		$response->approved = 1;
+		$response->transaction_id = 'FREE';
+	}
 
 	unset($_POST['card_number']);
 	unset($_POST['expire_date']);
@@ -131,11 +144,14 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 			$Booking->update_booking($order['booking']['id']);
 
 			$transaction_id = $response->transaction_id;
-			if(!$transaction_id){
-				$transaction_id = $response->invoice_number;
-			}
+			
+			if($response->transaction_id != 'FREE'){
+				if(!$transaction_id){
+					$transaction_id = $response->invoice_number;
+				}
 
-			$auth->priorAuthCapture($response->transaction_id);
+				$auth->priorAuthCapture($response->transaction_id);
+			}
 
 			$data = array();
 			$data = $_POST;
@@ -171,7 +187,7 @@ if($_POST['placeOrder'] && $_SESSION['cart']){
 
 	$_SESSION['booking_message'] = $message;
 	setcookie('booking_message',$message);
-	
+
 	if(!$error){
 		$url = home_url() . "/order_result.php";
 	}
