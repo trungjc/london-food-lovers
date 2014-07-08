@@ -31,7 +31,8 @@ function sendOrderEmail($data , $order_id){
 	$phpmailer->MsgHTML($email_body);
 	$phpmailer->AddAddress($data['customer_email'],$data['customer_name']);
 
-	if($phpmailer->Send()){
+	$res = $phpmailer->Send();
+	if($res){
 		$phpmailer->ClearAddresses();
 		 
 		// send email to admin also
